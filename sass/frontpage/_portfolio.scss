@@ -1,0 +1,98 @@
+/*portfolio two*/
+.services {
+  padding:5% 10%;
+  background-color: #fff;
+
+  h2 {
+	  font-size: 70px;
+	  margin-top: 1%;
+	  padding-left: 10%;
+	  font-weight: 100;
+	  line-height: 1;
+	  color: #333;
+	}
+
+	h3 {
+	    width: 45%;
+	    float: left;
+	    font-size: 1.3rem;
+	    line-height: 1.25;
+	    margin-top: 12px;
+	    font-weight: 500;
+	    color: #333;
+	}
+
+	p {
+	    font-size: 13px;
+	    letter-spacing: 1.5px;
+	    margin-top: 8px;
+	    line-height: 1.7em;
+    	word-spacing: 2px;
+    	color: #444;
+	}
+
+	.part1 {
+	  float: left;
+	  width: 50%;
+	}
+
+	.part2 {
+	  float: left;
+	  width: 50%;
+	  margin-top: 1%;
+	}
+
+	.div h3 {
+	  float: left;
+	  width: 30%;
+	}
+
+	.div p {
+	  float: left;
+	  width: 50%;
+	}
+
+	.div {
+	  padding: 7% 0;
+	}
+
+	.div:first-child {
+	  padding-top: 0;
+	}
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+
+	.services {
+
+		.part1 {
+		    float: none;
+		    width: 100%;
+		    text-align: center;
+		  }
+
+		  .part1 h2 {
+		    padding: 0;
+		  }
+
+		  .part2 {
+		    float: none;
+		    width: 100%;
+		    margin:0;
+		    text-align: center;
+		  }
+
+		  .div h3 {
+		    float: none;
+		    width: 100%;
+		  }
+
+		  .div p {
+		    float: none;
+		    width: 100%;
+		  }
+	}
+  
+}

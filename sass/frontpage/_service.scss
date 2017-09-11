@@ -1,0 +1,54 @@
+
+/*service three*/
+.allserv {
+    padding: 5% 15% 5% 15%;
+    background-color: rgba(241, 241, 241, 0.62);
+    color: #333;
+
+  h3 {
+    font-size: 50px;
+    margin-top: 1px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #333;
+  }
+
+  ul {
+      list-style: none;
+      font-size: 15px;
+      line-height: 1.7em;
+      text-align: left;
+  }
+
+  li {
+      line-height: 1.9em;
+      color: #444;
+  }
+
+    .zero {
+      float: left;
+      width: 28%;
+    }
+
+    .one {
+      float: left;
+      width: 20%;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    
+    .allserv {
+
+      .zero {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+      .one {
+        width: auto;
+      }
+    } 
+}

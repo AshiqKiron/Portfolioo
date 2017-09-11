@@ -1,0 +1,43 @@
+.error_page {
+	padding: 5%;
+
+	.page-header {
+		text-align: center;
+
+    	h1 {
+    		font-weight: 100;
+    		font-size: 250px;
+    	}
+	}
+
+	.error_widget {
+		padding: 4%;
+
+		.widget {
+			float: left;
+			width: 25%;
+			padding-bottom: 5%;
+		}
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+	.error_page {
+		.page-header h1 {
+			font-size: 100px;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width: 850px) {
+	.error_page {
+		.error_widget {
+
+			.widget {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+}

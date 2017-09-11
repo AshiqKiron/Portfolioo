@@ -1,0 +1,30 @@
+.search_page {
+	padding: 5%;
+	text-align: center;
+
+	h1 {
+		font-size: 100px;
+		margin:1px;
+	}
+
+	#secondary {
+		padding: 5%;
+	}
+
+	article {
+		text-align: left;
+		padding: 3% 5%;
+	}
+
+	.comments-link {
+		padding: 5px;
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+	.search_page {
+		h1 {
+			font-size: 50px;
+		}
+	}
+}

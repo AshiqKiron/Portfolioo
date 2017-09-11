@@ -1,0 +1,52 @@
+.front__loop {
+	padding: 0% 13%;
+	background-color: #f8f8f8;
+
+	.wrap {
+		float: left;
+		width: 29%;
+		margin: 5% 2%;
+		background-color: #f1f1f1;
+		text-align: justify;
+		transition: .5s ease all;
+
+		&:hover {
+			background: #fff;
+		    box-shadow: 0px 15px 27px rgba(0, 0, 0, 0.05), 0 15px 30px -10px rgba(0, 0, 0, 0.3);
+		    transition: .5s ease all;
+			}
+		}
+	
+
+	a {
+		color: #333;
+		font-size: 20px;
+		transition: .5s ease all;
+
+		&:hover {
+			color:#2196F3;
+			transition:.5s ease all;
+		}
+	}
+
+	h2 {
+		color: #222;
+		text-align: center;
+	    font-size: 30px;
+	    padding: 4% 0 0%;
+	    text-transform: uppercase;
+	    font-weight: 100;
+	    margin-top: 0px;
+	}
+
+	h3 {
+		padding: 5%;
+		text-align: center;
+		color: #333;
+	}
+
+	p {
+		padding: 5% 10%;
+		color: #555;
+	}
+}

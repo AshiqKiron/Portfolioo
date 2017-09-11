@@ -1,0 +1,199 @@
+.default_page {
+	padding:5%;
+
+	.entry-header {
+		text-align: center;
+
+		h1 {
+			font-size: 40px;
+			margin-top: 1px;
+			margin-bottom: 5%;
+		}
+	}
+
+	.entry-content {
+		margin: 0 10%;
+		padding: 3% 5%;
+		background-color: #eee;
+	}
+}
+
+.entry-content {
+	tr {
+		border:1px solid #333;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	td, th {
+		padding: 5px;
+		border:1px solid #333;
+		text-align: left;
+	}
+}
+
+
+/*right sidebar*/
+.right_sidebar_page {
+	padding:3% 5% 5%;
+
+	.entry-header {
+		text-align: center;
+
+		h1 {
+			font-size: 40px;
+			margin-top: 1px;
+			margin-bottom: 5%;
+		}
+	}
+
+	.entry-content {
+		 margin: 0 5% 3%;
+	    padding: 3% 3%;
+	    background-color: #eee;
+	    float: left;
+	    width: 70%;
+	}
+
+	.sidebar_widget {
+		float: left;
+		width: 20%;
+
+		a {
+			color: #2168a0;
+			font-size: 14px;
+		} 
+
+		ul {
+			list-style: none;
+		}
+
+		h2 {
+			font-size: 17px;
+		}
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width: 1500px) {
+	.right_sidebar_page {
+
+		.entry-content {
+			float: none;
+			width: 100%;
+			margin: 0;
+		}
+		.sidebar_widget {
+			display: none;
+		}
+	}
+}
+
+
+
+/*content only page*/
+.content_only_page {
+	padding: 3% 5% 5%;
+	margin: 0 10%;
+	padding: 5%;
+
+	.entry-content {
+		padding: 3% 5%;
+		background-color: #eee;
+	}
+
+	tr {
+		border:1px solid #333;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	td, th {
+		padding: 5px;
+		border:1px solid #333;
+		text-align: left;
+	}
+}
+
+
+/*fully condensed page*/
+.fullwidth_condensed_page {
+	padding: 3% 5% 5%;
+	margin: 0 16%;
+	padding: 5%;
+
+	.entry-content {
+		padding: 3% 5%;
+		background-color: #eee;
+	}
+
+	tr {
+		border:1px solid #333;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	td, th {
+		padding: 5px;
+		border:1px solid #333;
+		text-align: left;
+	}
+}
+
+
+/*header only page*/
+.header_only_page {
+	text-align: center;
+	padding: 5%
+}
+
+
+/*leftside bar page*/
+.left_sidebar_page {
+	padding: 3% 10% 5%;
+
+	.entry-header-main {
+		text-align: center;
+		padding: 3%;
+	}
+
+	.entry-header {
+		display: none;
+	}
+
+	.sidebar_widget {
+		float: left;
+		width: 20%;
+	}
+
+	article {
+		float: right;
+		width: 70%;
+		background-color: #eee;
+    	padding: 3%;
+	}
+
+	#comments article {
+		background-color: #fff;
+	}
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 1500px) {
+	.left_sidebar_page {
+
+		article {
+			float: none;
+			width: 100%;
+			margin: 0;
+		}
+		.sidebar_widget {
+			display: none;
+		}
+	}
+}
