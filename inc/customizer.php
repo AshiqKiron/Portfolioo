@@ -63,13 +63,6 @@ function portfolioo_customize_register( $wp_customize ) {
     	)
     );
 
-	$wp_customize->add_panel( 'Miscellaneous', array(
-            'priority' => 12,
-            'capability' => 'edit_theme_options',
-            'theme_supports' => '',
-            'title' => __( 'Miscellaneous', 'portfolioo' ),
-            'description' => __( 'Miscellaneous Settings', 'portfolioo' ),
-    ) );
 
     $wp_customize->add_panel( 'footer', array(
             'priority' => 13,
@@ -308,140 +301,6 @@ function portfolioo_customize_register( $wp_customize ) {
 		   );
 
 
-	// Add posts page
-	$wp_customize->add_section( 'misc' , array(
-		    'title'      => __('Posts Page','portfolioo'), 
-		    'panel'      => 'Miscellaneous',
-		    'description' => __('Post page settings' , 'portfolioo'),  
-		) 
-	);
-
-	// header color
-	$wp_customize->add_setting('portfolioo[post_site_titlecol]',array(
-		          'default'         => '#fff',
-		          'sanitize_callback' => 'sanitize_hex_color',
-		          'transport'       => 'postMessage',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'post_site_titlecol', array(
-				               'label'      => esc_html__( 'Site Title Color', 'portfolioo' ),
-				               'section'    => 'misc',
-				               'settings'   => 'portfolioo[post_site_titlecol]' 
-				           )
-				       )
-				   );
-
-
-	// header color
-	$wp_customize->add_setting('portfolioo[post_header_bgcol]',array(
-		          'default'         => '#5747ad',
-		          'sanitize_callback' => 'sanitize_hex_color',
-		          'transport'       => 'postMessage',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'post_header_bgcol', array(
-				               'label'      => esc_html__( 'Header Background Color', 'portfolioo' ),
-				               'section'    => 'misc',
-				               'settings'   => 'portfolioo[post_header_bgcol]' 
-				           )
-				       )
-				   );
-
-
-	// header meta link color
-	$wp_customize->add_setting('portfolioo[post_header_metalinkcol]',array(
-		          'default'         => '#FFEB3B',
-		          'sanitize_callback' => 'sanitize_hex_color',
-		          'transport'       => 'postMessage',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'post_header_metalinkcol', array(
-				               'label'      => esc_html__( 'Header Meta Link Color', 'portfolioo' ),
-				               'section'    => 'misc',
-				               'settings'   => 'portfolioo[post_header_metalinkcol]' 
-				           )
-				       )
-				   );
-
-	// header meta txt color
-	$wp_customize->add_setting('portfolioo[post_header_metatxtcol]',array(
-		          'default'         => '#fff',
-		          'sanitize_callback' => 'sanitize_hex_color',
-		          'transport'       => 'postMessage',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'post_header_metatxtcol', array(
-				               'label'      => esc_html__( 'Header Meta Text Color', 'portfolioo' ),
-				               'section'    => 'misc',
-				               'settings'   => 'portfolioo[post_header_metatxtcol]' 
-				           )
-				       )
-				   );
-
-	//post page bg color
-	$wp_customize->add_setting('portfolioo[post_bgcol]',array(
-		          'default'         => '#fff',
-		          'sanitize_callback' => 'sanitize_hex_color',
-		          'transport'       => 'postMessage',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'post_bgcol', array(
-				               'label'      => esc_html__( 'Page Background Color', 'portfolioo' ),
-				               'section'    => 'misc',
-				               'settings'   => 'portfolioo[post_bgcol]' 
-				           )
-				       )
-				   );
-
-
-	//post page text color
-	$wp_customize->add_setting('portfolioo[post_txtcol]',array(
-		          'default'         => '#333',
-		          'sanitize_callback' => 'sanitize_hex_color',
-		          'transport'       => 'postMessage',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'post_txtcol', array(
-				               'label'      => esc_html__( 'Text Color', 'portfolioo' ),
-				               'section'    => 'misc',
-				               'settings'   => 'portfolioo[post_txtcol]' 
-				           )
-				       )
-				   );
-
-
-	//post page text bg color
-	$wp_customize->add_setting('portfolioo[post_txt_bgcol]',array(
-		          'default'         => '#f5f5f5',
-		          'sanitize_callback' => 'sanitize_hex_color',
-		          'transport'       => 'postMessage',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'post_txt_bgcol', array(
-				               'label'      => esc_html__( 'Posts Background Color', 'portfolioo' ),
-				               'section'    => 'misc',
-				               'settings'   => 'portfolioo[post_txt_bgcol]' 
-				           )
-				       )
-				   );
-
-
-
-
 
 	// Footer  Section
 	$wp_customize->add_section( 'footer_section' , array(
@@ -678,25 +537,6 @@ function portfolioo_customize_register( $wp_customize ) {
 				               'label'      => esc_html__( 'Footer Background Color', 'portfolioo' ),
 				               'section'    => 'footer_section',
 				               'settings'   => 'portfolioo[footer_bg_color]' 
-				           )
-				       )
-				   );
-
-
-	// colophon Hide credit
-	$wp_customize->add_setting('portfolioo[hide_credit]',array(
-		          'default'         => 'true',
-		          'sanitize_callback' => 'sanitize_key',
-		          'transport'       => 'postMessage',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control(new WP_Customize_Control($wp_customize,'hide_credit', array(
-				               'label'      => esc_html__( 'Show Credit', 'portfolioo' ),
-				               'section'    => 'footer_section',
-				               'settings'   => 'portfolioo[hide_credit]',
-				               'type' 		=> 'checkbox' 
 				           )
 				       )
 				   );

@@ -116,43 +116,6 @@
         } );
     });
 
-    wp.customize( 'portfolioo[post_header_bgcol]', function( value ) {
-        value.bind( function( to ) {
-            $( '.single-post #masthead, .post-entry-meta' ).css( 'background-color', to );
-        } );
-    });
-
-    wp.customize( 'portfolioo[post_header_metalinkcol]', function( value ) {
-        value.bind( function( to ) {
-            $( '.post-entry-meta a' ).css( 'color', to );
-        } );
-    });
-
-    wp.customize( 'portfolioo[post_header_metatxtcol]', function( value ) {
-        value.bind( function( to ) {
-            $( '.post-entry-meta' ).css( 'color', to );
-        } );
-    });
-
-    wp.customize( 'portfolioo[post_bgcol]', function( value ) {
-        value.bind( function( to ) {
-            $( '.post_wrap' ).css( 'background-color', to );
-        } );
-    });
-
-    wp.customize( 'portfolioo[post_txtcol]', function( value ) {
-        value.bind( function( to ) {
-            $( '.entry-content' ).css( 'color', to );
-        } );
-    });
-
-    wp.customize( 'portfolioo[post_txt_bgcol]', function( value ) {
-        value.bind( function( to ) {
-            $( '.post_wrap .post_others' ).css( 'background-color', to );
-        } );
-    });
-
-
 
 
      //colophon text1
@@ -254,19 +217,6 @@
             $( '#colophon .footdiv' ).css( 'background-color', to );
         } );
     });
-
-
-
-    // hide credit
-    wp.customize( 'portfolioo[hide_credit]', function( value ) {
-    value.bind( function( to ) {
-        if ( true === to) {
-            $( '.site-info' ).show();
-          } else {
-            $( '.site-info' ).hide();
-          }
-        } );
-    } );
 
 
 

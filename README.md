@@ -10,8 +10,8 @@ Images are from pixabay.com and WordPress dummy contents released under GPL v2
 Tested up to: 4.8.2
 Requires    : 4.5
 
-1. Intro Widget Image - https://pixabay.com/en/parking-signs-symbols-black-circle-39771/
-2. Face - https://pixabay.com/en/business-man-businessman-corporate-1042709/
+1. Intro Widget Image - https://www.pexels.com/photo/apple-computer-desk-laptop-209151/
+2. Face - https://pixabay.com/en/young-man-portrait-beard-young-man-1281282/
 
 
 -------------------------------------------------------

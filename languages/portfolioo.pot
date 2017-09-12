@@ -1,239 +1,3329 @@
 # Copyright (C) 2017 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0.0\n"
+"Project-Id-Version: portfolioo 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-12-23 16:00+0100\n"
+"POT-Creation-Date: 2017-09-13 00:20+0600\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2016-12-23 16:00+0100\n"
 "Last-Translator: \n"
-"Language-Team: \n"
+"Language-Team: https://asphaltthemes.cm\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-KeywordsList: _e;__;esc_html__;esc_;esc_html_e;_n;_ex;printf;_x;_nx\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: languages/portfolioo.pot\n"
+"X-Poedit-SearchPath-1: .\n"
 
 #: 404.php:17
-#@ _s
-msgid "Oops! That page can&rsquo;t be found."
+msgid "404"
 msgstr ""
 
-#: 404.php:21
-#@ _s
+#: 404.php:18
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
-#: 404.php:33
-#@ _s
+#: 404.php:34
 msgid "Most Used Categories"
 msgstr ""
 
-#. translators: %1$s: smiley
-#: 404.php:51
+#: 404.php:52
 #, php-format
-#@ _s
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#. translators: 1: title.
+#: blog.php:14
+msgid "Edit"
+msgstr ""
+
+#: blog.php:60 template-parts/content.php:37
+msgid "Post Tag"
+msgstr ""
+
+#: blog.php:95
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: blog.php:99
+msgid "Older Entries <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i> "
+msgstr ""
+
+#: blog.php:100
+msgid "<i class=\"fa fa-angle-left\" aria-hidden=\"true\"></i> Newer Entries "
+msgstr ""
+
 #: comments.php:34
 #, php-format
-#@ _s
 msgid "One thought on &ldquo;%1$s&rdquo;"
 msgstr ""
 
-#. translators: 1: comment count number, 2: title.
 #: comments.php:40
 #, php-format
-#@ _s
-msgctxt "comments title"
 msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr ""
 
 #: comments.php:50 comments.php:71
-#@ _s
 msgid "Comment navigation"
 msgstr ""
 
 #: comments.php:53 comments.php:74
-#@ _s
 msgid "Older Comments"
 msgstr ""
 
 #: comments.php:54 comments.php:75
-#@ _s
 msgid "Newer Comments"
 msgstr ""
 
 #: comments.php:88
-#@ _s
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:18
-#@ _s
+#: footer.php:18 inc/customizer.php:316 inc/widgets/front-contact-two.php:94
+#: inc/widgets/front-contact-two.php:231 inc/widgets/front-contact-two.php:257
+msgid "Contact Me"
+msgstr ""
+
+#: footer.php:25 inc/customizer.php:333
+msgid "Twitter"
+msgstr ""
+
+#: footer.php:26 inc/customizer.php:350
+msgid "@Asphalt_Themes"
+msgstr ""
+
+#: footer.php:32
+msgid "Call Me"
+msgstr ""
+
+#: footer.php:33 inc/customizer.php:384
+msgid "+45 545 668"
+msgstr ""
+
+#: footer.php:39
+msgid "Meet Me"
+msgstr ""
+
+#: footer.php:40 inc/customizer.php:417
+msgid "Seasame Street, NY"
+msgstr ""
+
+#: footer.php:46
 msgid "https://wordpress.org/"
 msgstr ""
 
-#. translators: %s: CMS name, i.e. WordPress.
-#: footer.php:20
+#: footer.php:48
 #, php-format
-#@ _s
 msgid "Proudly powered by %s"
 msgstr ""
 
-#. translators: 1: Theme name, 2: Theme author.
-#: footer.php:25
+#: footer.php:53
 #, php-format
-#@ _s
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:47
-#@ _s
+#: functions.php:50
 msgid "Primary"
 msgstr ""
 
-#: functions.php:93
-#@ _s
+#: functions.php:109
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:95
-#@ _s
+#: functions.php:111 functions.php:131
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:24
-#@ _s
+#: functions.php:119
+msgid "Footer Widget"
+msgstr ""
+
+#: functions.php:121
+msgid "Add footer widgets here."
+msgstr ""
+
+#: functions.php:129 inc/customizer.php:52
+msgid "Frontpage"
+msgstr ""
+
+#: functions.php:232
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:44
-#@ _s
-msgid "Primary Menu"
+#: inc/customizer.php:43
+msgid "Header"
 msgstr ""
 
-#. translators: %s: post date.
-#: inc/template-tags.php:29
+#: inc/customizer.php:44
+msgid "This panel allows you to customize Header"
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "This panel allows you to customize Frontpage"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid "Basic Site Settings"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "This panel allows you to customize site settings"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "This panel allows you to customize Footer"
+msgstr ""
+
+#: inc/customizer.php:108
+msgid "Header Colors"
+msgstr ""
+
+#: inc/customizer.php:127
+msgid "Hamburger Icon Color"
+msgstr ""
+
+#: inc/customizer.php:144
+msgid "Header Background Color"
+msgstr ""
+
+#: inc/customizer.php:162
+msgid "Site Title Color"
+msgstr ""
+
+#: inc/customizer.php:179
+msgid "Menu Close BG Color"
+msgstr ""
+
+#: inc/customizer.php:197
 #, php-format
-#@ _s
-msgctxt "post date"
-msgid "Posted on %s"
+msgid ""
+"<h2>To Setup frontpage, Go to:</h2></br>\n"
+"\t\t<ul>\n"
+"\t\t<li>1. <b>Dashboard -> Pages -> Add New</b></li>\n"
+"\t\t<li>2. On the right, you will find a box titled <b>Page Attributes</b></li>\n"
+"\t\t<li>3. Select <b>Front Page Template</b> from the dropdown <b>Template</b> options</li>\n"
+"\t\t<li>4. Type Page title & click on <b>Publish</b></li>\n"
+"\t\t<li>5. Go to <b>Dashboard -> Settings -> Reading -> Front page displays </b></li>\n"
+"\t\t<li>6. Select <b>A static page(select below)</b> </li>\n"
+"\t\t<li>7. Then select the page with <b>\"Front Page Template\"</b> as <b>Front Page</b></li>\n"
+"\t\t<li>8. Click on <b>Save & Publish</b> and you are done.</li>\n"
+"\t\t<li>9. Still struggling? Follow the documentation <a portfoliooget=\"_blank\" href=\"%s\">Front Page Setup Documentation</a>\n"
+"\t\t</ul></br>"
 msgstr ""
 
-#. translators: %s: post author.
-#: inc/template-tags.php:35
-#, php-format
-#@ _s
-msgctxt "post author"
-msgid "by %s"
+#: inc/customizer.php:215
+msgid "Site Settings"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
+#: inc/customizer.php:225
+msgid "Typography Settings"
+msgstr ""
+
+#: inc/customizer.php:243
+msgid "Font-Family"
+msgstr ""
+
+#: inc/customizer.php:264
+msgid "Line Height"
+msgstr ""
+
+#: inc/customizer.php:290
+msgid "Font Size"
+msgstr ""
+
+#: inc/customizer.php:307
+msgid "Footer settings"
+msgstr ""
+
+#: inc/customizer.php:324 inc/customizer.php:341 inc/customizer.php:358
+#: inc/customizer.php:375 inc/customizer.php:392 inc/customizer.php:409
+#: inc/customizer.php:425 inc/widgets/front-portfolio-two.php:260
+#: inc/widgets/front-portfolio-two.php:265
+#: inc/widgets/front-portfolio-two.php:270
+#: inc/widgets/front-service-three.php:276
+#: inc/widgets/front-service-three.php:282
+#: inc/widgets/front-service-three.php:288
+#: inc/widgets/front-service-three.php:294
+#: inc/widgets/front-service-three.php:303
+#: inc/widgets/front-service-three.php:309
+#: inc/widgets/front-service-three.php:315
+#: inc/widgets/front-service-three.php:321
+#: inc/widgets/front-service-three.php:329
+#: inc/widgets/front-service-three.php:335
+#: inc/widgets/front-service-three.php:341
+#: inc/widgets/front-service-three.php:347
+msgid "Text"
+msgstr ""
+
+#: inc/customizer.php:367
+msgid "CALL ME"
+msgstr ""
+
+#: inc/customizer.php:401
+msgid "MEET ME"
+msgstr ""
+
+#: inc/customizer.php:442 inc/widgets/front-contact-two.php:319
+#: inc/widgets/front-intro-one.php:326 inc/widgets/front-service-three.php:353
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer.php:460
+msgid "Icon One"
+msgstr ""
+
+#: inc/customizer.php:479
+msgid "Icon Two"
+msgstr ""
+
+#: inc/customizer.php:498
+msgid "Icon Three"
+msgstr ""
+
+#: inc/customizer.php:518
+msgid "Icon Color"
+msgstr ""
+
+#: inc/customizer.php:537
+msgid "Footer Background Color"
+msgstr ""
+
+#: inc/customizer.php:684
+msgid "None"
+msgstr ""
+
+#: inc/customizer.php:685 inc/customizer.php:1389
+msgid " 500px"
+msgstr ""
+
+#: inc/customizer.php:686 inc/customizer.php:1391
+msgid " amazon"
+msgstr ""
+
+#: inc/customizer.php:687 inc/customizer.php:773
+msgid " balance-scale"
+msgstr ""
+
+#: inc/customizer.php:688 inc/customizer.php:780
+msgid " battery-0"
+msgstr ""
+
+#: inc/customizer.php:689 inc/customizer.php:781
+msgid " battery-1"
+msgstr ""
+
+#: inc/customizer.php:690 inc/customizer.php:782
+msgid " battery-2"
+msgstr ""
+
+#: inc/customizer.php:691 inc/customizer.php:783
+msgid " battery-3"
+msgstr ""
+
+#: inc/customizer.php:692 inc/customizer.php:784
+msgid " battery-4"
+msgstr ""
+
+#: inc/customizer.php:693 inc/customizer.php:785
+msgid " battery-empty"
+msgstr ""
+
+#: inc/customizer.php:694 inc/customizer.php:786
+msgid " battery-full"
+msgstr ""
+
+#: inc/customizer.php:695 inc/customizer.php:787
+msgid " battery-half"
+msgstr ""
+
+#: inc/customizer.php:696 inc/customizer.php:788
+msgid " battery-quarter"
+msgstr ""
+
+#: inc/customizer.php:697 inc/customizer.php:789
+msgid " battery-three-quarters"
+msgstr ""
+
+#: inc/customizer.php:698 inc/customizer.php:1400
+msgid " black-tie"
+msgstr ""
+
+#: inc/customizer.php:699 inc/customizer.php:814
+msgid " calendar-check-o"
+msgstr ""
+
+#: inc/customizer.php:700 inc/customizer.php:815
+msgid " calendar-minus-o"
+msgstr ""
+
+#: inc/customizer.php:701 inc/customizer.php:817
+msgid " calendar-plus-o"
+msgstr ""
+
+#: inc/customizer.php:702 inc/customizer.php:818
+msgid " calendar-times-o"
+msgstr ""
+
+#: inc/customizer.php:703 inc/customizer.php:1231 inc/customizer.php:1404
+msgid " cc-diners-club"
+msgstr ""
+
+#: inc/customizer.php:704 inc/customizer.php:1233 inc/customizer.php:1406
+msgid " cc-jcb"
+msgstr ""
+
+#: inc/customizer.php:705 inc/customizer.php:1411
+msgid " chrome"
+msgstr ""
+
+#: inc/customizer.php:706 inc/customizer.php:841
+msgid " clone"
+msgstr ""
+
+#: inc/customizer.php:707 inc/customizer.php:853
+msgid " commenting"
+msgstr ""
+
+#: inc/customizer.php:708 inc/customizer.php:854
+msgid " commenting-o"
+msgstr ""
+
+#: inc/customizer.php:709 inc/customizer.php:1414
+msgid " contao"
+msgstr ""
+
+#: inc/customizer.php:710 inc/customizer.php:859
+msgid " creative-commons"
+msgstr ""
+
+#: inc/customizer.php:711 inc/customizer.php:1424
+msgid " expeditedssl"
+msgstr ""
+
+#: inc/customizer.php:712 inc/customizer.php:1429
+msgid " firefox"
+msgstr ""
+
+#: inc/customizer.php:713 inc/customizer.php:1431
+msgid " fonticons"
+msgstr ""
+
+#: inc/customizer.php:714 inc/customizer.php:1182
+msgid " genderless"
+msgstr ""
+
+#: inc/customizer.php:715 inc/customizer.php:1435
+msgid " get-pocket"
+msgstr ""
+
+#: inc/customizer.php:716 inc/customizer.php:1253 inc/customizer.php:1436
+msgid " gg"
+msgstr ""
+
+#: inc/customizer.php:717 inc/customizer.php:1254 inc/customizer.php:1437
+msgid " gg-circle"
+msgstr ""
+
+#: inc/customizer.php:718 inc/customizer.php:930 inc/customizer.php:1148
+msgid " hand-grab-o"
+msgstr ""
+
+#: inc/customizer.php:719 inc/customizer.php:931 inc/customizer.php:1149
+msgid " hand-lizard-o"
+msgstr ""
+
+#: inc/customizer.php:720 inc/customizer.php:932 inc/customizer.php:1154
+msgid " hand-paper-o"
+msgstr ""
+
+#: inc/customizer.php:721 inc/customizer.php:933 inc/customizer.php:1155
+msgid " hand-peace-o"
+msgstr ""
+
+#: inc/customizer.php:722 inc/customizer.php:934 inc/customizer.php:1156
+msgid " hand-pointer-o"
+msgstr ""
+
+#: inc/customizer.php:723 inc/customizer.php:935 inc/customizer.php:1157
+msgid " hand-rock-o"
+msgstr ""
+
+#: inc/customizer.php:724 inc/customizer.php:936 inc/customizer.php:1158
+msgid " hand-scissors-o"
+msgstr ""
+
+#: inc/customizer.php:725 inc/customizer.php:937 inc/customizer.php:1159
+msgid " hand-spock-o"
+msgstr ""
+
+#: inc/customizer.php:726 inc/customizer.php:938 inc/customizer.php:1160
+msgid " hand-stop-o"
+msgstr ""
+
+#: inc/customizer.php:727 inc/customizer.php:947
+msgid " hourglass"
+msgstr ""
+
+#: inc/customizer.php:728 inc/customizer.php:948
+msgid " hourglass-1"
+msgstr ""
+
+#: inc/customizer.php:729 inc/customizer.php:949
+msgid " hourglass-2"
+msgstr ""
+
+#: inc/customizer.php:730 inc/customizer.php:950
+msgid " hourglass-3"
+msgstr ""
+
+#: inc/customizer.php:731 inc/customizer.php:951
+msgid " hourglass-end"
+msgstr ""
+
+#: inc/customizer.php:732 inc/customizer.php:952
+msgid " hourglass-half"
+msgstr ""
+
+#: inc/customizer.php:733 inc/customizer.php:953
+msgid " hourglass-o"
+msgstr ""
+
+#: inc/customizer.php:734 inc/customizer.php:954
+msgid " hourglass-sportfolioot"
+msgstr ""
+
+#: inc/customizer.php:735 inc/customizer.php:1450
+msgid " houzz"
+msgstr ""
+
+#: inc/customizer.php:736 inc/customizer.php:955
+msgid " i-cursor"
+msgstr ""
+
+#: inc/customizer.php:737 inc/customizer.php:958
+msgid " industry"
+msgstr ""
+
+#: inc/customizer.php:738 inc/customizer.php:1453
+msgid " internet-explorer"
+msgstr ""
+
+#: inc/customizer.php:739 inc/customizer.php:985
+msgid " map"
+msgstr ""
+
+#: inc/customizer.php:740 inc/customizer.php:987
+msgid " map-o"
+msgstr ""
+
+#: inc/customizer.php:741 inc/customizer.php:988
+msgid " map-pin"
+msgstr ""
+
+#: inc/customizer.php:742 inc/customizer.php:989
+msgid " map-signs"
+msgstr ""
+
+#: inc/customizer.php:743 inc/customizer.php:1003
+msgid " mouse-pointer"
+msgstr ""
+
+#: inc/customizer.php:744 inc/customizer.php:1007
+msgid " object-group"
+msgstr ""
+
+#: inc/customizer.php:745 inc/customizer.php:1008
+msgid " object-ungroup"
+msgstr ""
+
+#: inc/customizer.php:746 inc/customizer.php:1466
+msgid " odnoklassniki"
+msgstr ""
+
+#: inc/customizer.php:747 inc/customizer.php:1467
+msgid " odnoklassniki-square"
+msgstr ""
+
+#: inc/customizer.php:748 inc/customizer.php:1468
+msgid " opencart"
+msgstr ""
+
+#: inc/customizer.php:749 inc/customizer.php:1470
+msgid " opera"
+msgstr ""
+
+#: inc/customizer.php:750 inc/customizer.php:1471
+msgid " optin-monster"
+msgstr ""
+
+#: inc/customizer.php:751 inc/customizer.php:1038
+msgid " registered"
+msgstr ""
+
+#: inc/customizer.php:752 inc/customizer.php:1485
+msgid " safari"
+msgstr ""
+
+#: inc/customizer.php:753 inc/customizer.php:1091
+msgid " sticky-note"
+msgstr ""
+
+#: inc/customizer.php:754 inc/customizer.php:1092
+msgid " sticky-note-o"
+msgstr ""
+
+#: inc/customizer.php:755 inc/customizer.php:1103
+msgid " television"
+msgstr ""
+
+#: inc/customizer.php:756 inc/customizer.php:1121
+msgid " trademark"
+msgstr ""
+
+#: inc/customizer.php:757 inc/customizer.php:1505
+msgid " tripadvisor"
+msgstr ""
+
+#: inc/customizer.php:758 inc/customizer.php:1128
+msgid " tv"
+msgstr ""
+
+#: inc/customizer.php:759 inc/customizer.php:1512
+msgid " vimeo"
+msgstr ""
+
+#: inc/customizer.php:760 inc/customizer.php:1520
+msgid " wikipedia-w"
+msgstr ""
+
+#: inc/customizer.php:761 inc/customizer.php:1525
+msgid " y-combinator"
+msgstr ""
+
+#: inc/customizer.php:762 inc/customizer.php:1528
+msgid " yc"
+msgstr ""
+
+#: inc/customizer.php:763
+msgid " adjust"
+msgstr ""
+
+#: inc/customizer.php:764
+msgid " anchor"
+msgstr ""
+
+#: inc/customizer.php:765
+msgid " archive"
+msgstr ""
+
+#: inc/customizer.php:766 inc/customizer.php:1241
+msgid " area-chart"
+msgstr ""
+
+#: inc/customizer.php:767 inc/customizer.php:1340
+msgid " arrows"
+msgstr ""
+
+#: inc/customizer.php:768 inc/customizer.php:1342
+msgid " arrows-h"
+msgstr ""
+
+#: inc/customizer.php:769 inc/customizer.php:1343
+msgid " arrows-v"
+msgstr ""
+
+#: inc/customizer.php:770
+msgid " asterisk"
+msgstr ""
+
+#: inc/customizer.php:771
+msgid " at"
+msgstr ""
+
+#: inc/customizer.php:772 inc/customizer.php:1166
+msgid " automobile"
+msgstr ""
+
+#: inc/customizer.php:774
+msgid " ban"
+msgstr ""
+
+#: inc/customizer.php:775
+msgid " bank"
+msgstr ""
+
+#: inc/customizer.php:776 inc/customizer.php:1242
+msgid " bar-chart"
+msgstr ""
+
+#: inc/customizer.php:777 inc/customizer.php:1243
+msgid " bar-chart-o"
+msgstr ""
+
+#: inc/customizer.php:778
+msgid " barcode"
+msgstr ""
+
+#: inc/customizer.php:779
+msgid " bars"
+msgstr ""
+
+#: inc/customizer.php:790
+msgid " bed"
+msgstr ""
+
+#: inc/customizer.php:791
+msgid " beer"
+msgstr ""
+
+#: inc/customizer.php:792
+msgid " bell"
+msgstr ""
+
+#: inc/customizer.php:793
+msgid " bell-o"
+msgstr ""
+
+#: inc/customizer.php:794
+msgid " bell-slash"
+msgstr ""
+
+#: inc/customizer.php:795
+msgid " bell-slash-o"
+msgstr ""
+
+#: inc/customizer.php:796 inc/customizer.php:1167
+msgid " bicycle"
+msgstr ""
+
+#: inc/customizer.php:797
+msgid " binoculars"
+msgstr ""
+
+#: inc/customizer.php:798
+msgid " birthday-cake"
+msgstr ""
+
+#: inc/customizer.php:799
+msgid " bolt"
+msgstr ""
+
+#: inc/customizer.php:800
+msgid " bomb"
+msgstr ""
+
+#: inc/customizer.php:801
+msgid " book"
+msgstr ""
+
+#: inc/customizer.php:802
+msgid " bookmark"
+msgstr ""
+
+#: inc/customizer.php:803
+msgid " bookmark-o"
+msgstr ""
+
+#: inc/customizer.php:804
+msgid " briefcase"
+msgstr ""
+
+#: inc/customizer.php:805
+msgid " bug"
+msgstr ""
+
+#: inc/customizer.php:806
+msgid " building"
+msgstr ""
+
+#: inc/customizer.php:807
+msgid " building-o"
+msgstr ""
+
+#: inc/customizer.php:808
+msgid " bullhorn"
+msgstr ""
+
+#: inc/customizer.php:809
+msgid " bullseye"
+msgstr ""
+
+#: inc/customizer.php:810 inc/customizer.php:1168
+msgid " bus"
+msgstr ""
+
+#: inc/customizer.php:811 inc/customizer.php:1169
+msgid " cab"
+msgstr ""
+
+#: inc/customizer.php:812
+msgid " calculator"
+msgstr ""
+
+#: inc/customizer.php:813
+msgid " calendar"
+msgstr ""
+
+#: inc/customizer.php:816
+msgid " calendar-o"
+msgstr ""
+
+#: inc/customizer.php:819
+msgid " camera"
+msgstr ""
+
+#: inc/customizer.php:820
+msgid " camera-retro"
+msgstr ""
+
+#: inc/customizer.php:821 inc/customizer.php:1170
+msgid " car"
+msgstr ""
+
+#: inc/customizer.php:822 inc/customizer.php:1347
+msgid " caret-square-o-down"
+msgstr ""
+
+#: inc/customizer.php:823 inc/customizer.php:1348
+msgid " caret-square-o-left"
+msgstr ""
+
+#: inc/customizer.php:824 inc/customizer.php:1349
+msgid " caret-square-o-right"
+msgstr ""
+
+#: inc/customizer.php:825 inc/customizer.php:1350
+msgid " caret-square-o-up"
+msgstr ""
+
+#: inc/customizer.php:826
+msgid " cart-arrow-down"
+msgstr ""
+
+#: inc/customizer.php:827
+msgid " cart-plus"
+msgstr ""
+
+#: inc/customizer.php:828
+msgid " cc"
+msgstr ""
+
+#: inc/customizer.php:829
+msgid " certificate"
+msgstr ""
+
+#: inc/customizer.php:830
+msgid " check"
+msgstr ""
+
+#: inc/customizer.php:831
+msgid " check-circle"
+msgstr ""
+
+#: inc/customizer.php:832
+msgid " check-circle-o"
+msgstr ""
+
+#: inc/customizer.php:833 inc/customizer.php:1219
+msgid " check-square"
+msgstr ""
+
+#: inc/customizer.php:834 inc/customizer.php:1220
+msgid " check-square-o"
+msgstr ""
+
+#: inc/customizer.php:835
+msgid " child"
+msgstr ""
+
+#: inc/customizer.php:836 inc/customizer.php:1221
+msgid " circle"
+msgstr ""
+
+#: inc/customizer.php:837 inc/customizer.php:1222
+msgid " circle-o"
+msgstr ""
+
+#: inc/customizer.php:838 inc/customizer.php:1214
+msgid " circle-o-notch"
+msgstr ""
+
+#: inc/customizer.php:839
+msgid " circle-thin"
+msgstr ""
+
+#: inc/customizer.php:840
+msgid " clock-o"
+msgstr ""
+
+#: inc/customizer.php:842
+msgid " close"
+msgstr ""
+
+#: inc/customizer.php:843
+msgid " cloud"
+msgstr ""
+
+#: inc/customizer.php:844
+msgid " cloud-download"
+msgstr ""
+
+#: inc/customizer.php:845
+msgid " cloud-upload"
+msgstr ""
+
+#: inc/customizer.php:846
+msgid " code"
+msgstr ""
+
+#: inc/customizer.php:847
+msgid " code-fork"
+msgstr ""
+
+#: inc/customizer.php:848
+msgid " coffee"
+msgstr ""
+
+#: inc/customizer.php:849 inc/customizer.php:1215
+msgid " cog"
+msgstr ""
+
+#: inc/customizer.php:850
+msgid " cogs"
+msgstr ""
+
+#: inc/customizer.php:851
+msgid " comment"
+msgstr ""
+
+#: inc/customizer.php:852
+msgid " comment-o"
+msgstr ""
+
+#: inc/customizer.php:855
+msgid " comments"
+msgstr ""
+
+#: inc/customizer.php:856
+msgid " comments-o"
+msgstr ""
+
+#: inc/customizer.php:857
+msgid " compass"
+msgstr ""
+
+#: inc/customizer.php:858
+msgid " copyright"
+msgstr ""
+
+#: inc/customizer.php:860 inc/customizer.php:1238
+msgid " credit-card"
+msgstr ""
+
+#: inc/customizer.php:861
+msgid " crop"
+msgstr ""
+
+#: inc/customizer.php:862
+msgid " crosshairs"
+msgstr ""
+
+#: inc/customizer.php:863
+msgid " cube"
+msgstr ""
+
+#: inc/customizer.php:864
+msgid " cubes"
+msgstr ""
+
+#: inc/customizer.php:865
+msgid " cutlery"
+msgstr ""
+
+#: inc/customizer.php:866
+msgid " dashboard"
+msgstr ""
+
+#: inc/customizer.php:867
+msgid " database"
+msgstr ""
+
+#: inc/customizer.php:868
+msgid " desktop"
+msgstr ""
+
+#: inc/customizer.php:869
+msgid " diamond"
+msgstr ""
+
+#: inc/customizer.php:870 inc/customizer.php:1223
+msgid " dot-circle-o"
+msgstr ""
+
+#: inc/customizer.php:871
+msgid " download"
+msgstr ""
+
+#: inc/customizer.php:872
+msgid " edit"
+msgstr ""
+
+#: inc/customizer.php:873
+msgid " ellipsis-h"
+msgstr ""
+
+#: inc/customizer.php:874
+msgid " ellipsis-v"
+msgstr ""
+
+#: inc/customizer.php:875
+msgid " envelope"
+msgstr ""
+
+#: inc/customizer.php:876
+msgid " envelope-o"
+msgstr ""
+
+#: inc/customizer.php:877
+msgid " envelope-square"
+msgstr ""
+
+#: inc/customizer.php:878 inc/customizer.php:1283
+msgid " eraser"
+msgstr ""
+
+#: inc/customizer.php:879 inc/customizer.php:1359
+msgid " exchange"
+msgstr ""
+
+#: inc/customizer.php:880
+msgid " exclamation"
+msgstr ""
+
+#: inc/customizer.php:881
+msgid " exclamation-circle"
+msgstr ""
+
+#: inc/customizer.php:882
+msgid " exclamation-triangle"
+msgstr ""
+
+#: inc/customizer.php:883
+msgid " external-link"
+msgstr ""
+
+#: inc/customizer.php:884
+msgid " external-link-square"
+msgstr ""
+
+#: inc/customizer.php:885
+msgid " eye"
+msgstr ""
+
+#: inc/customizer.php:886
+msgid " eye-slash"
+msgstr ""
+
+#: inc/customizer.php:887
+msgid " eyedropper"
+msgstr ""
+
+#: inc/customizer.php:888
+msgid " fax"
+msgstr ""
+
+#: inc/customizer.php:889
+msgid " feed"
+msgstr ""
+
+#: inc/customizer.php:890
+msgid " female"
+msgstr ""
+
+#: inc/customizer.php:891 inc/customizer.php:1171
+msgid " fighter-jet"
+msgstr ""
+
+#: inc/customizer.php:892 inc/customizer.php:1197
+msgid " file-archive-o"
+msgstr ""
+
+#: inc/customizer.php:893 inc/customizer.php:1198
+msgid " file-audio-o"
+msgstr ""
+
+#: inc/customizer.php:894 inc/customizer.php:1199
+msgid " file-code-o"
+msgstr ""
+
+#: inc/customizer.php:895 inc/customizer.php:1200
+msgid " file-excel-o"
+msgstr ""
+
+#: inc/customizer.php:896 inc/customizer.php:1201
+msgid " file-image-o"
+msgstr ""
+
+#: inc/customizer.php:897 inc/customizer.php:1202
+msgid " file-movie-o"
+msgstr ""
+
+#: inc/customizer.php:898 inc/customizer.php:1204
+msgid " file-pdf-o"
+msgstr ""
+
+#: inc/customizer.php:899 inc/customizer.php:1205
+msgid " file-photo-o"
+msgstr ""
+
+#: inc/customizer.php:900 inc/customizer.php:1206
+msgid " file-picture-o"
+msgstr ""
+
+#: inc/customizer.php:901 inc/customizer.php:1207
+msgid " file-powerpoint-o"
+msgstr ""
+
+#: inc/customizer.php:902 inc/customizer.php:1208
+msgid " file-sound-o"
+msgstr ""
+
+#: inc/customizer.php:903 inc/customizer.php:1211
+msgid " file-video-o"
+msgstr ""
+
+#: inc/customizer.php:904 inc/customizer.php:1212
+msgid " file-word-o"
+msgstr ""
+
+#: inc/customizer.php:905 inc/customizer.php:1213
+msgid " file-zip-o"
+msgstr ""
+
+#: inc/customizer.php:906
+msgid " film"
+msgstr ""
+
+#: inc/customizer.php:907
+msgid " filter"
+msgstr ""
+
+#: inc/customizer.php:908
+msgid " fire"
+msgstr ""
+
+#: inc/customizer.php:909
+msgid " fire-extinguisher"
+msgstr ""
+
+#: inc/customizer.php:910
+msgid " flag"
+msgstr ""
+
+#: inc/customizer.php:911
+msgid " flag-checkered"
+msgstr ""
+
+#: inc/customizer.php:912
+msgid " flag-o"
+msgstr ""
+
+#: inc/customizer.php:913
+msgid " flash"
+msgstr ""
+
+#: inc/customizer.php:914
+msgid " flask"
+msgstr ""
+
+#: inc/customizer.php:915
+msgid " folder"
+msgstr ""
+
+#: inc/customizer.php:916
+msgid " folder-o"
+msgstr ""
+
+#: inc/customizer.php:917
+msgid " folder-open"
+msgstr ""
+
+#: inc/customizer.php:918
+msgid " folder-open-o"
+msgstr ""
+
+#: inc/customizer.php:919
+msgid " frown-o"
+msgstr ""
+
+#: inc/customizer.php:920
+msgid " futbol-o"
+msgstr ""
+
+#: inc/customizer.php:921
+msgid " gamepad"
+msgstr ""
+
+#: inc/customizer.php:922
+msgid " gavel"
+msgstr ""
+
+#: inc/customizer.php:923 inc/customizer.php:1216
+msgid " gear"
+msgstr ""
+
+#: inc/customizer.php:924
+msgid " gears"
+msgstr ""
+
+#: inc/customizer.php:925
+msgid " gift"
+msgstr ""
+
+#: inc/customizer.php:926
+msgid " glass"
+msgstr ""
+
+#: inc/customizer.php:927
+msgid " globe"
+msgstr ""
+
+#: inc/customizer.php:928
+msgid " graduation-cap"
+msgstr ""
+
+#: inc/customizer.php:929
+msgid " group"
+msgstr ""
+
+#: inc/customizer.php:939
+msgid " hdd-o"
+msgstr ""
+
+#: inc/customizer.php:940
+msgid " headphones"
+msgstr ""
+
+#: inc/customizer.php:941 inc/customizer.php:1536
+msgid " heart"
+msgstr ""
+
+#: inc/customizer.php:942 inc/customizer.php:1537
+msgid " heart-o"
+msgstr ""
+
+#: inc/customizer.php:943 inc/customizer.php:1538
+msgid " heartbeat"
+msgstr ""
+
+#: inc/customizer.php:944
+msgid " history"
+msgstr ""
+
+#: inc/customizer.php:945
+msgid " home"
+msgstr ""
+
+#: inc/customizer.php:946
+msgid " hotel"
+msgstr ""
+
+#: inc/customizer.php:956
+msgid " image"
+msgstr ""
+
+#: inc/customizer.php:957
+msgid " inbox"
+msgstr ""
+
+#: inc/customizer.php:959
+msgid " info"
+msgstr ""
+
+#: inc/customizer.php:960
+msgid " info-circle"
+msgstr ""
+
+#: inc/customizer.php:961
+msgid " institution"
+msgstr ""
+
+#: inc/customizer.php:962
+msgid " key"
+msgstr ""
+
+#: inc/customizer.php:963
+msgid " keyboard-o"
+msgstr ""
+
+#: inc/customizer.php:964
+msgid " language"
+msgstr ""
+
+#: inc/customizer.php:965
+msgid " laptop"
+msgstr ""
+
+#: inc/customizer.php:966
+msgid " leaf"
+msgstr ""
+
+#: inc/customizer.php:967
+msgid " legal"
+msgstr ""
+
+#: inc/customizer.php:968
+msgid " lemon-o"
+msgstr ""
+
+#: inc/customizer.php:969
+msgid " level-down"
+msgstr ""
+
+#: inc/customizer.php:970
+msgid " level-up"
+msgstr ""
+
+#: inc/customizer.php:971
+msgid " life-bouy"
+msgstr ""
+
+#: inc/customizer.php:972
+msgid " life-buoy"
+msgstr ""
+
+#: inc/customizer.php:973
+msgid " life-ring"
+msgstr ""
+
+#: inc/customizer.php:974
+msgid " life-saver"
+msgstr ""
+
+#: inc/customizer.php:975
+msgid " lightbulb-o"
+msgstr ""
+
+#: inc/customizer.php:976 inc/customizer.php:1244
+msgid " line-chart"
+msgstr ""
+
+#: inc/customizer.php:977
+msgid " location-arrow"
+msgstr ""
+
+#: inc/customizer.php:978
+msgid " lock"
+msgstr ""
+
+#: inc/customizer.php:979
+msgid " magic"
+msgstr ""
+
+#: inc/customizer.php:980
+msgid " magnet"
+msgstr ""
+
+#: inc/customizer.php:981
+msgid " mail-forward"
+msgstr ""
+
+#: inc/customizer.php:982
+msgid " mail-reply"
+msgstr ""
+
+#: inc/customizer.php:983
+msgid " mail-reply-all"
+msgstr ""
+
+#: inc/customizer.php:984
+msgid " male"
+msgstr ""
+
+#: inc/customizer.php:986
+msgid " map-marker"
+msgstr ""
+
+#: inc/customizer.php:990
+msgid " meh-o"
+msgstr ""
+
+#: inc/customizer.php:991
+msgid " microphone"
+msgstr ""
+
+#: inc/customizer.php:992
+msgid " microphone-slash"
+msgstr ""
+
+#: inc/customizer.php:993
+msgid " minus"
+msgstr ""
+
+#: inc/customizer.php:994
+msgid " minus-circle"
+msgstr ""
+
+#: inc/customizer.php:995 inc/customizer.php:1224
+msgid " minus-square"
+msgstr ""
+
+#: inc/customizer.php:996 inc/customizer.php:1225
+msgid " minus-square-o"
+msgstr ""
+
+#: inc/customizer.php:997
+msgid " mobile"
+msgstr ""
+
+#: inc/customizer.php:998
+msgid " mobile-phone"
+msgstr ""
+
+#: inc/customizer.php:999 inc/customizer.php:1259
+msgid " money"
+msgstr ""
+
+#: inc/customizer.php:1000
+msgid " moon-o"
+msgstr ""
+
+#: inc/customizer.php:1001
+msgid " morportfolioo-board"
+msgstr ""
+
+#: inc/customizer.php:1002 inc/customizer.php:1172
+msgid " motorcycle"
+msgstr ""
+
+#: inc/customizer.php:1004
+msgid " music"
+msgstr ""
+
+#: inc/customizer.php:1005
+msgid " navicon"
+msgstr ""
+
+#: inc/customizer.php:1006
+msgid " newspaper-o"
+msgstr ""
+
+#: inc/customizer.php:1009
+msgid " paint-brush"
+msgstr ""
+
+#: inc/customizer.php:1010
+msgid " paper-plane"
+msgstr ""
+
+#: inc/customizer.php:1011
+msgid " paper-plane-o"
+msgstr ""
+
+#: inc/customizer.php:1012
+msgid " paw"
+msgstr ""
+
+#: inc/customizer.php:1013
+msgid " pencil"
+msgstr ""
+
+#: inc/customizer.php:1014
+msgid " pencil-square"
+msgstr ""
+
+#: inc/customizer.php:1015
+msgid " pencil-square-o"
+msgstr ""
+
+#: inc/customizer.php:1016
+msgid " phone"
+msgstr ""
+
+#: inc/customizer.php:1017
+msgid " phone-square"
+msgstr ""
+
+#: inc/customizer.php:1018
+msgid " photo"
+msgstr ""
+
+#: inc/customizer.php:1019
+msgid " picture-o"
+msgstr ""
+
+#: inc/customizer.php:1020 inc/customizer.php:1245
+msgid " pie-chart"
+msgstr ""
+
+#: inc/customizer.php:1021 inc/customizer.php:1173
+msgid " plane"
+msgstr ""
+
+#: inc/customizer.php:1022
+msgid " plug"
+msgstr ""
+
+#: inc/customizer.php:1023
+msgid " plus"
+msgstr ""
+
+#: inc/customizer.php:1024
+msgid " plus-circle"
+msgstr ""
+
+#: inc/customizer.php:1025 inc/customizer.php:1226 inc/customizer.php:1541
+msgid " plus-square"
+msgstr ""
+
+#: inc/customizer.php:1026 inc/customizer.php:1227
+msgid " plus-square-o"
+msgstr ""
+
+#: inc/customizer.php:1027
+msgid " power-off"
+msgstr ""
+
+#: inc/customizer.php:1028
+msgid " print"
+msgstr ""
+
+#: inc/customizer.php:1029
+msgid " puzzle-piece"
+msgstr ""
+
+#: inc/customizer.php:1030
+msgid " qrcode"
+msgstr ""
+
+#: inc/customizer.php:1031
+msgid " question"
+msgstr ""
+
+#: inc/customizer.php:1032
+msgid " question-circle"
+msgstr ""
+
+#: inc/customizer.php:1033
+msgid " quote-left"
+msgstr ""
+
+#: inc/customizer.php:1034
+msgid " quote-right"
+msgstr ""
+
+#: inc/customizer.php:1035 inc/customizer.php:1384
+msgid " random"
+msgstr ""
+
+#: inc/customizer.php:1036
+msgid " recycle"
+msgstr ""
+
+#: inc/customizer.php:1037 inc/customizer.php:1217
+msgid " refresh"
+msgstr ""
+
+#: inc/customizer.php:1039
+msgid " remove"
+msgstr ""
+
+#: inc/customizer.php:1040
+msgid " reorder"
+msgstr ""
+
+#: inc/customizer.php:1041
+msgid " reply"
+msgstr ""
+
+#: inc/customizer.php:1042
+msgid " reply-all"
+msgstr ""
+
+#: inc/customizer.php:1043
+msgid " retweet"
+msgstr ""
+
+#: inc/customizer.php:1044
+msgid " road"
+msgstr ""
+
+#: inc/customizer.php:1045 inc/customizer.php:1174
+msgid " rocket"
+msgstr ""
+
+#: inc/customizer.php:1046
+msgid " rss"
+msgstr ""
+
+#: inc/customizer.php:1047
+msgid " rss-square"
+msgstr ""
+
+#: inc/customizer.php:1048
+msgid " search"
+msgstr ""
+
+#: inc/customizer.php:1049
+msgid " search-minus"
+msgstr ""
+
+#: inc/customizer.php:1050
+msgid " search-plus"
+msgstr ""
+
+#: inc/customizer.php:1051
+msgid " send"
+msgstr ""
+
+#: inc/customizer.php:1052
+msgid " send-o"
+msgstr ""
+
+#: inc/customizer.php:1053
+msgid " server"
+msgstr ""
+
+#: inc/customizer.php:1054
+msgid " share"
+msgstr ""
+
+#: inc/customizer.php:1055 inc/customizer.php:1487
+msgid " share-alt"
+msgstr ""
+
+#: inc/customizer.php:1056 inc/customizer.php:1488
+msgid " share-alt-square"
+msgstr ""
+
+#: inc/customizer.php:1057
+msgid " share-square"
+msgstr ""
+
+#: inc/customizer.php:1058
+msgid " share-square-o"
+msgstr ""
+
+#: inc/customizer.php:1059
+msgid " shield"
+msgstr ""
+
+#: inc/customizer.php:1060 inc/customizer.php:1175
+msgid " ship"
+msgstr ""
+
+#: inc/customizer.php:1061
+msgid " shopping-cart"
+msgstr ""
+
+#: inc/customizer.php:1062
+msgid " sign-in"
+msgstr ""
+
+#: inc/customizer.php:1063
+msgid " sign-out"
+msgstr ""
+
+#: inc/customizer.php:1064
+msgid " signal"
+msgstr ""
+
+#: inc/customizer.php:1065
+msgid " sitemap"
+msgstr ""
+
+#: inc/customizer.php:1066
+msgid " sliders"
+msgstr ""
+
+#: inc/customizer.php:1067
+msgid " smile-o"
+msgstr ""
+
+#: inc/customizer.php:1068
+msgid " soccer-ball-o"
+msgstr ""
+
+#: inc/customizer.php:1069
+msgid " sort"
+msgstr ""
+
+#: inc/customizer.php:1070
+msgid " sort-alpha-asc"
+msgstr ""
+
+#: inc/customizer.php:1071
+msgid " sort-alpha-desc"
+msgstr ""
+
+#: inc/customizer.php:1072
+msgid " sort-amount-asc"
+msgstr ""
+
+#: inc/customizer.php:1073
+msgid " sort-amount-desc"
+msgstr ""
+
+#: inc/customizer.php:1074
+msgid " sort-asc"
+msgstr ""
+
+#: inc/customizer.php:1075
+msgid " sort-desc"
+msgstr ""
+
+#: inc/customizer.php:1076
+msgid " sort-down"
+msgstr ""
+
+#: inc/customizer.php:1077
+msgid " sort-numeric-asc"
+msgstr ""
+
+#: inc/customizer.php:1078
+msgid " sort-numeric-desc"
+msgstr ""
+
+#: inc/customizer.php:1079
+msgid " sort-up"
+msgstr ""
+
+#: inc/customizer.php:1080 inc/customizer.php:1176
+msgid " space-shuttle"
+msgstr ""
+
+#: inc/customizer.php:1081 inc/customizer.php:1218
+msgid " spinner"
+msgstr ""
+
+#: inc/customizer.php:1082
+msgid " spoon"
+msgstr ""
+
+#: inc/customizer.php:1083 inc/customizer.php:1228
+msgid " square"
+msgstr ""
+
+#: inc/customizer.php:1084 inc/customizer.php:1229
+msgid " square-o"
+msgstr ""
+
+#: inc/customizer.php:1085
+msgid " sportfolioo"
+msgstr ""
+
+#: inc/customizer.php:1086
+msgid " sportfolioo-half"
+msgstr ""
+
+#: inc/customizer.php:1087
+msgid " sportfolioo-half-empty"
+msgstr ""
+
+#: inc/customizer.php:1088
+msgid " sportfolioo-half-full"
+msgstr ""
+
+#: inc/customizer.php:1089
+msgid " sportfolioo-half-o"
+msgstr ""
+
+#: inc/customizer.php:1090
+msgid " sportfolioo-o"
+msgstr ""
+
+#: inc/customizer.php:1093
+msgid " street-view"
+msgstr ""
+
+#: inc/customizer.php:1094
+msgid " suitcase"
+msgstr ""
+
+#: inc/customizer.php:1095
+msgid " sun-o"
+msgstr ""
+
+#: inc/customizer.php:1096
+msgid " support"
+msgstr ""
+
+#: inc/customizer.php:1097
+msgid " tablet"
+msgstr ""
+
+#: inc/customizer.php:1098
+msgid " tachometer"
+msgstr ""
+
+#: inc/customizer.php:1099
+msgid " tag"
+msgstr ""
+
+#: inc/customizer.php:1100
+msgid " tags"
+msgstr ""
+
+#: inc/customizer.php:1101
+msgid " tasks"
+msgstr ""
+
+#: inc/customizer.php:1102 inc/customizer.php:1178
+msgid " taxi"
+msgstr ""
+
+#: inc/customizer.php:1104
+msgid " terminal"
+msgstr ""
+
+#: inc/customizer.php:1105
+msgid " thumb-tack"
+msgstr ""
+
+#: inc/customizer.php:1106 inc/customizer.php:1161
+msgid " thumbs-down"
+msgstr ""
+
+#: inc/customizer.php:1107 inc/customizer.php:1162
+msgid " thumbs-o-down"
+msgstr ""
+
+#: inc/customizer.php:1108 inc/customizer.php:1163
+msgid " thumbs-o-up"
+msgstr ""
+
+#: inc/customizer.php:1109 inc/customizer.php:1164
+msgid " thumbs-up"
+msgstr ""
+
+#: inc/customizer.php:1110
+msgid " ticket"
+msgstr ""
+
+#: inc/customizer.php:1111
+msgid " times"
+msgstr ""
+
+#: inc/customizer.php:1112
+msgid " times-circle"
+msgstr ""
+
+#: inc/customizer.php:1113
+msgid " times-circle-o"
+msgstr ""
+
+#: inc/customizer.php:1114
+msgid " tint"
+msgstr ""
+
+#: inc/customizer.php:1115 inc/customizer.php:1368
+msgid " toggle-down"
+msgstr ""
+
+#: inc/customizer.php:1116 inc/customizer.php:1369
+msgid " toggle-left"
+msgstr ""
+
+#: inc/customizer.php:1117
+msgid " toggle-off"
+msgstr ""
+
+#: inc/customizer.php:1118
+msgid " toggle-on"
+msgstr ""
+
+#: inc/customizer.php:1119 inc/customizer.php:1370
+msgid " toggle-right"
+msgstr ""
+
+#: inc/customizer.php:1120 inc/customizer.php:1371
+msgid " toggle-up"
+msgstr ""
+
+#: inc/customizer.php:1122
+msgid " trash"
+msgstr ""
+
+#: inc/customizer.php:1123
+msgid " trash-o"
+msgstr ""
+
+#: inc/customizer.php:1124
+msgid " tree"
+msgstr ""
+
+#: inc/customizer.php:1125
+msgid " trophy"
+msgstr ""
+
+#: inc/customizer.php:1126 inc/customizer.php:1180
+msgid " truck"
+msgstr ""
+
+#: inc/customizer.php:1127
+msgid " tty"
+msgstr ""
+
+#: inc/customizer.php:1129
+msgid " umbrella"
+msgstr ""
+
+#: inc/customizer.php:1130
+msgid " university"
+msgstr ""
+
+#: inc/customizer.php:1131
+msgid " unlock"
+msgstr ""
+
+#: inc/customizer.php:1132
+msgid " unlock-alt"
+msgstr ""
+
+#: inc/customizer.php:1133
+msgid " unsorted"
+msgstr ""
+
+#: inc/customizer.php:1134
+msgid " upload"
+msgstr ""
+
+#: inc/customizer.php:1135
+msgid " user"
+msgstr ""
+
+#: inc/customizer.php:1136
+msgid " user-plus"
+msgstr ""
+
+#: inc/customizer.php:1137
+msgid " user-secret"
+msgstr ""
+
+#: inc/customizer.php:1138
+msgid " user-times"
+msgstr ""
+
+#: inc/customizer.php:1139
+msgid " users"
+msgstr ""
+
+#: inc/customizer.php:1140
+msgid " video-camera"
+msgstr ""
+
+#: inc/customizer.php:1141
+msgid " volume-down"
+msgstr ""
+
+#: inc/customizer.php:1142
+msgid " volume-off"
+msgstr ""
+
+#: inc/customizer.php:1143
+msgid " volume-up"
+msgstr ""
+
+#: inc/customizer.php:1144
+msgid " warning"
+msgstr ""
+
+#: inc/customizer.php:1145 inc/customizer.php:1181 inc/customizer.php:1544
+msgid " wheelchair"
+msgstr ""
+
+#: inc/customizer.php:1146
+msgid " wifi"
+msgstr ""
+
+#: inc/customizer.php:1147
+msgid " wrench"
+msgstr ""
+
+#: inc/customizer.php:1150 inc/customizer.php:1360
+msgid " hand-o-down"
+msgstr ""
+
+#: inc/customizer.php:1151 inc/customizer.php:1361
+msgid " hand-o-left"
+msgstr ""
+
+#: inc/customizer.php:1152 inc/customizer.php:1362
+msgid " hand-o-right"
+msgstr ""
+
+#: inc/customizer.php:1153 inc/customizer.php:1363
+msgid " hand-o-up"
+msgstr ""
+
+#: inc/customizer.php:1165 inc/customizer.php:1534
+msgid " ambulance"
+msgstr ""
+
+#: inc/customizer.php:1177
+msgid " subway"
+msgstr ""
+
+#: inc/customizer.php:1179
+msgid " train"
+msgstr ""
+
+#: inc/customizer.php:1183
+msgid " intersex"
+msgstr ""
+
+#: inc/customizer.php:1184
+msgid " mars"
+msgstr ""
+
+#: inc/customizer.php:1185
+msgid " mars-double"
+msgstr ""
+
+#: inc/customizer.php:1186
+msgid " mars-stroke"
+msgstr ""
+
+#: inc/customizer.php:1187
+msgid " mars-stroke-h"
+msgstr ""
+
+#: inc/customizer.php:1188
+msgid " mars-stroke-v"
+msgstr ""
+
+#: inc/customizer.php:1189
+msgid " mercury"
+msgstr ""
+
+#: inc/customizer.php:1190
+msgid " neuter"
+msgstr ""
+
+#: inc/customizer.php:1191
+msgid " transgender"
+msgstr ""
+
+#: inc/customizer.php:1192
+msgid " transgender-alt"
+msgstr ""
+
+#: inc/customizer.php:1193
+msgid " venus"
+msgstr ""
+
+#: inc/customizer.php:1194
+msgid " venus-double"
+msgstr ""
+
+#: inc/customizer.php:1195
+msgid " venus-mars"
+msgstr ""
+
+#: inc/customizer.php:1196 inc/customizer.php:1284
+msgid " file"
+msgstr ""
+
+#: inc/customizer.php:1203 inc/customizer.php:1285
+msgid " file-o"
+msgstr ""
+
+#: inc/customizer.php:1209 inc/customizer.php:1286
+msgid " file-text"
+msgstr ""
+
+#: inc/customizer.php:1210 inc/customizer.php:1287
+msgid " file-text-o"
+msgstr ""
+
+#: inc/customizer.php:1230 inc/customizer.php:1403
+msgid " cc-amex"
+msgstr ""
+
+#: inc/customizer.php:1232 inc/customizer.php:1405
+msgid " cc-discover"
+msgstr ""
+
+#: inc/customizer.php:1234 inc/customizer.php:1407
+msgid " cc-mastercard"
+msgstr ""
+
+#: inc/customizer.php:1235 inc/customizer.php:1408
+msgid " cc-paypal"
+msgstr ""
+
+#: inc/customizer.php:1236 inc/customizer.php:1409
+msgid " cc-stripe"
+msgstr ""
+
+#: inc/customizer.php:1237 inc/customizer.php:1410
+msgid " cc-visa"
+msgstr ""
+
+#: inc/customizer.php:1239 inc/customizer.php:1447
+msgid " google-wallet"
+msgstr ""
+
+#: inc/customizer.php:1240 inc/customizer.php:1473
+msgid " paypal"
+msgstr ""
+
+#: inc/customizer.php:1246 inc/customizer.php:1399
+msgid " bitcoin"
+msgstr ""
+
+#: inc/customizer.php:1247 inc/customizer.php:1401
+msgid " btc"
+msgstr ""
+
+#: inc/customizer.php:1248
+msgid " cny"
+msgstr ""
+
+#: inc/customizer.php:1249
+msgid " dollar"
+msgstr ""
+
+#: inc/customizer.php:1250
+msgid " eur"
+msgstr ""
+
+#: inc/customizer.php:1251
+msgid " euro"
+msgstr ""
+
+#: inc/customizer.php:1252
+msgid " gbp"
+msgstr ""
+
+#: inc/customizer.php:1255
+msgid " ils"
+msgstr ""
+
+#: inc/customizer.php:1256
+msgid " inr"
+msgstr ""
+
+#: inc/customizer.php:1257
+msgid " jpy"
+msgstr ""
+
+#: inc/customizer.php:1258
+msgid " krw"
+msgstr ""
+
+#: inc/customizer.php:1260
+msgid " rmb"
+msgstr ""
+
+#: inc/customizer.php:1261
+msgid " rouble"
+msgstr ""
+
+#: inc/customizer.php:1262
+msgid " rub"
+msgstr ""
+
+#: inc/customizer.php:1263
+msgid " ruble"
+msgstr ""
+
+#: inc/customizer.php:1264
+msgid " rupee"
+msgstr ""
+
+#: inc/customizer.php:1265
+msgid " shekel"
+msgstr ""
+
+#: inc/customizer.php:1266
+msgid " sheqel"
+msgstr ""
+
+#: inc/customizer.php:1267
+msgid " try"
+msgstr ""
+
+#: inc/customizer.php:1268
+msgid " turkish-lira"
+msgstr ""
+
+#: inc/customizer.php:1269
+msgid " won"
+msgstr ""
+
+#: inc/customizer.php:1270
+msgid " yen"
+msgstr ""
+
+#: inc/customizer.php:1271
+msgid " align-center"
+msgstr ""
+
+#: inc/customizer.php:1272
+msgid " align-justify"
+msgstr ""
+
+#: inc/customizer.php:1273
+msgid " align-left"
+msgstr ""
+
+#: inc/customizer.php:1274
+msgid " align-right"
+msgstr ""
+
+#: inc/customizer.php:1275
+msgid " bold"
+msgstr ""
+
+#: inc/customizer.php:1276
+msgid " chain"
+msgstr ""
+
+#: inc/customizer.php:1277
+msgid " chain-broken"
+msgstr ""
+
+#: inc/customizer.php:1278
+msgid " clipboard"
+msgstr ""
+
+#: inc/customizer.php:1279
+msgid " columns"
+msgstr ""
+
+#: inc/customizer.php:1280
+msgid " copy"
+msgstr ""
+
+#: inc/customizer.php:1281
+msgid " cut"
+msgstr ""
+
+#: inc/customizer.php:1282
+msgid " dedent"
+msgstr ""
+
+#: inc/customizer.php:1288
+msgid " files-o"
+msgstr ""
+
+#: inc/customizer.php:1289
+msgid " floppy-o"
+msgstr ""
+
+#: inc/customizer.php:1290
+msgid " font"
+msgstr ""
+
+#: inc/customizer.php:1291
+msgid " header"
+msgstr ""
+
+#: inc/customizer.php:1292
+msgid " indent"
+msgstr ""
+
+#: inc/customizer.php:1293
+msgid " italic"
+msgstr ""
+
+#: inc/customizer.php:1294
+msgid " link"
+msgstr ""
+
+#: inc/customizer.php:1295
+msgid " list"
+msgstr ""
+
+#: inc/customizer.php:1296
+msgid " list-alt"
+msgstr ""
+
+#: inc/customizer.php:1297
+msgid " list-ol"
+msgstr ""
+
+#: inc/customizer.php:1298
+msgid " list-ul"
+msgstr ""
+
+#: inc/customizer.php:1299
+msgid " outdent"
+msgstr ""
+
+#: inc/customizer.php:1300
+msgid " paperclip"
+msgstr ""
+
+#: inc/customizer.php:1301
+msgid " paragraph"
+msgstr ""
+
+#: inc/customizer.php:1302
+msgid " paste"
+msgstr ""
+
+#: inc/customizer.php:1303
+msgid " repeat"
+msgstr ""
+
+#: inc/customizer.php:1304
+msgid " rotate-left"
+msgstr ""
+
+#: inc/customizer.php:1305
+msgid " rotate-right"
+msgstr ""
+
+#: inc/customizer.php:1306
+msgid " save"
+msgstr ""
+
+#: inc/customizer.php:1307
+msgid " scissors"
+msgstr ""
+
+#: inc/customizer.php:1308
+msgid " strikethrough"
+msgstr ""
+
+#: inc/customizer.php:1309
+msgid " subscript"
+msgstr ""
+
+#: inc/customizer.php:1310
+msgid " superscript"
+msgstr ""
+
+#: inc/customizer.php:1311
+msgid " table"
+msgstr ""
+
+#: inc/customizer.php:1312
+msgid " text-height"
+msgstr ""
+
+#: inc/customizer.php:1313
+msgid " text-width"
+msgstr ""
+
+#: inc/customizer.php:1314
+msgid " th"
+msgstr ""
+
+#: inc/customizer.php:1315
+msgid " th-large"
+msgstr ""
+
+#: inc/customizer.php:1316
+msgid " th-list"
+msgstr ""
+
+#: inc/customizer.php:1317
+msgid " underline"
+msgstr ""
+
+#: inc/customizer.php:1318
+msgid " undo"
+msgstr ""
+
+#: inc/customizer.php:1319
+msgid " unlink"
+msgstr ""
+
+#: inc/customizer.php:1320
+msgid " angle-double-down"
+msgstr ""
+
+#: inc/customizer.php:1321
+msgid " angle-double-left"
+msgstr ""
+
+#: inc/customizer.php:1322
+msgid " angle-double-right"
+msgstr ""
+
+#: inc/customizer.php:1323
+msgid " angle-double-up"
+msgstr ""
+
+#: inc/customizer.php:1324
+msgid " angle-down"
+msgstr ""
+
+#: inc/customizer.php:1325
+msgid " angle-left"
+msgstr ""
+
+#: inc/customizer.php:1326
+msgid " angle-right"
+msgstr ""
+
+#: inc/customizer.php:1327
+msgid " angle-up"
+msgstr ""
+
+#: inc/customizer.php:1328
+msgid " arrow-circle-down"
+msgstr ""
+
+#: inc/customizer.php:1329
+msgid " arrow-circle-left"
+msgstr ""
+
+#: inc/customizer.php:1330
+msgid " arrow-circle-o-down"
+msgstr ""
+
+#: inc/customizer.php:1331
+msgid " arrow-circle-o-left"
+msgstr ""
+
+#: inc/customizer.php:1332
+msgid " arrow-circle-o-right"
+msgstr ""
+
+#: inc/customizer.php:1333
+msgid " arrow-circle-o-up"
+msgstr ""
+
+#: inc/customizer.php:1334
+msgid " arrow-circle-right"
+msgstr ""
+
+#: inc/customizer.php:1335
+msgid " arrow-circle-up"
+msgstr ""
+
+#: inc/customizer.php:1336
+msgid " arrow-down"
+msgstr ""
+
+#: inc/customizer.php:1337
+msgid " arrow-left"
+msgstr ""
+
+#: inc/customizer.php:1338
+msgid " arrow-right"
+msgstr ""
+
+#: inc/customizer.php:1339
+msgid " arrow-up"
+msgstr ""
+
+#: inc/customizer.php:1341 inc/customizer.php:1372
+msgid " arrows-alt"
+msgstr ""
+
+#: inc/customizer.php:1344
+msgid " caret-down"
+msgstr ""
+
+#: inc/customizer.php:1345
+msgid " caret-left"
+msgstr ""
+
+#: inc/customizer.php:1346
+msgid " caret-right"
+msgstr ""
+
+#: inc/customizer.php:1351
+msgid " caret-up"
+msgstr ""
+
+#: inc/customizer.php:1352
+msgid " chevron-circle-down"
+msgstr ""
+
+#: inc/customizer.php:1353
+msgid " chevron-circle-left"
+msgstr ""
+
+#: inc/customizer.php:1354
+msgid " chevron-circle-right"
+msgstr ""
+
+#: inc/customizer.php:1355
+msgid " chevron-circle-up"
+msgstr ""
+
+#: inc/customizer.php:1356
+msgid " chevron-left"
+msgstr ""
+
+#: inc/customizer.php:1357
+msgid " chevron-right"
+msgstr ""
+
+#: inc/customizer.php:1358
+msgid " chevron-up"
+msgstr ""
+
+#: inc/customizer.php:1364
+msgid " long-arrow-down"
+msgstr ""
+
+#: inc/customizer.php:1365
+msgid " long-arrow-left"
+msgstr ""
+
+#: inc/customizer.php:1366
+msgid " long-arrow-right"
+msgstr ""
+
+#: inc/customizer.php:1367
+msgid " long-arrow-up"
+msgstr ""
+
+#: inc/customizer.php:1373
+msgid " backward"
+msgstr ""
+
+#: inc/customizer.php:1374
+msgid " compress"
+msgstr ""
+
+#: inc/customizer.php:1375
+msgid " eject"
+msgstr ""
+
+#: inc/customizer.php:1376
+msgid " expand"
+msgstr ""
+
+#: inc/customizer.php:1377
+msgid " fast-backward"
+msgstr ""
+
+#: inc/customizer.php:1378
+msgid " fast-forward"
+msgstr ""
+
+#: inc/customizer.php:1379
+msgid " forward"
+msgstr ""
+
+#: inc/customizer.php:1380
+msgid " pause"
+msgstr ""
+
+#: inc/customizer.php:1381
+msgid " play"
+msgstr ""
+
+#: inc/customizer.php:1382
+msgid " play-circle"
+msgstr ""
+
+#: inc/customizer.php:1383
+msgid " play-circle-o"
+msgstr ""
+
+#: inc/customizer.php:1385
+msgid " step-backward"
+msgstr ""
+
+#: inc/customizer.php:1386
+msgid " step-forward"
+msgstr ""
+
+#: inc/customizer.php:1387
+msgid " stop"
+msgstr ""
+
+#: inc/customizer.php:1388 inc/customizer.php:1532
+msgid " youtube-play"
+msgstr ""
+
+#: inc/customizer.php:1390
+msgid " adn"
+msgstr ""
+
+#: inc/customizer.php:1392
+msgid " android"
+msgstr ""
+
+#: inc/customizer.php:1393
+msgid " angellist"
+msgstr ""
+
+#: inc/customizer.php:1394
+msgid " apple"
+msgstr ""
+
+#: inc/customizer.php:1395
+msgid " behance"
+msgstr ""
+
+#: inc/customizer.php:1396
+msgid " behance-square"
+msgstr ""
+
+#: inc/customizer.php:1397
+msgid " bitbucket"
+msgstr ""
+
+#: inc/customizer.php:1398
+msgid " bitbucket-square"
+msgstr ""
+
+#: inc/customizer.php:1402
+msgid " buysellads"
+msgstr ""
+
+#: inc/customizer.php:1412
+msgid " codepen"
+msgstr ""
+
+#: inc/customizer.php:1413
+msgid " connectdevelop"
+msgstr ""
+
+#: inc/customizer.php:1415
+msgid " css3"
+msgstr ""
+
+#: inc/customizer.php:1416
+msgid " dashcube"
+msgstr ""
+
+#: inc/customizer.php:1417
+msgid " delicious"
+msgstr ""
+
+#: inc/customizer.php:1418
+msgid " devianportfolioot"
+msgstr ""
+
+#: inc/customizer.php:1419
+msgid " digg"
+msgstr ""
+
+#: inc/customizer.php:1420
+msgid " dribbble"
+msgstr ""
+
+#: inc/customizer.php:1421
+msgid " dropbox"
+msgstr ""
+
+#: inc/customizer.php:1422
+msgid " drupal"
+msgstr ""
+
+#: inc/customizer.php:1423
+msgid " empire"
+msgstr ""
+
+#: inc/customizer.php:1425
+msgid " facebook"
+msgstr ""
+
+#: inc/customizer.php:1426
+msgid " facebook-f"
+msgstr ""
+
+#: inc/customizer.php:1427
+msgid " facebook-official"
+msgstr ""
+
+#: inc/customizer.php:1428
+msgid " facebook-square"
+msgstr ""
+
+#: inc/customizer.php:1430
+msgid " flickr"
+msgstr ""
+
+#: inc/customizer.php:1432
+msgid " forumbee"
+msgstr ""
+
+#: inc/customizer.php:1433
+msgid " foursquare"
+msgstr ""
+
+#: inc/customizer.php:1434
+msgid " ge"
+msgstr ""
+
+#: inc/customizer.php:1438
+msgid " git"
+msgstr ""
+
+#: inc/customizer.php:1439
+msgid " git-square"
+msgstr ""
+
+#: inc/customizer.php:1440
+msgid " github"
+msgstr ""
+
+#: inc/customizer.php:1441
+msgid " github-alt"
+msgstr ""
+
+#: inc/customizer.php:1442
+msgid " github-square"
+msgstr ""
+
+#: inc/customizer.php:1443
+msgid " gittip"
+msgstr ""
+
+#: inc/customizer.php:1444
+msgid " google"
+msgstr ""
+
+#: inc/customizer.php:1445
+msgid " google-plus"
+msgstr ""
+
+#: inc/customizer.php:1446
+msgid " google-plus-square"
+msgstr ""
+
+#: inc/customizer.php:1448
+msgid " gratipay"
+msgstr ""
+
+#: inc/customizer.php:1449
+msgid " hacker-news"
+msgstr ""
+
+#: inc/customizer.php:1451
+msgid " html5"
+msgstr ""
+
+#: inc/customizer.php:1452
+msgid " instagram"
+msgstr ""
+
+#: inc/customizer.php:1454
+msgid " ioxhost"
+msgstr ""
+
+#: inc/customizer.php:1455
+msgid " joomla"
+msgstr ""
+
+#: inc/customizer.php:1456
+msgid " jsfiddle"
+msgstr ""
+
+#: inc/customizer.php:1457
+msgid " lastfm"
+msgstr ""
+
+#: inc/customizer.php:1458
+msgid " lastfm-square"
+msgstr ""
+
+#: inc/customizer.php:1459
+msgid " leanpub"
+msgstr ""
+
+#: inc/customizer.php:1460
+msgid " linkedin"
+msgstr ""
+
+#: inc/customizer.php:1461
+msgid " linkedin-square"
+msgstr ""
+
+#: inc/customizer.php:1462
+msgid " linux"
+msgstr ""
+
+#: inc/customizer.php:1463
+msgid " maxcdn"
+msgstr ""
+
+#: inc/customizer.php:1464
+msgid " meanpath"
+msgstr ""
+
+#: inc/customizer.php:1465
+msgid " medium"
+msgstr ""
+
+#: inc/customizer.php:1469
+msgid " openid"
+msgstr ""
+
+#: inc/customizer.php:1472
+msgid " pagelines"
+msgstr ""
+
+#: inc/customizer.php:1474
+msgid " pied-piper"
+msgstr ""
+
+#: inc/customizer.php:1475
+msgid " pied-piper-alt"
+msgstr ""
+
+#: inc/customizer.php:1476
+msgid " pinterest"
+msgstr ""
+
+#: inc/customizer.php:1477
+msgid " pinterest-p"
+msgstr ""
+
+#: inc/customizer.php:1478
+msgid " pinterest-square"
+msgstr ""
+
+#: inc/customizer.php:1479
+msgid " qq"
+msgstr ""
+
+#: inc/customizer.php:1480
+msgid " ra"
+msgstr ""
+
+#: inc/customizer.php:1481
+msgid " rebel"
+msgstr ""
+
+#: inc/customizer.php:1482
+msgid " reddit"
+msgstr ""
+
+#: inc/customizer.php:1483
+msgid " reddit-square"
+msgstr ""
+
+#: inc/customizer.php:1484
+msgid " renren"
+msgstr ""
+
+#: inc/customizer.php:1486
+msgid " sellsy"
+msgstr ""
+
+#: inc/customizer.php:1489
+msgid " shirtsinbulk"
+msgstr ""
+
+#: inc/customizer.php:1490
+msgid " simplybuilt"
+msgstr ""
+
+#: inc/customizer.php:1491
+msgid " skyatlas"
+msgstr ""
+
+#: inc/customizer.php:1492
+msgid " skype"
+msgstr ""
+
+#: inc/customizer.php:1493
+msgid " slack"
+msgstr ""
+
+#: inc/customizer.php:1494
+msgid " slideshare"
+msgstr ""
+
+#: inc/customizer.php:1495
+msgid " soundcloud"
+msgstr ""
+
+#: inc/customizer.php:1496
+msgid " spotify"
+msgstr ""
+
+#: inc/customizer.php:1497
+msgid " stack-exchange"
+msgstr ""
+
+#: inc/customizer.php:1498
+msgid " stack-overflow"
+msgstr ""
+
+#: inc/customizer.php:1499
+msgid " steam"
+msgstr ""
+
+#: inc/customizer.php:1500
+msgid " steam-square"
+msgstr ""
+
+#: inc/customizer.php:1501
+msgid " stumbleupon"
+msgstr ""
+
+#: inc/customizer.php:1502
+msgid " stumbleupon-circle"
+msgstr ""
+
+#: inc/customizer.php:1503
+msgid " tencent-weibo"
+msgstr ""
+
+#: inc/customizer.php:1504
+msgid " trello"
+msgstr ""
+
+#: inc/customizer.php:1506
+msgid " tumblr"
+msgstr ""
+
+#: inc/customizer.php:1507
+msgid " tumblr-square"
+msgstr ""
+
+#: inc/customizer.php:1508
+msgid " twitch"
+msgstr ""
+
+#: inc/customizer.php:1509
+msgid " twitter"
+msgstr ""
+
+#: inc/customizer.php:1510
+msgid " twitter-square"
+msgstr ""
+
+#: inc/customizer.php:1511
+msgid " viacoin"
+msgstr ""
+
+#: inc/customizer.php:1513
+msgid " vimeo-square"
+msgstr ""
+
+#: inc/customizer.php:1514
+msgid " vine"
+msgstr ""
+
+#: inc/customizer.php:1515
+msgid " vk"
+msgstr ""
+
+#: inc/customizer.php:1516
+msgid " wechat"
+msgstr ""
+
+#: inc/customizer.php:1517
+msgid " weibo"
+msgstr ""
+
+#: inc/customizer.php:1518
+msgid " weixin"
+msgstr ""
+
+#: inc/customizer.php:1519
+msgid " whatsapp"
+msgstr ""
+
+#: inc/customizer.php:1521
+msgid " windows"
+msgstr ""
+
+#: inc/customizer.php:1522
+msgid " wordpress"
+msgstr ""
+
+#: inc/customizer.php:1523
+msgid " xing"
+msgstr ""
+
+#: inc/customizer.php:1524
+msgid " xing-square"
+msgstr ""
+
+#: inc/customizer.php:1526
+msgid " y-combinator-square"
+msgstr ""
+
+#: inc/customizer.php:1527
+msgid " yahoo"
+msgstr ""
+
+#: inc/customizer.php:1529
+msgid " yc-square"
+msgstr ""
+
+#: inc/customizer.php:1530
+msgid " yelp"
+msgstr ""
+
+#: inc/customizer.php:1531
+msgid " youtube"
+msgstr ""
+
+#: inc/customizer.php:1533
+msgid " youtube-square"
+msgstr ""
+
+#: inc/customizer.php:1535
+msgid " h-square"
+msgstr ""
+
+#: inc/customizer.php:1539
+msgid " hospital-o"
+msgstr ""
+
+#: inc/customizer.php:1540
+msgid " medkit"
+msgstr ""
+
+#: inc/customizer.php:1542
+msgid " stethoscope"
+msgstr ""
+
+#: inc/customizer.php:1543
+msgid " user-md"
+msgstr ""
+
 #: inc/template-tags.php:52
-#@ _s
 msgid ", "
 msgstr ""
 
-#. translators: 1: list of categories.
 #: inc/template-tags.php:55
 #, php-format
-#@ _s
 msgid "Posted in %1$s"
 msgstr ""
 
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:59
+#: inc/template-tags.php:55
 #, php-format
-#@ _s
-msgctxt "list item separator"
-msgid ", "
+msgid "<span class=\"cat-links\">"
 msgstr ""
 
-#. translators: 1: list of tags.
 #: inc/template-tags.php:62
+#, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
-#. translators: %s: post title
+#: inc/template-tags.php:62
+#, php-format
+msgid "<p class=\"tags-links\">"
+msgstr ""
+
 #: inc/template-tags.php:72
 #, php-format
-#@ _s
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:89 template-parts/content-page.php:35
+#: inc/template-tags.php:89
 #, php-format
-#@ _s
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#. translators: %s: search query.
+#: inc/widgets/front-blog.php:23
+msgid "Portfolioo Blog Two"
+msgstr ""
+
+#: inc/widgets/front-blog.php:100 inc/widgets/front-blog.php:189
+msgid "Blog"
+msgstr ""
+
+#: inc/widgets/front-blog.php:203 inc/widgets/front-contact-two.php:256
+#: inc/widgets/front-intro-one.php:265 inc/widgets/front-portfolio-two.php:230
+#: inc/widgets/front-service-three.php:263
+msgid "Title"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:24
+msgid "Portfolioo Contact Widget Two"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:96 inc/widgets/front-contact-two.php:232
+#: inc/widgets/front-intro-one.php:120 inc/widgets/front-intro-one.php:225
+#: inc/widgets/front-intro-one.php:302
+msgid "John Doe"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:97 inc/widgets/front-contact-two.php:233
+msgid "Founder"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:98 inc/widgets/front-contact-two.php:234
+msgid "+44-444-444"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:101 inc/widgets/front-contact-two.php:236
+msgid "Office Address"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:102 inc/widgets/front-contact-two.php:237
+msgid "134, Pirate road, Free juntion"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:103 inc/widgets/front-contact-two.php:104
+#: inc/widgets/front-contact-two.php:238 inc/widgets/front-contact-two.php:239
+msgid "Seasame Street, NYC"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:235
+msgid "example@email.com"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:260 inc/widgets/front-contact-two.php:339
+#: inc/widgets/front-intro-one.php:331 inc/widgets/front-portfolio-two.php:280
+#: inc/widgets/front-service-three.php:358
+msgid "Background Color"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:267
+msgid "Text: Address"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:272 inc/widgets/front-contact-two.php:277
+#: inc/widgets/front-contact-two.php:282
+msgid "Text:"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:290 inc/widgets/front-contact-two.php:295
+#: inc/widgets/front-contact-two.php:300 inc/widgets/front-contact-two.php:305
+msgid "Top Text"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:314 inc/widgets/front-intro-one.php:321
+msgid "Sub Title Color"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:324
+msgid "Border One Color"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:329
+msgid "Border Two Color"
+msgstr ""
+
+#: inc/widgets/front-contact-two.php:334
+msgid "Border Three Color"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:23
+msgid "Portfolioo Intro Widget One"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:117 inc/widgets/front-intro-one.php:219
+msgid "Providing World Class WordPress Services"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:119 inc/widgets/front-intro-one.php:224
+msgid "NAME"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:121 inc/widgets/front-intro-one.php:226
+msgid "EMAIL"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:122 inc/widgets/front-intro-one.php:227
+#: inc/widgets/front-intro-one.php:314
+msgid "john@doe.com"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:218
+msgid "static"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:244
+msgid "Hero Image:"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:244
+msgid " (Suggested Size : 1920 * 1080 )"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:256
+msgid "Image Setting"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:258
+msgid "Fixed"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:259
+msgid "Static"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:272 inc/widgets/front-portfolio-two.php:234
+#: inc/widgets/front-portfolio-two.php:254
+#: inc/widgets/front-portfolio-two.php:274
+#: inc/widgets/front-service-three.php:267
+msgid "Color"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:281
+msgid "Image:"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:281
+msgid " (Suggested Size : 250 * 250 )"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:296
+msgid "Name"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:308
+msgid "Email"
+msgstr ""
+
+#: inc/widgets/front-intro-one.php:336
+msgid "Border Color"
+msgstr ""
+
+#: inc/widgets/front-portfolio-two.php:24
+msgid "Portfolioo Porfolio Widget Two"
+msgstr ""
+
+#: inc/widgets/front-portfolio-two.php:94
+#: inc/widgets/front-portfolio-two.php:210
+#: inc/widgets/front-portfolio-two.php:231
+msgid "Portfolio"
+msgstr ""
+
+#: inc/widgets/front-portfolio-two.php:95
+#: inc/widgets/front-portfolio-two.php:211
+#: inc/widgets/front-portfolio-two.php:241
+msgid "Branding"
+msgstr ""
+
+#: inc/widgets/front-portfolio-two.php:96
+#: inc/widgets/front-portfolio-two.php:98
+#: inc/widgets/front-portfolio-two.php:100
+#: inc/widgets/front-portfolio-two.php:212
+#: inc/widgets/front-portfolio-two.php:214
+#: inc/widgets/front-portfolio-two.php:216
+#: inc/widgets/front-portfolio-two.php:261
+#: inc/widgets/front-portfolio-two.php:266
+#: inc/widgets/front-portfolio-two.php:271
+msgid "Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor"
+msgstr ""
+
+#: inc/widgets/front-portfolio-two.php:97
+#: inc/widgets/front-portfolio-two.php:213
+#: inc/widgets/front-portfolio-two.php:251
+msgid "Design"
+msgstr ""
+
+#: inc/widgets/front-portfolio-two.php:99
+#: inc/widgets/front-portfolio-two.php:215
+#: inc/widgets/front-portfolio-two.php:246
+msgid "Advertising"
+msgstr ""
+
+#: inc/widgets/front-portfolio-two.php:240
+#: inc/widgets/front-portfolio-two.php:245
+#: inc/widgets/front-portfolio-two.php:250
+msgid "Sub Title"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:23
+msgid "Portfolioo Service Widget Three"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:93
+#: inc/widgets/front-service-three.php:236
+msgid "Services"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:95
+#: inc/widgets/front-service-three.php:237
+msgid "Art Service"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:96
+#: inc/widgets/front-service-three.php:238
+msgid "Mechanical Parts"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:97
+#: inc/widgets/front-service-three.php:239
+msgid "Drawling life"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:98
+#: inc/widgets/front-service-three.php:240
+msgid "Animating"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:99
+#: inc/widgets/front-service-three.php:241
+msgid "Folklore"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:100
+#: inc/widgets/front-service-three.php:242
+msgid "Digital Marketing"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:101
+#: inc/widgets/front-service-three.php:243
+msgid "International Networking"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:102
+#: inc/widgets/front-service-three.php:244
+msgid "Social Experiment"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:103
+#: inc/widgets/front-service-three.php:245
+msgid "SEO"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:104
+#: inc/widgets/front-service-three.php:246
+msgid "Digital strategy"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:105
+#: inc/widgets/front-service-three.php:247
+msgid "Content Marketing"
+msgstr ""
+
+#: inc/widgets/front-service-three.php:106
+#: inc/widgets/front-service-three.php:248
+msgid "Email Marketing"
+msgstr ""
+
 #: search.php:21
 #, php-format
-#@ _s
 msgid "Search Results for: %s"
 msgstr ""
 
 #: template-parts/content-none.php:14
-#@ _s
 msgid "Nothing Found"
 msgstr ""
 
-#. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:25
 #, php-format
-#@ _s
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:38
-#@ _s
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
 #: template-parts/content-none.php:44
-#@ _s
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#@ _s
-#: template-parts/content-page.php:22 template-parts/content.php:45
+#: template-parts/content-page.php:22 template-parts/content-single.php:64
 msgid "Pages:"
 msgstr ""
 
-#. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:34
+#: template-parts/content-single.php:57
 #, php-format
-#@ _s
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-#@ _s
-msgid "_s"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-#@ _s
-msgid "http://underscores.me/"
-msgstr ""
-
-#. Description of the plugin/theme
-#@ _s
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
-msgstr ""
-
-#. Author of the plugin/theme
-#@ _s
-msgid "Automattic"
-msgstr ""
-
-#. Author URI of the plugin/theme
-#@ _s
-msgid "http://automattic.com/"
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

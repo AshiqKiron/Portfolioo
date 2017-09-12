@@ -35,20 +35,6 @@ function portfolioo_customizer_css() {
       #colophon .footdiv {background-color: <?php echo esc_html($portfolioo['footer_bg_color']); ?>;}
       #colophon .footdiv .main .fa {color: <?php echo esc_html($portfolioo['colophon_icon_color']); ?>;}
 
-      /*posts*/
-      .single-post .site-title a {color: <?php echo esc_html($portfolioo['post_site_titlecol']); ?>;}
-      .single-post #masthead, .post-entry-meta {background-color: <?php echo esc_html($portfolioo['post_header_bgcol']); ?>;}
-      .post-entry-meta a {color: <?php echo esc_html($portfolioo['post_header_metalinkcol']); ?>;}
-      .post-entry-meta {color: <?php echo esc_html($portfolioo['post_header_metatxtcol']); ?>;}
-      .entry-content {background-color: <?php echo esc_html($portfolioo['post_bgcol']); ?>;}
-      .entry-content {color: <?php echo esc_html($portfolioo['post_txtcol']); ?>;}
-      .post_wrap .post_others {background-color: <?php echo esc_html($portfolioo['post_txt_bgcol']); ?>;}
-
-
-      <?php if( false == $portfolioo['hide_credit'] ) { ?>
-                .site-info { display: none; }
-    <?php } // end if ?>
-
     </style>
     <?php
 }
