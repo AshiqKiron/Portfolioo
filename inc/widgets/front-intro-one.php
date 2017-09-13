@@ -293,25 +293,25 @@ class portfolioo_intro_one_widget extends WP_Widget
             
         <!-- text1 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text1' ); ?>"><?php _e( 'Name', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text1' ); ?>"><?php _e( 'Name Field', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text1' ); ?>" name="<?php echo $this->get_field_name( 'text1' ); ?>" type="text" value="<?php echo esc_attr( $instance['text1'] ); ?>" />
         </p>
 
         <!-- text2 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text2' ); ?>"><?php _e( 'John Doe', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text2' ); ?>"><?php _e( 'Name Field', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text2' ); ?>" name="<?php echo $this->get_field_name( 'text2' ); ?>" type="text" value="<?php echo esc_attr( $instance['text2'] ); ?>" />
         </p>
 
          <!-- text3 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text3' ); ?>"><?php _e( 'Email', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text3' ); ?>"><?php _e( 'Email Field', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text3' ); ?>" name="<?php echo $this->get_field_name( 'text3' ); ?>" type="text" value="<?php echo esc_attr( $instance['text3'] ); ?>" />
         </p>
 
         <!-- text4 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text4' ); ?>"><?php _e( 'john@doe.com', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text4' ); ?>"><?php _e( 'Email Field', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text4' ); ?>" name="<?php echo $this->get_field_name( 'text4' ); ?>" type="text" value="<?php echo esc_attr( $instance['text4'] ); ?>" />
         </p>
 
