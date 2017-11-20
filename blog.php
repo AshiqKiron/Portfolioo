@@ -57,7 +57,7 @@ get_header(); ?>
                          if ( $post_tags ) {
                             echo "<p>".  $post_tags[0]->name ."</p>"; 
                         }  else {
-                            echo '<p>' . __('Post Tag', 'portfolioo') . '</p>';
+                            echo '<p>' . esc_html__('Post Tag', 'portfolioo') . '</p>';
                         }
                         ?>
 
@@ -92,7 +92,7 @@ get_header(); ?>
                  <?php wp_reset_postdata(); ?>
 
                 <?php else : ?>
-                    <p><?php _e( 'Sorry, no posts matched your criteria.', 'portfolioo' ); ?></p>
+                    <p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'portfolioo' ); ?></p>
                 <?php endif; ?>
 
                 <div class="blog_pagination"><div class="clearfix"></div>

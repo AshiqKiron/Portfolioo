@@ -1,19 +1,41 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
 
+*Portfolioo WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.*
+*Underscores WordPress Theme is distributed under the terms of the GNU GPL*
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation.
 
-*Portfolioo WordPress Theme, Copyright 2017 Asphalt Themes*
-*Portfolioo is distributed under the terms of the GNU GPL*
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/licenses/
+
+
+
+* Changelog *
+
+#### 0.0.1
+- Initial release 
+
+#### 0.0.2
+- TRT revise submission
+
 
 
 Images are from pixabay.com and WordPress dummy contents released under GPL v2
-Tested up to: 4.8.2
+Tested up to: 4.9
 Requires    : 4.5
 
 1. Intro Widget Image - https://www.pexels.com/photo/apple-computer-desk-laptop-209151/
 2. Face - https://pixabay.com/en/young-man-portrait-beard-young-man-1281282/
 
 
+Portfolioo WordPress Theme bundles the following third-party resources:
 -------------------------------------------------------
 Credits:
 -------------------------------------------------------

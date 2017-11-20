@@ -562,11 +562,18 @@ function portfolioo_customizer_misc_js() {
 add_action( 'customize_controls_enqueue_scripts', 'portfolioo_customizer_misc_js' );
 
 
-function portfolioo_admin_load() {
-  	wp_enqueue_style( 'portoflioo-css', get_template_directory_uri() . '/assets/css/backend.css' );
 
+
+// load backend css file on widget.php page
+function portfolioo_admin_load($hook) {
+ 
+	if( $hook != 'widgets.php'  )  {
+		return;
+	}
+ 
+	wp_enqueue_style( 'portoflioo-css', get_template_directory_uri() . '/assets/css/backend.css' );
 }
-add_action( 'admin_enqueue_scripts', 'portfolioo_admin_load' );
+add_action('admin_enqueue_scripts', 'portfolioo_admin_load');
 
 
 // Sanitize text field

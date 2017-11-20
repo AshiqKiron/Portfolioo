@@ -81,8 +81,6 @@ function portfolioo_setup() {
 		'default-image' => '',
 	) ) );
 
-	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
 add_action( 'after_setup_theme', 'portfolioo_setup' );
@@ -139,45 +137,6 @@ add_action( 'widgets_init', 'portfolioo_widgets_init' );
 
 
 
-
-/*software license field*/
-/*function setup_theme_admin_menus() {
-    // We will write the function contents very soon.
-       add_submenu_page('themes.php', 
-        'Front Page Elements', 'Portfolioo', 'manage_options', 
-        'front-page-elements', 'theme_front_page_settings'); 
-}
- 
-// This tells WordPress to call the function named "setup_theme_admin_menus"
-// when it's time to create the menu pages.
-add_action("admin_menu", "setup_theme_admin_menus");
-
-function theme_front_page_settings() {
-    echo "Hello, world!";
-}
-*/
-
-/*function theme_settings_page(){}
-
-function add_theme_menu_item()
-{
-	add_menu_page("Theme Panel", "Portfolioo", "manage_options", "theme-panel", "theme_settings_page", null, 99);
-}
-
-add_action("admin_menu", "add_theme_menu_item");*/
-
-
-
-/*add_action('admin_menu', 'add_appearance_menu');
-
-function add_appearance_menu(){
-     add_submenu_page( 'themes.php', $page_title, $menu_title, $capability, $menu_slug, $function); 
-}
-*/
-
-
-
-
 /**
  * Enqueue scripts and styles.
  */
@@ -207,11 +166,22 @@ function portfolioo_google_fonts() {
 add_action('wp_enqueue_scripts', 'portfolioo_google_fonts'); 
 
 
-//remove [...] from excerpt
-function portfolioo_excerpt_more( $more ) {
-	return '';
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with ... and
+ * a 'Continue reading' link.
+ */
+function portfolioo_excerpt_more( $link ) {
+	if ( is_admin() ) {
+		return $link;
+	}
+	$link = sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		/* translators: %s: Name of current post */
+		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'portfolioo' ), get_the_title( get_the_ID() ) )
+	);
+	return ' &hellip; ' . $link;
 }
-add_filter('excerpt_more', 'portfolioo_excerpt_more');
+add_filter( 'excerpt_more', 'portfolioo_excerpt_more' );
 
 
 //Theme upsell function

@@ -34,7 +34,7 @@
                      if ( $post_tags ) {
                         echo "<p>".  $post_tags[0]->name ."</p>"; 
                     }  else {
-                        echo '<p>' . __('Post Tag', 'portfolioo') . '</p>';
+                        echo '<p>' . esc_html__('Post Tag', 'portfolioo') . '</p>';
                     }
                     ?>
 
@@ -64,4 +64,4 @@
 	<footer class="entry-footer">
 		<?php //portfolioo_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php //the_ID(); ?> -->  <div class="clear:both;"></div>
+</article><!-- #post-<?php //the_ID(); ?> -->  
