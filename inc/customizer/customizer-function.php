@@ -2,7 +2,7 @@
 
 function portfolioo_customizer_styles() {
   wp_enqueue_style(
-    'custom-style',
+    'portfolioo-custom-style',
     get_template_directory_uri() . '/style.css'
   );
         $color = get_header_image();  //E.g. #FF0000
@@ -13,7 +13,7 @@ function portfolioo_customizer_styles() {
                         background-repeat:no-repeat;
                 }";
         
-        wp_add_inline_style( 'custom-style', $custom_css );
+        wp_add_inline_style( 'portfolioo-custom-style', $custom_css );
        
 }
 add_action( 'wp_enqueue_scripts', 'portfolioo_customizer_styles' );

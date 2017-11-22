@@ -8,7 +8,9 @@
 /**
  * Register the Widget
  */
-add_action( 'widgets_init', create_function( '', 'register_widget("portfolioo_intro_one_widget");' ) );
+add_action( 'widgets_init', function(){
+     register_widget( 'portfolioo_intro_one_widget' );
+});
 
 
 class portfolioo_intro_one_widget extends WP_Widget
@@ -20,7 +22,7 @@ class portfolioo_intro_one_widget extends WP_Widget
     {
         $widget_ops = array(
             'classname' => 'portfolioo_intro_one_widget',
-            'description' => __('Portfolioo Intro Widget One', 'portfolioo'),
+            'description' => esc_html__('Portfolioo Intro Widget One', 'portfolioo'),
             'customize_selective_refresh' => true
         );
 
@@ -111,15 +113,15 @@ class portfolioo_intro_one_widget extends WP_Widget
     public function widget( $args, $instance )
     {
 
-            $heroimage      = isset( $instance['heroimage'] ) ? apply_filters('widget_title', $instance['heroimage'] ) : esc_url(get_template_directory_uri().'/assets/images/YT.jpg');
+            $heroimage      = isset( $instance['heroimage'] ) ? apply_filters('', $instance['heroimage'] ) : esc_url(get_template_directory_uri().'/assets/images/YT.jpg');
             $introimgfixed  = isset( $instance['introimgfixed'] ) ? $instance['introimgfixed'] : 'static';
-
-            $title          = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'] ) : esc_html__('Providing World Class WordPress Services','portfolioo');
-            $image          = isset( $instance['image'] ) ? apply_filters('widget_title', $instance['image'] ) : esc_url(get_template_directory_uri().'/assets/images/short.jpg');
-            $text1          = isset( $instance['text1'] ) ? apply_filters('widget_title', $instance['text1'] ) : __('NAME','portfolioo');
-            $text2          = isset( $instance['text2'] ) ? apply_filters('widget_title', $instance['text2'] ) : __('John Doe','portfolioo');
-            $text3          = isset( $instance['text3'] ) ? apply_filters('widget_title', $instance['text3'] ) : __('EMAIL','portfolioo');
-            $text4          = isset( $instance['text4'] ) ? apply_filters('widget_title', $instance['text4'] ) : __('john@doe.com','portfolioo');
+            
+            $title          = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'], $instance, $this->id_base ) : esc_html__('Providing World Class WordPress Services','portfolioo');
+            $image          = isset( $instance['image'] ) ? apply_filters('', $instance['image'] ) : esc_url(get_template_directory_uri().'/assets/images/short.jpg');
+            $text1          = isset( $instance['text1'] ) ? apply_filters('', $instance['text1'] ) : esc_html__('NAME','portfolioo');
+            $text2          = isset( $instance['text2'] ) ? apply_filters('', $instance['text2'] ) : esc_html__('John Doe','portfolioo');
+            $text3          = isset( $instance['text3'] ) ? apply_filters('', $instance['text3'] ) : esc_html__('EMAIL','portfolioo');
+            $text4          = isset( $instance['text4'] ) ? apply_filters('', $instance['text4'] ) : esc_html__('john@doe.com','portfolioo');
             
             $titlecolor     = isset( $instance['titlecolor'] ) ? $instance['titlecolor'] : '#fff';
             $subtitlecolor     = isset( $instance['subtitlecolor'] ) ? $instance['subtitlecolor'] : '#212121';
@@ -221,10 +223,10 @@ class portfolioo_intro_one_widget extends WP_Widget
           'txtcolor'    => '#999',
           'subtitlecolor'    => '#212121',
           'image'         =>  get_template_directory_uri().'/assets/images/short.jpg',
-          'text1'         => __('NAME',  'portfolioo'),
-          'text2'         => __('John Doe', 'portfolioo'),
-          'text3'         => __('EMAIL', 'portfolioo'),
-          'text4'         => __('john@doe.com', 'portfolioo'),
+          'text1'         => esc_html__('NAME',  'portfolioo'),
+          'text2'         => esc_html__('John Doe', 'portfolioo'),
+          'text3'         => esc_html__('EMAIL', 'portfolioo'),
+          'text4'         => esc_html__('john@doe.com', 'portfolioo'),
           'txt1and3color' => '#AAA',
           'txt2and4color' => '#333',
           'bgcolor'       => '#fff',
@@ -241,7 +243,7 @@ class portfolioo_intro_one_widget extends WP_Widget
 
 
         <p>
-            <label style="max-width: 100%;overflow: hidden;" for="<?php echo $this->get_field_name( 'heroimage' ); ?>"><?php _e( 'Hero Image:', 'portfolioo'  ); ?></label> <span><?php _e(' (Suggested Size : 1920 * 1080 )' , 'portfolioo'); ?></span>
+            <label style="max-width: 100%;overflow: hidden;" for="<?php echo $this->get_field_name( 'heroimage' ); ?>"><?php esc_html_e( 'Hero Image:', 'portfolioo'  ); ?></label> <span><?php _e(' (Suggested Size : 1920 * 1080 )' , 'portfolioo'); ?></span>
  
             <?php if (!empty($instance['heroimage'])) { 
               ?> <img style="max-width: 100%;overflow: hidden;" src="<?php echo esc_url( $instance['heroimage'] ); ?>" class="widgtimgprv" /> <span style="float:right;cursor: pointer;" class="mediaremvbtn">X</span><?php 
@@ -253,23 +255,23 @@ class portfolioo_intro_one_widget extends WP_Widget
 
 
         <p>
-            <label for="<?php echo $this->get_field_id( 'introimgfixed' ); ?>"><?php _e('Image Setting', 'portfolioo') ?></label>
+            <label for="<?php echo $this->get_field_id( 'introimgfixed' ); ?>"><?php esc_html_e('Image Setting', 'portfolioo') ?></label>
             <select id="<?php echo $this->get_field_id( 'introimgfixed' ); ?>" name="<?php echo $this->get_field_name( 'introimgfixed' ); ?>" class="widefat">
-            <option value="fixed" <?php if ( 'fixed' == $instance['introimgfixed'] ) echo 'selected="selected"'; ?>><?php _e('Fixed', 'portfolioo') ?></option>
-            <option value="static" <?php if ( 'static' == $instance['introimgfixed'] ) echo 'selected="selected"'; ?>><?php _e('Static', 'portfolioo') ?></option>
+            <option value="fixed" <?php if ( 'fixed' == $instance['introimgfixed'] ) echo 'selected="selected"'; ?>><?php esc_html_e('Fixed', 'portfolioo') ?></option>
+            <option value="static" <?php if ( 'static' == $instance['introimgfixed'] ) echo 'selected="selected"'; ?>><?php esc_html_e('Static', 'portfolioo') ?></option>
             </select>
         </p>
 
         <!-- Title -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php esc_html_e( 'Title', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
         </p>
 
         <!-- title Color -->
         
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'titlecolor' ); ?>"><?php _e('Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'titlecolor' ); ?>"><?php esc_html_e('Color', 'portfolioo') ?></label>
           <input class="widefat color-picker" id="<?php echo $this->get_field_id( 'titlecolor' ); ?>" name="<?php echo $this->get_field_name( 'titlecolor' ); ?>" value="<?php echo $instance['titlecolor']; ?>" />
         </p>
 
@@ -278,7 +280,7 @@ class portfolioo_intro_one_widget extends WP_Widget
 
         <!-- face image Field -->
         <p>
-            <label style="max-width: 100%;overflow: hidden;" for="<?php echo $this->get_field_name( 'image' ); ?>"><?php _e( 'Image:', 'portfolioo'  ); ?></label> <span><?php _e(' (Suggested Size : 250 * 250 )' , 'portfolioo'); ?></span>
+            <label style="max-width: 100%;overflow: hidden;" for="<?php echo $this->get_field_name( 'image' ); ?>"><?php esc_html_e( 'Image:', 'portfolioo'  ); ?></label> <span><?php _e(' (Suggested Size : 250 * 250 )' , 'portfolioo'); ?></span>
  
             <?php if (!empty($instance['image'])) { 
               ?> <img style="max-width: 100%;overflow: hidden;" src="<?php echo esc_url( $instance['image'] ); ?>" class="widgtimgprv" /> <span style="float:right;cursor: pointer;" class="mediaremvbtn">X</span><?php 
@@ -293,47 +295,47 @@ class portfolioo_intro_one_widget extends WP_Widget
             
         <!-- text1 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text1' ); ?>"><?php _e( 'Name Field', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text1' ); ?>"><?php esc_html_e( 'Name Field', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text1' ); ?>" name="<?php echo $this->get_field_name( 'text1' ); ?>" type="text" value="<?php echo esc_attr( $instance['text1'] ); ?>" />
         </p>
 
         <!-- text2 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text2' ); ?>"><?php _e( 'Name Field', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text2' ); ?>"><?php esc_html_e( 'Name Field', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text2' ); ?>" name="<?php echo $this->get_field_name( 'text2' ); ?>" type="text" value="<?php echo esc_attr( $instance['text2'] ); ?>" />
         </p>
 
          <!-- text3 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text3' ); ?>"><?php _e( 'Email Field', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text3' ); ?>"><?php esc_html_e( 'Email Field', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text3' ); ?>" name="<?php echo $this->get_field_name( 'text3' ); ?>" type="text" value="<?php echo esc_attr( $instance['text3'] ); ?>" />
         </p>
 
         <!-- text4 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text4' ); ?>"><?php _e( 'Email Field', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text4' ); ?>"><?php esc_html_e( 'Email Field', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text4' ); ?>" name="<?php echo $this->get_field_name( 'text4' ); ?>" type="text" value="<?php echo esc_attr( $instance['text4'] ); ?>" />
         </p>
 
         <br>
         <br>
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'subtitlecolor' ); ?>"><?php _e('Sub Title Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'subtitlecolor' ); ?>"><?php esc_html_e('Sub Title Color', 'portfolioo') ?></label>
           <input class="widefat color-picker" style="float:right;" id="<?php echo $this->get_field_id( 'subtitlecolor' ); ?>" name="<?php echo $this->get_field_name( 'subtitlecolor' ); ?>" value="<?php echo $instance['subtitlecolor']; ?>" />
         </p>
 
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'txtcolor' ); ?>"><?php _e('Text Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'txtcolor' ); ?>"><?php esc_html_e('Text Color', 'portfolioo') ?></label>
           <input class="widefat color-picker" style="float:right;" id="<?php echo $this->get_field_id( 'txtcolor' ); ?>" name="<?php echo $this->get_field_name( 'txtcolor' ); ?>" value="<?php echo $instance['txtcolor']; ?>" />
         </p>
 
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bgcolor' ); ?>"><?php _e('Background Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bgcolor' ); ?>"><?php esc_html_e('Background Color', 'portfolioo') ?></label>
           <input class="widefat color-picker" style="float:right;" id="<?php echo $this->get_field_id( 'bgcolor' ); ?>" name="<?php echo $this->get_field_name( 'bgcolor' ); ?>" value="<?php echo $instance['bgcolor']; ?>" />
         </p>
 
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bordercolor' ); ?>"><?php _e('Border Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bordercolor' ); ?>"><?php esc_html_e('Border Color', 'portfolioo') ?></label>
           <input class="widefat color-picker" style="float:right;" id="<?php echo $this->get_field_id( 'bordercolor' ); ?>" name="<?php echo $this->get_field_name( 'bordercolor' ); ?>" value="<?php echo $instance['bordercolor']; ?>" />
         </p>
 

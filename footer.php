@@ -13,35 +13,6 @@
 
 	</div><!-- #content -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<section class="footdiv">
-			<div class="footdiv__wrap">
-				<h3><?php echo do_shortcode(get_option('colophon_txt1', esc_html__('Contact Me' , 'portfolioo')));?></h3>
-				<span class="dash"></span>
-				<div class="main">
-					<div class="fone">
-						<span class="footer_icon_one">
-			                <span class="fa <?php echo get_option('footer_icon1' ,'fa-twitter' ); ?>"></span>
-			            </span>
-						<h4><?php echo do_shortcode(get_option('colophon_txt2', esc_html__('Twitter' , 'portfolioo')));?></h4>
-						<p><?php echo do_shortcode(get_option('colophon_txt3', esc_html__('@Asphalt_Themes' , 'portfolioo')));?></p>
-					</div>
-					<div class="ftwo">
-						<span class="footer_icon_two">
-			                <span class="fa <?php echo get_option('footer_icon2' ,'fa-phone' ); ?>"></span>
-			            </span>
-						<h4><?php echo do_shortcode(get_option('colophon_txt4', esc_html__('Call Me' , 'portfolioo')));?></h4>
-						<p><?php echo do_shortcode(get_option('colophon_txt5', esc_html__('+45 545 668' , 'portfolioo')));?></p>
-					</div>
-					<div class="fthree">
-						<span class="footer_icon_three">
-			                <span class="fa <?php echo get_option('footer_icon3' ,'fa-map-marker' ); ?>"></span>
-			            </span>
-						<h4><?php echo do_shortcode(get_option('colophon_txt6', __('Meet Me' , 'portfolioo')));?></h4>
-						<p><?php echo do_shortcode(get_option('colophon_txt7', __('Seasame Street, NY' , 'portfolioo')));?></p>
-					</div>
-				</div><div class="clearfix"></div>
-			</div>
-		</section>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'portfolioo' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */

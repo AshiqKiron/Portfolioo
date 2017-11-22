@@ -21,7 +21,7 @@ class portfolioo_porfolio_two_widget extends WP_Widget
     {
         $widget_ops = array(
             'classname' => 'portfolioo_porfolio_two_widget',
-            'description' => __('Portfolioo Porfolio Widget Two', 'portfolioo'),
+            'description' => esc_html__('Portfolioo Porfolio Widget Two', 'portfolioo'),
             'customize_selective_refresh' => true
         );
 
@@ -91,13 +91,14 @@ class portfolioo_porfolio_two_widget extends WP_Widget
     {
 
 
-          $title  = isset( $instance['title'] ) ?  apply_filters('widget_title', $instance['title'] ) : __('Portfolio','portfolioo');
-          $text1          = isset( $instance['text1'] ) ? apply_filters('widget_title', $instance['text1'] ) : __('Branding','portfolioo');
-          $text2          = isset( $instance['text2'] ) ? apply_filters('widget_title', $instance['text2'] ) : __('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor','portfolioo');
-          $text3          = isset( $instance['text3'] ) ? apply_filters('widget_title', $instance['text3'] ) : __('Design','portfolioo');
-          $text4          = isset( $instance['text4'] ) ? apply_filters('widget_title', $instance['text4'] ) : __('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor','portfolioo');
-          $text5          = isset( $instance['text5'] ) ? apply_filters('widget_title', $instance['text5'] ) : __('Advertising','portfolioo');
-          $text6          = isset( $instance['text6'] ) ? apply_filters('widget_title', $instance['text6'] ) : __('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor','portfolioo');
+          $title  = isset( $instance['title'] ) ?  apply_filters('widget_title', $instance['title'], $instance, $this->id_base ) : esc_html__('Portfolio','portfolioo');
+
+          $text1          = isset( $instance['text1'] ) ? apply_filters('', $instance['text1'] ) : esc_html__('Branding','portfolioo');
+          $text2          = isset( $instance['text2'] ) ? apply_filters('', $instance['text2'] ) : esc_html__('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor','portfolioo');
+          $text3          = isset( $instance['text3'] ) ? apply_filters('', $instance['text3'] ) : esc_html__('Design','portfolioo');
+          $text4          = isset( $instance['text4'] ) ? apply_filters('', $instance['text4'] ) : esc_html__('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor','portfolioo');
+          $text5          = isset( $instance['text5'] ) ? apply_filters('', $instance['text5'] ) : esc_html__('Advertising','portfolioo');
+          $text6          = isset( $instance['text6'] ) ? apply_filters('', $instance['text6'] ) : esc_html__('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor','portfolioo');
 
         $titlecolor = isset( $instance['titlecolor'] ) ? $instance['titlecolor'] : '#333';
         $bgcolor = isset( $instance['bgcolor'] ) ? $instance['bgcolor'] : '#fff';
@@ -207,13 +208,13 @@ class portfolioo_porfolio_two_widget extends WP_Widget
     {
         /* Set up some default widget settings. */
         $defaults = array( 
-          'title'        => __('Portfolio', 'portfolioo'),
-          'text1'         => __('Branding',  'portfolioo'),
-          'text2'         => __('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'),
-          'text3'         => __('Design', 'portfolioo'),
-          'text4'         => __('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'),
-          'text5'         => __('Advertising',  'portfolioo'),
-          'text6'         => __('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'),
+          'title'        => esc_html__('Portfolio', 'portfolioo'),
+          'text1'         => esc_html__('Branding',  'portfolioo'),
+          'text2'         => esc_html__('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'),
+          'text3'         => esc_html__('Design', 'portfolioo'),
+          'text4'         => esc_html__('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'),
+          'text5'         => esc_html__('Advertising',  'portfolioo'),
+          'text6'         => esc_html__('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'),
           'titlecolor'    => '#333',
           'subtitle1color'=> '#444',
           'text1color'    => '#444',
@@ -227,57 +228,57 @@ class portfolioo_porfolio_two_widget extends WP_Widget
         ?>
 
         <p>
-          <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title', 'portfolioo'  ); ?></label>
-            <input placeholder="<?php _e('Portfolio', 'portfolioo'); ?>" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
+          <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php esc_html_e( 'Title', 'portfolioo'  ); ?></label>
+            <input placeholder="<?php esc_html_e('Portfolio', 'portfolioo'); ?>" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
         </p>
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'titlecolor' ); ?>"><?php _e('Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'titlecolor' ); ?>"><?php esc_html_e('Color', 'portfolioo') ?></label>
           <input class="color-picker" id="<?php echo $this->get_field_id( 'titlecolor' ); ?>" name="<?php echo $this->get_field_name( 'titlecolor' ); ?>" value="<?php echo $instance['titlecolor']; ?>"/>
         </p>
         <br>
 
         <p>
-          <label for="<?php echo $this->get_field_name( 'text1' ); ?>"><?php _e( 'Sub Title', 'portfolioo'  ); ?></label>
-            <input placeholder="<?php _e('Branding', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text1' ); ?>" name="<?php echo $this->get_field_name( 'text1' ); ?>" type="text" value="<?php echo esc_attr( $instance['text1'] ); ?>" />
+          <label for="<?php echo $this->get_field_name( 'text1' ); ?>"><?php esc_html_e( 'Sub Title', 'portfolioo'  ); ?></label>
+            <input placeholder="<?php esc_html_e('Branding', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text1' ); ?>" name="<?php echo $this->get_field_name( 'text1' ); ?>" type="text" value="<?php echo esc_attr( $instance['text1'] ); ?>" />
         </p>
 
        <p>
-          <label for="<?php echo $this->get_field_name( 'text5' ); ?>"><?php _e( 'Sub Title', 'portfolioo'  ); ?></label>
-            <input placeholder="<?php _e('Advertising', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text5' ); ?>" name="<?php echo $this->get_field_name( 'text5' ); ?>" type="text" value="<?php echo esc_attr( $instance['text5'] ); ?>" />
+          <label for="<?php echo $this->get_field_name( 'text5' ); ?>"><?php esc_html_e( 'Sub Title', 'portfolioo'  ); ?></label>
+            <input placeholder="<?php esc_html_e('Advertising', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text5' ); ?>" name="<?php echo $this->get_field_name( 'text5' ); ?>" type="text" value="<?php echo esc_attr( $instance['text5'] ); ?>" />
         </p>
 
         <p>
-          <label for="<?php echo $this->get_field_name( 'text3' ); ?>"><?php _e( 'Sub Title', 'portfolioo'  ); ?></label>
-            <input placeholder="<?php _e('Design', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text3' ); ?>" name="<?php echo $this->get_field_name( 'text3' ); ?>" type="text" value="<?php echo esc_attr( $instance['text3'] ); ?>" />
+          <label for="<?php echo $this->get_field_name( 'text3' ); ?>"><?php esc_html_e( 'Sub Title', 'portfolioo'  ); ?></label>
+            <input placeholder="<?php esc_html_e('Design', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text3' ); ?>" name="<?php echo $this->get_field_name( 'text3' ); ?>" type="text" value="<?php echo esc_attr( $instance['text3'] ); ?>" />
         </p>
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'subtitle1color' ); ?>"><?php _e('Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'subtitle1color' ); ?>"><?php esc_html_e('Color', 'portfolioo') ?></label>
           <input class="color-picker" id="<?php echo $this->get_field_id( 'subtitle1color' ); ?>" name="<?php echo $this->get_field_name( 'subtitle1color' ); ?>" value="<?php echo $instance['subtitle1color']; ?>"/>
         </p>
         <br>
 
         <p>
-          <label for="<?php echo $this->get_field_name( 'text4' ); ?>"><?php _e( 'Text', 'portfolioo'  ); ?></label>
-            <input placeholder="<?php _e('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text4' ); ?>" name="<?php echo $this->get_field_name( 'text4' ); ?>" type="text" value="<?php echo esc_attr( $instance['text4'] ); ?>" />
+          <label for="<?php echo $this->get_field_name( 'text4' ); ?>"><?php esc_html_e( 'Text', 'portfolioo'  ); ?></label>
+            <input placeholder="<?php esc_html_e('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text4' ); ?>" name="<?php echo $this->get_field_name( 'text4' ); ?>" type="text" value="<?php echo esc_attr( $instance['text4'] ); ?>" />
         </p>
 
          <p>
-          <label for="<?php echo $this->get_field_name( 'text2' ); ?>"><?php _e( 'Text', 'portfolioo'  ); ?></label>
-            <input placeholder="<?php _e('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text2' ); ?>" name="<?php echo $this->get_field_name( 'text2' ); ?>" type="text" value="<?php echo esc_attr( $instance['text2'] ); ?>" />
+          <label for="<?php echo $this->get_field_name( 'text2' ); ?>"><?php esc_html_e( 'Text', 'portfolioo'  ); ?></label>
+            <input placeholder="<?php esc_html_e('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text2' ); ?>" name="<?php echo $this->get_field_name( 'text2' ); ?>" type="text" value="<?php echo esc_attr( $instance['text2'] ); ?>" />
         </p>
 
         <p>
-          <label for="<?php echo $this->get_field_name( 'text6' ); ?>"><?php _e( 'Text', 'portfolioo'  ); ?></label>
-            <input placeholder="<?php _e('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text6' ); ?>" name="<?php echo $this->get_field_name( 'text6' ); ?>" type="text" value="<?php echo esc_attr( $instance['text6'] ); ?>" />
+          <label for="<?php echo $this->get_field_name( 'text6' ); ?>"><?php esc_html_e( 'Text', 'portfolioo'  ); ?></label>
+            <input placeholder="<?php esc_html_e('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor', 'portfolioo'); ?>"class="widefat" id="<?php echo $this->get_field_id( 'text6' ); ?>" name="<?php echo $this->get_field_name( 'text6' ); ?>" type="text" value="<?php echo esc_attr( $instance['text6'] ); ?>" />
         </p>
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'text1color' ); ?>"><?php _e('Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'text1color' ); ?>"><?php esc_html_e('Color', 'portfolioo') ?></label>
           <input class="color-picker" id="<?php echo $this->get_field_id( 'text1color' ); ?>" name="<?php echo $this->get_field_name( 'text1color' ); ?>" value="<?php echo $instance['text1color']; ?>"/>
         </p>
         <br>
 
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bgcolor' ); ?>"><?php _e('Background Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bgcolor' ); ?>"><?php esc_html_e('Background Color', 'portfolioo') ?></label>
           <input class="color-picker" id="<?php echo $this->get_field_id( 'bgcolor' ); ?>" name="<?php echo $this->get_field_name( 'bgcolor' ); ?>" value="<?php echo $instance['bgcolor']; ?>"/>
         </p>
 

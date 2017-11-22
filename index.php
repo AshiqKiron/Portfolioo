@@ -53,5 +53,10 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<div class="clearfix"></div>
+    <section class="footer-widget">
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-1') ) :   endif; ?>
+        <div class="clearfix"></div>
+  	</section>
 <?php
 get_footer();

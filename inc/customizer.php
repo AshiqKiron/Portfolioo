@@ -22,7 +22,6 @@ function portfolioo_customize_register( $wp_customize ) {
 	$wp_customize->get_section('header_image')->panel = 'header';
 	$wp_customize->get_section('title_tagline')->panel = 'header';
 	$wp_customize->get_section('static_front_page')->panel = 'frontpage';
-	$wp_customize->remove_section('colors');
 	$wp_customize->get_section('background_image')->panel = 'basic_settings';
 
 	//$wp_customize->get_control('header_textcolor')->section = 'header_section';
@@ -311,123 +310,6 @@ function portfolioo_customize_register( $wp_customize ) {
 		)
 	);  
 
-	// colophon text 
-	$wp_customize->add_setting('colophon_txt1',array(
-		          'default'         => esc_html__('Contact Me', 'portfolioo'),
-		          'transport'       => 'postMessage',
-		          'sanitize_callback' => 'portoflioo_sanitize_text',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control('colophon_txt1', array(
-				               'label'      => esc_html__( 'Text', 'portfolioo' ),
-				               'section'    => 'footer_section',
-				               'settings'   => 'colophon_txt1' 
-				           )
-				   );
-
-
-	// colophon text2 
-	$wp_customize->add_setting('colophon_txt2',array(
-		          'default'         => esc_html__('Twitter', 'portfolioo'),
-		          'transport'       => 'postMessage',
-		          'sanitize_callback' => 'portoflioo_sanitize_text',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control('colophon_txt2', array(
-				               'label'      => esc_html__( 'Text', 'portfolioo' ),
-				               'section'    => 'footer_section',
-				               'settings'   => 'colophon_txt2' 
-				           )
-				   );
-
-
-	// colophon text3 
-	$wp_customize->add_setting('colophon_txt3',array(
-		          'default'         => esc_html__('@Asphalt_Themes', 'portfolioo'),
-		          'transport'       => 'postMessage',
-		          'sanitize_callback' => 'portoflioo_sanitize_text',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control('colophon_txt3', array(
-				               'label'      => esc_html__( 'Text', 'portfolioo' ),
-				               'section'    => 'footer_section',
-				               'settings'   => 'colophon_txt3' 
-				           )
-				   );
-
-
-	// colophon text4
-	$wp_customize->add_setting('colophon_txt4',array(
-		          'default'         => esc_html__('CALL ME', 'portfolioo'),
-		          'transport'       => 'postMessage',
-		          'sanitize_callback' => 'portoflioo_sanitize_text',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control('colophon_txt4', array(
-				               'label'      => esc_html__( 'Text', 'portfolioo' ),
-				               'section'    => 'footer_section',
-				               'settings'   => 'colophon_txt4' 
-				           )
-				   );
-
-
-	// colophon text5
-	$wp_customize->add_setting('colophon_txt5',array(
-		          'default'         => esc_html__('+45 545 668', 'portfolioo'),
-		          'transport'       => 'postMessage',
-		          'sanitize_callback' => 'portoflioo_sanitize_text',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control('colophon_txt5', array(
-				               'label'      => esc_html__( 'Text', 'portfolioo' ),
-				               'section'    => 'footer_section',
-				               'settings'   => 'colophon_txt5' 
-				           )
-				   );
-
-
-	// colophon text6
-	$wp_customize->add_setting('colophon_txt6',array(
-		          'default'         => esc_html__('MEET ME', 'portfolioo'),
-		          'transport'       => 'postMessage',
-		          'sanitize_callback' => 'portoflioo_sanitize_text',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control('colophon_txt6', array(
-				               'label'      => esc_html__( 'Text', 'portfolioo' ),
-				               'section'    => 'footer_section',
-				               'settings'   => 'colophon_txt6' 
-				           )
-				   );
-
-	// colophon text7
-	$wp_customize->add_setting('colophon_txt7',array(
-		          'default'         => esc_html__('Seasame Street, NY', 'portfolioo'),
-		          'transport'       => 'postMessage',
-		          'sanitize_callback' => 'portoflioo_sanitize_text',
-		          'type'            => 'option',
-		)
-	);
-				// Control
-				$wp_customize->add_control('colophon_txt7', array(
-				               'label'      => esc_html__( 'Text', 'portfolioo' ),
-				               'section'    => 'footer_section',
-				               'settings'   => 'colophon_txt7' 
-				           )
-				   );
-
 
 	// colophon text color
 	$wp_customize->add_setting('portfolioo[colophon_txt_color]',array(
@@ -446,62 +328,6 @@ function portfolioo_customize_register( $wp_customize ) {
 				       )
 				   );
 
-
-	//footer  icon 1
-    $wp_customize->add_setting('footer_icon1', array(
-	            'default' => 'fa-twitter',
-	            'transport' => 'postMessage',
-	            'sanitize_callback' => 'sanitize_key',
-	            'type'            => 'option'
-            )
-        );
-
-		        $wp_customize->add_control('footer_icon1',  array(
-				        'label' => __('Icon One', 'portfolioo'),
-				        'section' => 'footer_section',
-				        'type' => 'select',
-				        'settings' => 'footer_icon1',
-				        'choices' => portfolioo_icons() 
-		    		)
-		        );
-
-
-	//footer  icon 2
-    $wp_customize->add_setting('footer_icon2', array(
-	            'default' => 'fa-phone',
-	            'transport' => 'postMessage',
-	            'sanitize_callback' => 'sanitize_key',
-	            'type'            => 'option'
-            )
-        );
-
-		        $wp_customize->add_control('footer_icon2',  array(
-				        'label' => __('Icon Two', 'portfolioo'),
-				        'section' => 'footer_section',
-				        'type' => 'select',
-				        'settings' => 'footer_icon2',
-				        'choices' => portfolioo_icons() 
-		    		)
-		        );
-
-
-	//footer  icon 3
-    $wp_customize->add_setting('footer_icon3', array(
-	            'default' => 'fa-map-marker',
-	            'transport' => 'postMessage',
-	            'sanitize_callback' => 'sanitize_key',
-	            'type'            => 'option'
-            )
-        );
-
-		        $wp_customize->add_control('footer_icon3',  array(
-				        'label' => __('Icon Three', 'portfolioo'),
-				        'section' => 'footer_section',
-				        'type' => 'select',
-				        'settings' => 'footer_icon3',
-				        'choices' => portfolioo_icons() 
-		    		)
-		        );
 
 
 
@@ -1551,10 +1377,3 @@ function portfolioo_icons(){
         'fa-wheelchair' => __( ' wheelchair', 'portfolioo') 
         );
 }
-
-
-function portfolioo_customizer_widget_append() {
-	wp_enqueue_script( 'portoflioo-customizer-widget-append', get_template_directory_uri() .'/js/customizer-control.js', array( 'customize-controls' , 'jquery'), null, true );
-
-}
-add_action( 'customize_controls_enqueue_scripts', 'portfolioo_customizer_widget_append' );

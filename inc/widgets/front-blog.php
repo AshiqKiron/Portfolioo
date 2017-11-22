@@ -8,7 +8,9 @@
 /**
  * Register the Widget
  */
-add_action( 'widgets_init', create_function( '', 'register_widget("portfolioo_blog_widget");' ) );
+add_action( 'widgets_init', function(){
+     register_widget( 'portfolioo_blog_widget' );
+});
 
 
 class portfolioo_blog_widget extends WP_Widget
@@ -20,7 +22,7 @@ class portfolioo_blog_widget extends WP_Widget
     {
         $widget_ops = array(
             'classname' => 'portfolioo_blog_widget',
-            'description' => __('Portfolioo Blog Two', 'portfolioo'),
+            'description' => esc_html__('Portfolioo Blog Two', 'portfolioo'),
             'customize_selective_refresh' => true
         );
 
@@ -97,7 +99,7 @@ class portfolioo_blog_widget extends WP_Widget
     {   extract( $args );
 
           echo '<section class="front__loop">';
-          $title = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'] ) : __('Blog','portfolioo');
+          $title = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'],$instance, $this->id_base ) : esc_html__('Blog','portfolioo');
           $blockbgcol = isset( $instance['blockbgcol'] ) ? $instance['blockbgcol'] : '#f1f1f1';
           $blockhovbgcol = isset( $instance['blockhovbgcol'] ) ? $instance['blockhovbgcol'] : '#fff';
           $titcol = isset( $instance['titcol'] ) ? $instance['titcol'] : '#333';
@@ -186,7 +188,7 @@ class portfolioo_blog_widget extends WP_Widget
     {
         /* Set up some default widget settings. */
         $defaults = array( 
-          'title'         => __('Blog',  'portfolioo'),
+          'title'         => esc_html__('Blog',  'portfolioo'),
           'blockbgcol'    => '#f1f1f1',
           'blockhovbgcol' => '#fff',
           'titcol'        => '#333',
@@ -200,7 +202,7 @@ class portfolioo_blog_widget extends WP_Widget
         ?>
 
         <p>
-          <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title', 'portfolioo'  ); ?></label>
+          <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php esc_html__( 'Title', 'portfolioo'  ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
         </p>
        <!--  <p>

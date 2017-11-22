@@ -19,11 +19,37 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+
+#### 0.0.3 (23.11.2017)
+- Removed customizer locked widgets from customizer
+- Used the_comments_navigation in comment.php
+- Changed creat_function in widgets
+- Deleted blog.php
+- Added home.php
+- Removed footer contact detail fields
+- Removed customizer 
+- Prefixed customizer-function.php function name
+- Properly escaped texts in widgets
+- Removed footer contact section and customizer settings
+- Removed multiple widget_title in widgets
+- Added WP default customizer color panel
+- Added widget title instance and id base
+
+
+#### 0.0.2 (21.11.2017)
+- TRT revise submission
+- Escaped texts on blog.php and content.php file also checked other files.
+- Revised readme file
+- Removed duplicate customizer widget partial refresh from functions.php
+- Removed git,sass files
+- Fixed html class
+- backend.css now loads in widget.php and customizer panel only
+- Tooks excerpt function from TweentySeventeen
+
 #### 0.0.1
 - Initial release 
 
-#### 0.0.2
-- TRT revise submission
+
 
 
 

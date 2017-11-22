@@ -118,95 +118,13 @@
 
 
 
-     //colophon text1
-     wp.customize( 'colophon_txt1', function( value ) {
-		value.bind( function( to ) {
-			$( '#colophon .footdiv h3' ).text( to );
-		} );
-	} );
-
-     //colophon text2
-     wp.customize( 'colophon_txt2', function( value ) {
-		value.bind( function( to ) {
-			$( '.fone h4' ).text( to );
-		} );
-	} );
-
-     //colophon text3
-     wp.customize( 'colophon_txt3', function( value ) {
-		value.bind( function( to ) {
-			$( '.fone p' ).text( to );
-		} );
-	} );
-
-     //colophon text4
-     wp.customize( 'colophon_txt4', function( value ) {
-		value.bind( function( to ) {
-			$( '.ftwo h4' ).text( to );
-		} );
-	} );
-
-     //colophon text5
-     wp.customize( 'colophon_txt5', function( value ) {
-		value.bind( function( to ) {
-			$( '.ftwo p' ).text( to );
-		} );
-	} );
-
-     //colophon text6
-     wp.customize( 'colophon_txt6', function( value ) {
-		value.bind( function( to ) {
-			$( '.fthree h4' ).text( to );
-		} );
-	} );
-
-     //colophon text7
-     wp.customize( 'colophon_txt7', function( value ) {
-		value.bind( function( to ) {
-			$( '.fthree p' ).text( to );
-		} );
-	} );
+     
 
 
     //colophon text color
 	wp.customize( 'portfolioo[colophon_txt_color]', function( value ) {
         value.bind( function( to ) {
             $( '#colophon .footdiv h3, #colophon .footdiv .main h4, #colophon .footdiv .main p' ).css( 'color', to );
-        } );
-    });
-
-
-    //footer icon1
-    wp.customize( 'footer_icon1', function( value ) {
-        value.bind( function( to ) {
-            $( '.footer_icon_one span' ).attr('class','');
-            $( '.footer_icon_one span').addClass('fa '+ to +'');                    
-        } );
-    } );
-
-
-    //footer icon2
-    wp.customize( 'footer_icon2', function( value ) {
-        value.bind( function( to ) {
-            $( '.footer_icon_two span' ).attr('class','');
-            $( '.footer_icon_two span').addClass('fa '+ to +'');                    
-        } );
-    } );
-
-
-    //footer icon3
-    wp.customize( 'footer_icon3', function( value ) {
-        value.bind( function( to ) {
-            $( '.footer_icon_three span' ).attr('class','');
-            $( '.footer_icon_three span').addClass('fa '+ to +'');                    
-        } );
-    } );
-
-
-    //colophon icon color
-	wp.customize( 'portfolioo[colophon_icon_color]', function( value ) {
-        value.bind( function( to ) {
-            $( '#colophon .footdiv .main .fa' ).css( 'color', to );
         } );
     });
 

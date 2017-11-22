@@ -8,7 +8,9 @@
 /**
  * Register the Widget
  */
-add_action( 'widgets_init', create_function( '', 'register_widget("portfolioo_service_three_widget");' ) );
+add_action( 'widgets_init', function(){
+     register_widget( 'portfolioo_service_three_widget' );
+});
 
 
 class portfolioo_service_three_widget extends WP_Widget
@@ -20,7 +22,7 @@ class portfolioo_service_three_widget extends WP_Widget
     {
         $widget_ops = array(
             'classname' => 'portfolioo_service_three_widget',
-            'description' => __('Portfolioo Service Widget Three', 'portfolioo'),
+            'description' => esc_html__('Portfolioo Service Widget Three', 'portfolioo'),
             'customize_selective_refresh' => true
         );
 
@@ -90,20 +92,20 @@ class portfolioo_service_three_widget extends WP_Widget
     {
 
 
-            $title          = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'] ) : esc_html__('Services','portfolioo');
-            
-            $text1          = isset( $instance['text1'] ) ? apply_filters('widget_title', $instance['text1'] ) : __('Art Service','portfolioo');
-            $text2          = isset( $instance['text2'] ) ? apply_filters('widget_title', $instance['text2'] ) : __('Mechanical Parts','portfolioo');
-            $text3          = isset( $instance['text3'] ) ? apply_filters('widget_title', $instance['text3'] ) : __('Drawling life','portfolioo');
-            $text4          = isset( $instance['text4'] ) ? apply_filters('widget_title', $instance['text4'] ) : __('Animating','portfolioo');
-            $text5          = isset( $instance['text5'] ) ? apply_filters('widget_title', $instance['text5'] ) : __('Folklore','portfolioo');
-            $text6          = isset( $instance['text6'] ) ? apply_filters('widget_title', $instance['text6'] ) : __('Digital Marketing','portfolioo');
-            $text7          = isset( $instance['text7'] ) ? apply_filters('widget_title', $instance['text7'] ) : __('International Networking','portfolioo');
-            $text8          = isset( $instance['text8'] ) ? apply_filters('widget_title', $instance['text8'] ) : __('Social Experiment','portfolioo');
-            $text9          = isset( $instance['text9'] ) ? apply_filters('widget_title', $instance['text9'] ) : __('SEO','portfolioo');
-            $text10          = isset( $instance['text10'] ) ? apply_filters('widget_title', $instance['text10'] ) : __('Digital strategy','portfolioo');
-            $text11          = isset( $instance['text11'] ) ? apply_filters('widget_title', $instance['text11'] ) : __('Content Marketing','portfolioo');
-            $text12          = isset( $instance['text12'] ) ? apply_filters('widget_title', $instance['text12'] ) : __('Email Marketing','portfolioo');
+            $title          = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'], $instance, $this->id_base ) : esc_html__('Services','portfolioo');
+
+            $text1          = isset( $instance['text1'] ) ? apply_filters('', $instance['text1'] ) : esc_html__('Art Service','portfolioo');
+            $text2          = isset( $instance['text2'] ) ? apply_filters('', $instance['text2'] ) : esc_html__('Mechanical Parts','portfolioo');
+            $text3          = isset( $instance['text3'] ) ? apply_filters('', $instance['text3'] ) : esc_html__('Drawling life','portfolioo');
+            $text4          = isset( $instance['text4'] ) ? apply_filters('', $instance['text4'] ) : esc_html__('Animating','portfolioo');
+            $text5          = isset( $instance['text5'] ) ? apply_filters('', $instance['text5'] ) : esc_html__('Folklore','portfolioo');
+            $text6          = isset( $instance['text6'] ) ? apply_filters('', $instance['text6'] ) : esc_html__('Digital Marketing','portfolioo');
+            $text7          = isset( $instance['text7'] ) ? apply_filters('', $instance['text7'] ) : esc_html__('International Networking','portfolioo');
+            $text8          = isset( $instance['text8'] ) ? apply_filters('', $instance['text8'] ) : esc_html__('Social Experiment','portfolioo');
+            $text9          = isset( $instance['text9'] ) ? apply_filters('', $instance['text9'] ) : esc_html__('SEO','portfolioo');
+            $text10          = isset( $instance['text10'] ) ? apply_filters('', $instance['text10'] ) : esc_html__('Digital strategy','portfolioo');
+            $text11          = isset( $instance['text11'] ) ? apply_filters('', $instance['text11'] ) : esc_html__('Content Marketing','portfolioo');
+            $text12          = isset( $instance['text12'] ) ? apply_filters('', $instance['text12'] ) : esc_html__('Email Marketing','portfolioo');
             
             $textcolor  = isset( $instance['textcolor'] ) ? $instance['textcolor'] : '#444';
             $bgcolor        = isset( $instance['bgcolor'] ) ? $instance['bgcolor'] : '#f1f1f1';
@@ -233,19 +235,19 @@ class portfolioo_service_three_widget extends WP_Widget
     {
         /* Set up some default widget settings. */
         $defaults = array( 
-          'title'         => __('Services',  'portfolioo'),
-          'text1'         => __('Art Service',  'portfolioo'),
-          'text2'         => __('Mechanical Parts', 'portfolioo'),
-          'text3'         => __('Drawling life', 'portfolioo'),
-          'text4'         => __('Animating', 'portfolioo'),
-          'text5'         => __('Folklore',  'portfolioo'),
-          'text6'         => __('Digital Marketing', 'portfolioo'),
-          'text7'         => __('International Networking', 'portfolioo'),
-          'text8'         => __('Social Experiment', 'portfolioo'),
-          'text9'         => __('SEO',  'portfolioo'),
-          'text10'         => __('Digital strategy', 'portfolioo'),
-          'text11'         => __('Content Marketing', 'portfolioo'),
-          'text12'         => __('Email Marketing', 'portfolioo'),
+          'title'         => esc_html__('Services',  'portfolioo'),
+          'text1'         => esc_html__('Art Service',  'portfolioo'),
+          'text2'         => esc_html__('Mechanical Parts', 'portfolioo'),
+          'text3'         => esc_html__('Drawling life', 'portfolioo'),
+          'text4'         => esc_html__('Animating', 'portfolioo'),
+          'text5'         => esc_html__('Folklore',  'portfolioo'),
+          'text6'         => esc_html__('Digital Marketing', 'portfolioo'),
+          'text7'         => esc_html__('International Networking', 'portfolioo'),
+          'text8'         => esc_html__('Social Experiment', 'portfolioo'),
+          'text9'         => esc_html__('SEO',  'portfolioo'),
+          'text10'         => esc_html__('Digital strategy', 'portfolioo'),
+          'text11'         => esc_html__('Content Marketing', 'portfolioo'),
+          'text12'         => esc_html__('Email Marketing', 'portfolioo'),
           'textcolor' => '#444',
           'titlecolor' => '#333',
           'bgcolor'       => '#f1f1f1'
@@ -260,11 +262,11 @@ class portfolioo_service_three_widget extends WP_Widget
 
         <!-- Title -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php esc_html_e( 'Title', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
         </p>
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'titlecolor' ); ?>"><?php _e('Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'titlecolor' ); ?>"><?php esc_html_e('Color', 'portfolioo') ?></label>
           <input class="color-picker" id="<?php echo $this->get_field_id( 'titlecolor' ); ?>" name="<?php echo $this->get_field_name( 'titlecolor' ); ?>" value="<?php echo $instance['titlecolor']; ?>"/>
         </p>
         <br>
@@ -273,25 +275,25 @@ class portfolioo_service_three_widget extends WP_Widget
             
         <!-- text1 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text1' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text1' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text1' ); ?>" name="<?php echo $this->get_field_name( 'text1' ); ?>" type="text" value="<?php echo esc_attr( $instance['text1'] ); ?>" />
         </p>
 
         <!-- text2 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text2' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text2' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text2' ); ?>" name="<?php echo $this->get_field_name( 'text2' ); ?>" type="text" value="<?php echo esc_attr( $instance['text2'] ); ?>" />
         </p>
 
          <!-- text3 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text3' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text3' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text3' ); ?>" name="<?php echo $this->get_field_name( 'text3' ); ?>" type="text" value="<?php echo esc_attr( $instance['text3'] ); ?>" />
         </p>
 
         <!-- text4 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text4' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text4' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text4' ); ?>" name="<?php echo $this->get_field_name( 'text4' ); ?>" type="text" value="<?php echo esc_attr( $instance['text4'] ); ?>" />
         </p>
 
@@ -300,25 +302,25 @@ class portfolioo_service_three_widget extends WP_Widget
         <br>
         <!-- text5 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text5' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text5' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text5' ); ?>" name="<?php echo $this->get_field_name( 'text5' ); ?>" type="text" value="<?php echo esc_attr( $instance['text5'] ); ?>" />
         </p>
 
         <!-- text6 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text6' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text6' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text6' ); ?>" name="<?php echo $this->get_field_name( 'text6' ); ?>" type="text" value="<?php echo esc_attr( $instance['text6'] ); ?>" />
         </p>
 
          <!-- text7 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text7' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text7' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text7' ); ?>" name="<?php echo $this->get_field_name( 'text7' ); ?>" type="text" value="<?php echo esc_attr( $instance['text7'] ); ?>" />
         </p>
 
         <!-- text8 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text8' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text8' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text8' ); ?>" name="<?php echo $this->get_field_name( 'text8' ); ?>" type="text" value="<?php echo esc_attr( $instance['text8'] ); ?>" />
         </p>
 
@@ -332,30 +334,30 @@ class portfolioo_service_three_widget extends WP_Widget
 
         <!-- text10 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text10' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text10' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text10' ); ?>" name="<?php echo $this->get_field_name( 'text10' ); ?>" type="text" value="<?php echo esc_attr( $instance['text10'] ); ?>" />
         </p>
 
          <!-- text11 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text11' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text11' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text11' ); ?>" name="<?php echo $this->get_field_name( 'text11' ); ?>" type="text" value="<?php echo esc_attr( $instance['text11'] ); ?>" />
         </p>
 
         <!-- text12 field -->
         <p>
-            <label for="<?php echo $this->get_field_name( 'text12' ); ?>"><?php _e( 'Text', 'portfolioo' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'text12' ); ?>"><?php esc_html_e( 'Text', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'text12' ); ?>" name="<?php echo $this->get_field_name( 'text12' ); ?>" type="text" value="<?php echo esc_attr( $instance['text12'] ); ?>" />
         </p>
 
         <br>
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'textcolor' ); ?>"><?php _e('Text Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'textcolor' ); ?>"><?php esc_html_e('Text Color', 'portfolioo') ?></label>
           <input class="color-picker" id="<?php echo $this->get_field_id( 'textcolor' ); ?>" name="<?php echo $this->get_field_name( 'textcolor' ); ?>" value="<?php echo $instance['textcolor']; ?>"/>
         </p>
 
         <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bgcolor' ); ?>"><?php _e('Background Color', 'portfolioo') ?></label>
+          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bgcolor' ); ?>"><?php esc_html_e('Background Color', 'portfolioo') ?></label>
           <input class="color-picker" id="<?php echo $this->get_field_id( 'bgcolor' ); ?>" name="<?php echo $this->get_field_name( 'bgcolor' ); ?>" value="<?php echo $instance['bgcolor']; ?>"/>
         </p>
         
