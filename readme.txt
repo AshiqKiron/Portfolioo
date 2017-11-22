@@ -1,5 +1,56 @@
-*Portfolioo WordPress Theme, Copyright 2017 Asphalt Themes*
-*Portfolioo is distributed under the terms of the GNU GPLv2*
+[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+
+
+*Portfolioo WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.*
+*Underscores WordPress Theme is distributed under the terms of the GNU GPL*
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/licenses/
+
+
+
+* Changelog *
+
+
+#### 0.0.3 (23.11.2017)
+- Removed customizer locked widgets from customizer
+- Used the_comments_navigation in comment.php
+- Changed creat_function in widgets
+- Deleted blog.php
+- Added home.php
+- Removed footer contact detail fields
+- Removed customizer 
+- Prefixed customizer-function.php function name
+- Properly escaped texts in widgets
+- Removed footer contact section and customizer settings
+- Removed multiple widget_title in widgets
+- Added WP default customizer color panel
+- Added widget title instance and id base
+
+
+#### 0.0.2 (21.11.2017)
+- TRT revise submission
+- Escaped texts on blog.php and content.php file also checked other files.
+- Revised readme file
+- Removed duplicate customizer widget partial refresh from functions.php
+- Removed git,sass files
+- Fixed html class
+- backend.css now loads in widget.php and customizer panel only
+- Tooks excerpt function from TweentySeventeen
+
+#### 0.0.1
+- Initial release 
+
+
+
 
 
 Images are from pixabay.com and WordPress dummy contents released under GPL v2
@@ -10,6 +61,7 @@ Requires    : 4.5
 2. Face - https://pixabay.com/en/young-man-portrait-beard-young-man-1281282/
 
 
+Portfolioo WordPress Theme bundles the following third-party resources:
 -------------------------------------------------------
 Credits:
 -------------------------------------------------------
