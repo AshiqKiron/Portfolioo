@@ -184,28 +184,6 @@ function portfolioo_excerpt_more( $link ) {
 add_filter( 'excerpt_more', 'portfolioo_excerpt_more' );
 
 
-//Theme upsell function
-function portfolioo_upsell_notice() {
-	 // Enqueue the script
-	 wp_enqueue_script(
-	 'portfolioo-customizer-upsell',
-	 get_template_directory_uri() . '/js/upsell.js',
-	 array(), '1.0.0',
-	 true
-	 );
-	 // Localize the script
-	 wp_localize_script(
-	 'portfolioo-customizer-upsell',
-	 'portfoliooL10n',
-	 array(
-	 'portfoliooURL'  => esc_url( 'https://asphaltthemes.com/portfolioo' ),
-	 'portfoliooLabel'  => __( 'Upgrade to PRO', 'portfolioo' ),
-	 )
-	 );
-	}
-add_action( 'customize_controls_enqueue_scripts', 'portfolioo_upsell_notice' );
-
-
 
 /**
  * Frontpage widgets
@@ -243,6 +221,12 @@ require get_template_directory() . '/inc/customizer/customizer-function.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load theme upsell
+ */
+require_once( trailingslashit( get_template_directory() ) . '/inc/trt-customize-pro/example-1/class-customize.php' );
+
 
 
 

@@ -116,12 +116,12 @@ class portfolioo_intro_one_widget extends WP_Widget
             $heroimage      = isset( $instance['heroimage'] ) ? apply_filters('', $instance['heroimage'] ) : esc_url(get_template_directory_uri().'/assets/images/YT.jpg');
             $introimgfixed  = isset( $instance['introimgfixed'] ) ? $instance['introimgfixed'] : 'static';
             
-            $title          = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'], $instance, $this->id_base ) : esc_html__('Providing World Class WordPress Services','portfolioo');
+            $title          = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'], $instance, $this->id_base ) : esc_attr__('Providing World Class WordPress Services','portfolioo');
             $image          = isset( $instance['image'] ) ? apply_filters('', $instance['image'] ) : esc_url(get_template_directory_uri().'/assets/images/short.jpg');
-            $text1          = isset( $instance['text1'] ) ? apply_filters('', $instance['text1'] ) : esc_html__('NAME','portfolioo');
-            $text2          = isset( $instance['text2'] ) ? apply_filters('', $instance['text2'] ) : esc_html__('John Doe','portfolioo');
-            $text3          = isset( $instance['text3'] ) ? apply_filters('', $instance['text3'] ) : esc_html__('EMAIL','portfolioo');
-            $text4          = isset( $instance['text4'] ) ? apply_filters('', $instance['text4'] ) : esc_html__('john@doe.com','portfolioo');
+            $text1          = isset( $instance['text1'] ) ? apply_filters('', $instance['text1'] ) : esc_attr__('NAME','portfolioo');
+            $text2          = isset( $instance['text2'] ) ? apply_filters('', $instance['text2'] ) : esc_attr__('John Doe','portfolioo');
+            $text3          = isset( $instance['text3'] ) ? apply_filters('', $instance['text3'] ) : esc_attr__('EMAIL','portfolioo');
+            $text4          = isset( $instance['text4'] ) ? apply_filters('', $instance['text4'] ) : esc_attr__('john@doe.com','portfolioo');
             
             $titlecolor     = isset( $instance['titlecolor'] ) ? $instance['titlecolor'] : '#fff';
             $subtitlecolor     = isset( $instance['subtitlecolor'] ) ? $instance['subtitlecolor'] : '#212121';
@@ -217,16 +217,16 @@ class portfolioo_intro_one_widget extends WP_Widget
         /* Set up some default widget settings. */
         $defaults = array( 
           'heroimage'     =>  get_template_directory_uri().'/assets/images/YT.jpg',
-          'introimgfixed' => esc_html__('static', 'portfolioo'),
-          'title'         => esc_html__('Providing World Class WordPress Services', 'portfolioo'), 
+          'introimgfixed' => esc_attr__('static', 'portfolioo'),
+          'title'         => esc_attr__('Providing World Class WordPress Services', 'portfolioo'), 
           'titlecolor'    => '#fff',
           'txtcolor'    => '#999',
           'subtitlecolor'    => '#212121',
           'image'         =>  get_template_directory_uri().'/assets/images/short.jpg',
-          'text1'         => esc_html__('NAME',  'portfolioo'),
-          'text2'         => esc_html__('John Doe', 'portfolioo'),
-          'text3'         => esc_html__('EMAIL', 'portfolioo'),
-          'text4'         => esc_html__('john@doe.com', 'portfolioo'),
+          'text1'         => esc_attr__('NAME',  'portfolioo'),
+          'text2'         => esc_attr__('John Doe', 'portfolioo'),
+          'text3'         => esc_attr__('EMAIL', 'portfolioo'),
+          'text4'         => esc_attr__('john@doe.com', 'portfolioo'),
           'txt1and3color' => '#AAA',
           'txt2and4color' => '#333',
           'bgcolor'       => '#fff',
@@ -243,7 +243,7 @@ class portfolioo_intro_one_widget extends WP_Widget
 
 
         <p>
-            <label style="max-width: 100%;overflow: hidden;" for="<?php echo $this->get_field_name( 'heroimage' ); ?>"><?php esc_html_e( 'Hero Image:', 'portfolioo'  ); ?></label> <span><?php _e(' (Suggested Size : 1920 * 1080 )' , 'portfolioo'); ?></span>
+            <label style="max-width: 100%;overflow: hidden;" for="<?php echo $this->get_field_name( 'heroimage' ); ?>"><?php esc_html_e( 'Hero Image:', 'portfolioo'  ); ?></label> <span><?php esc_attr__(' (Suggested Size : 1920 * 1080 )' , 'portfolioo'); ?></span>
  
             <?php if (!empty($instance['heroimage'])) { 
               ?> <img style="max-width: 100%;overflow: hidden;" src="<?php echo esc_url( $instance['heroimage'] ); ?>" class="widgtimgprv" /> <span style="float:right;cursor: pointer;" class="mediaremvbtn">X</span><?php 

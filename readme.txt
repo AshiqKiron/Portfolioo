@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
-
-
 *Portfolioo WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.*
 *Underscores WordPress Theme is distributed under the terms of the GNU GPL*
 This program is free software: you can redistribute it and/or modify
@@ -18,6 +15,18 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 
 * Changelog *
+
+
+#### 0.0.4 (25.11.2017)
+- Revert back to old comment function
+- Used esc_attr__ on HTML translatable string on widget HTML
+- Removed home.php custom 10 query post limitation
+- Fixed portfolioo typo on customizer.php
+- Removed body line height customizer option
+- Change customizer wp_kses_post to sanitize_text_field
+- Added tadlock's upsell code
+
+
 
 
 #### 0.0.3 (23.11.2017)
@@ -52,10 +61,11 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 
 
-
 Images are from pixabay.com and WordPress dummy contents released under GPL v2
-Tested up to: 4.9
-Requires    : 4.5
+Tested up to WordPress: 4.9
+Requires WordPress    : 4.5
+Requires PHP version  : 5.6
+Requires MySQL version: 5.7
 
 1. Intro Widget Image - https://www.pexels.com/photo/apple-computer-desk-laptop-209151/
 2. Face - https://pixabay.com/en/young-man-portrait-beard-young-man-1281282/
@@ -105,3 +115,10 @@ Credits:
     - License - The MIT License (MIT)   
     - URL - https://github.com/necolas/normalize.css/blob/master/LICENSE.md
     - Source - http://necolas.github.com/normalize.css/
+
+
+### 8. Theme Upsell Code by Justin Tadlock
+    - Author - Nicolas Gallagher and Jonathan Neal 
+    - License - GNU GPLv2  
+    - URL - https://github.com/justintadlock/trt-customizer-pro/blob/master/license.md
+    - Source - https://github.com/justintadlock/trt-customizer-pro

@@ -92,20 +92,20 @@ class portfolioo_service_three_widget extends WP_Widget
     {
 
 
-            $title          = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'], $instance, $this->id_base ) : esc_html__('Services','portfolioo');
+            $title          = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'], $instance, $this->id_base ) : esc_attr__('Services','portfolioo');
 
-            $text1          = isset( $instance['text1'] ) ? apply_filters('', $instance['text1'] ) : esc_html__('Art Service','portfolioo');
-            $text2          = isset( $instance['text2'] ) ? apply_filters('', $instance['text2'] ) : esc_html__('Mechanical Parts','portfolioo');
-            $text3          = isset( $instance['text3'] ) ? apply_filters('', $instance['text3'] ) : esc_html__('Drawling life','portfolioo');
-            $text4          = isset( $instance['text4'] ) ? apply_filters('', $instance['text4'] ) : esc_html__('Animating','portfolioo');
-            $text5          = isset( $instance['text5'] ) ? apply_filters('', $instance['text5'] ) : esc_html__('Folklore','portfolioo');
-            $text6          = isset( $instance['text6'] ) ? apply_filters('', $instance['text6'] ) : esc_html__('Digital Marketing','portfolioo');
-            $text7          = isset( $instance['text7'] ) ? apply_filters('', $instance['text7'] ) : esc_html__('International Networking','portfolioo');
-            $text8          = isset( $instance['text8'] ) ? apply_filters('', $instance['text8'] ) : esc_html__('Social Experiment','portfolioo');
-            $text9          = isset( $instance['text9'] ) ? apply_filters('', $instance['text9'] ) : esc_html__('SEO','portfolioo');
-            $text10          = isset( $instance['text10'] ) ? apply_filters('', $instance['text10'] ) : esc_html__('Digital strategy','portfolioo');
-            $text11          = isset( $instance['text11'] ) ? apply_filters('', $instance['text11'] ) : esc_html__('Content Marketing','portfolioo');
-            $text12          = isset( $instance['text12'] ) ? apply_filters('', $instance['text12'] ) : esc_html__('Email Marketing','portfolioo');
+            $text1          = isset( $instance['text1'] ) ? apply_filters('', $instance['text1'] ) : esc_attr__('Art Service','portfolioo');
+            $text2          = isset( $instance['text2'] ) ? apply_filters('', $instance['text2'] ) : esc_attr__('Mechanical Parts','portfolioo');
+            $text3          = isset( $instance['text3'] ) ? apply_filters('', $instance['text3'] ) : esc_attr__('Drawling life','portfolioo');
+            $text4          = isset( $instance['text4'] ) ? apply_filters('', $instance['text4'] ) : esc_attr__('Animating','portfolioo');
+            $text5          = isset( $instance['text5'] ) ? apply_filters('', $instance['text5'] ) : esc_attr__('Folklore','portfolioo');
+            $text6          = isset( $instance['text6'] ) ? apply_filters('', $instance['text6'] ) : esc_attr__('Digital Marketing','portfolioo');
+            $text7          = isset( $instance['text7'] ) ? apply_filters('', $instance['text7'] ) : esc_attr__('International Networking','portfolioo');
+            $text8          = isset( $instance['text8'] ) ? apply_filters('', $instance['text8'] ) : esc_attr__('Social Experiment','portfolioo');
+            $text9          = isset( $instance['text9'] ) ? apply_filters('', $instance['text9'] ) : esc_attr__('SEO','portfolioo');
+            $text10          = isset( $instance['text10'] ) ? apply_filters('', $instance['text10'] ) : esc_attr__('Digital strategy','portfolioo');
+            $text11          = isset( $instance['text11'] ) ? apply_filters('', $instance['text11'] ) : esc_attr__('Content Marketing','portfolioo');
+            $text12          = isset( $instance['text12'] ) ? apply_filters('', $instance['text12'] ) : esc_attr__('Email Marketing','portfolioo');
             
             $textcolor  = isset( $instance['textcolor'] ) ? $instance['textcolor'] : '#444';
             $bgcolor        = isset( $instance['bgcolor'] ) ? $instance['bgcolor'] : '#f1f1f1';
@@ -235,19 +235,19 @@ class portfolioo_service_three_widget extends WP_Widget
     {
         /* Set up some default widget settings. */
         $defaults = array( 
-          'title'         => esc_html__('Services',  'portfolioo'),
-          'text1'         => esc_html__('Art Service',  'portfolioo'),
-          'text2'         => esc_html__('Mechanical Parts', 'portfolioo'),
-          'text3'         => esc_html__('Drawling life', 'portfolioo'),
-          'text4'         => esc_html__('Animating', 'portfolioo'),
-          'text5'         => esc_html__('Folklore',  'portfolioo'),
-          'text6'         => esc_html__('Digital Marketing', 'portfolioo'),
-          'text7'         => esc_html__('International Networking', 'portfolioo'),
-          'text8'         => esc_html__('Social Experiment', 'portfolioo'),
-          'text9'         => esc_html__('SEO',  'portfolioo'),
-          'text10'         => esc_html__('Digital strategy', 'portfolioo'),
-          'text11'         => esc_html__('Content Marketing', 'portfolioo'),
-          'text12'         => esc_html__('Email Marketing', 'portfolioo'),
+          'title'         => esc_attr__('Services',  'portfolioo'),
+          'text1'         => esc_attr__('Art Service',  'portfolioo'),
+          'text2'         => esc_attr__('Mechanical Parts', 'portfolioo'),
+          'text3'         => esc_attr__('Drawling life', 'portfolioo'),
+          'text4'         => esc_attr__('Animating', 'portfolioo'),
+          'text5'         => esc_attr__('Folklore',  'portfolioo'),
+          'text6'         => esc_attr__('Digital Marketing', 'portfolioo'),
+          'text7'         => esc_attr__('International Networking', 'portfolioo'),
+          'text8'         => esc_attr__('Social Experiment', 'portfolioo'),
+          'text9'         => esc_attr__('SEO',  'portfolioo'),
+          'text10'         => esc_attr__('Digital strategy', 'portfolioo'),
+          'text11'         => esc_attr__('Content Marketing', 'portfolioo'),
+          'text12'         => esc_attr__('Email Marketing', 'portfolioo'),
           'textcolor' => '#444',
           'titlecolor' => '#333',
           'bgcolor'       => '#f1f1f1'

@@ -95,13 +95,6 @@
         } );
     });  
 
-     //Site Line height
-     wp.customize( 'portfolioo[body_line_height]', function( value ) {
-        value.bind( function( to ) {             
-            $( 'body' ).css( 'line-height', to + 'em' );            
-        } );
-    });
-
     //Site Font Size
      wp.customize( 'portfolioo[body_font_size]', function( value ) {
         value.bind( function( to ) {             

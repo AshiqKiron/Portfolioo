@@ -28,7 +28,7 @@ get_header(); ?>
                 $args = array (
                     'post__in'  => '',
                     'ignore_sticky_posts' => 'false',
-                    'posts_per_page' => '10',
+                    
                     'paged' => $paged
                     );
                 $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;

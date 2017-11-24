@@ -29,7 +29,6 @@ function portfolioo_customizer_css() {
       .site-title a {color: <?php echo esc_html($portfolioo['site_title_color']); ?>;}
       .pad_menutitle i.fa.fa-times {background-color: <?php echo esc_html($portfolioo['sidr_close_color']); ?>;}
       body {font-family: <?php echo esc_html($portfolioo['body_font_family']); ?>;}
-      body {line-height: <?php echo esc_html($portfolioo['body_line_height']); ?>;}
       body {font-size: <?php echo esc_html($portfolioo['body_font_size']); ?>px;}
       #colophon .footdiv h3, #colophon .footdiv .main h4, #colophon .footdiv .main p {color: <?php echo esc_html($portfolioo['colophon_txt_color']); ?>;}
       #colophon .footdiv {background-color: <?php echo esc_html($portfolioo['footer_bg_color']); ?>;}

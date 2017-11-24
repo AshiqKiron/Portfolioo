@@ -231,7 +231,7 @@ function portfolioo_customize_register( $wp_customize ) {
 	//site font family 
 	$wp_customize->add_setting('portfolioo[body_font_family]',array(
 		          'default'         => 'Open Sans',
-		          'sanitize_callback' => 'wp_kses_post',
+		          'sanitize_callback' => 'sanitize_text_field',
 		          'transport'       => 'postMessage',
 		          'type'			=> 'option'
 		      )
@@ -248,36 +248,11 @@ function portfolioo_customize_register( $wp_customize ) {
 		        )       
 		   );
 
-	//site body_line_height
-	$wp_customize->add_setting('portfolioo[body_line_height]',array(
-		          'default'         => '1.8',
-		          'sanitize_callback' => 'wp_kses_post',
-		          'transport'       => 'postMessage',
-		          'type'			=> 'option'
-		      )
-		);
-
-				
-		   		// Control
-		   		$wp_customize->add_control(new WP_Customize_Control($wp_customize,'body_line_height', array(
-		                'label'          => __( 'Line Height', 'portfolioo' ),
-		                'section'        => 'typorgraphy_section',
-		                'settings'       => 'portfolioo[body_line_height]',
-		                'type'           => 'range',
-		                'input_attrs' => array(
-					    'min' => '1',
-					    'max' => '3',
-					    'step' => '.1',
-					  )
-		            )
-		        )       
-		   );
-
 
 	//site body_ font size
 	$wp_customize->add_setting('portfolioo[body_font_size]',array(
 		          'default'         => '16',
-		          'sanitize_callback' => 'wp_kses_post',
+		          'sanitize_callback' => 'sanitize_text_field',
 		          'transport'       => 'postMessage',
 		          'type'			=> 'option'
 		      )
@@ -397,25 +372,25 @@ function portfolioo_admin_load($hook) {
 		return;
 	}
  
-	wp_enqueue_style( 'portoflioo-css', get_template_directory_uri() . '/assets/css/backend.css' );
+	wp_enqueue_style( 'portfolioo-css', get_template_directory_uri() . '/assets/css/backend.css' );
 }
 add_action('admin_enqueue_scripts', 'portfolioo_admin_load');
 
 
 // Sanitize text field
-function portoflioo_sanitize_text( $text ) {
+function portfolioo_sanitize_text( $text ) {
 
     return wp_kses_post( force_balance_tags( $text ) );
 }
 
 // Sanitize texportfoliooea 
-function portoflioo_sanitize_css( $input ) {
+function portfolioo_sanitize_css( $input ) {
 	return wp_filter_nohtml_kses( $input );
 }
 
 
 // checkbox sanitization
-   function portoflioo_checkbox_sanitize($input) {
+   function portfolioo_checkbox_sanitize($input) {
       if ( $input == 1 ) {
          return 1;
       } else {
@@ -424,7 +399,7 @@ function portoflioo_sanitize_css( $input ) {
    }
 
 // icon sanitization
-function portoflioo_icon_sanitize( $input ) {
+function portfolioo_icon_sanitize( $input ) {
     
     $valid_keys = athena_icons();
     
