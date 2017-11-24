@@ -16,6 +16,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.0.5 (25.11.2017)
+- Fixed theme check error
+
+
 
 #### 0.0.4 (25.11.2017)
 - Revert back to old comment function

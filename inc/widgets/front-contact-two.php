@@ -362,7 +362,7 @@ class portfolioo_contact_two_widget extends WP_Widget
         $instance[ 'name' ]      = wp_kses_post( $new_instance[ 'name' ] );
         $instance[ 'text1' ]      = wp_kses_post( $new_instance[ 'text1' ] );
         $instance[ 'text2' ]      = wp_kses_post( $new_instance[ 'text2' ] );
-        $instance[ 'email' ]      = esc_attr__($new_instance[ 'email' ] );
+        $instance[ 'email' ]      = ($new_instance[ 'email' ] );
         $instance[ 'address1' ]      = wp_kses_post( $new_instance[ 'address1' ] );
         $instance[ 'address2' ]      = wp_kses_post( $new_instance[ 'address2' ] );
         $instance[ 'address3' ]      = wp_kses_post( $new_instance[ 'address3' ] );
