@@ -30,7 +30,6 @@ class portfolioo_blog_widget extends WP_Widget
 
         add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('admin_enqueue_styles', array($this, 'upload_styles'));
-        add_action('wp_enqueue_scripts', array(&$this, 'portfolioo_intro2_css'));
     }
 
 
@@ -99,12 +98,8 @@ class portfolioo_blog_widget extends WP_Widget
     {   extract( $args );
 
           echo '<section class="front__loop">';
-          $title = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'],$instance, $this->id_base ) : esc_html__('Blog','portfolioo');
-          $blockbgcol = isset( $instance['blockbgcol'] ) ? $instance['blockbgcol'] : '#f1f1f1';
-          $blockhovbgcol = isset( $instance['blockhovbgcol'] ) ? $instance['blockhovbgcol'] : '#fff';
-          $titcol = isset( $instance['titcol'] ) ? $instance['titcol'] : '#333';
-          $tithovcol = isset( $instance['tithovcol'] ) ? $instance['tithovcol'] : '#2196F3';
-          $txtcol = isset( $instance['txtcol'] ) ? $instance['txtcol'] : '#333';
+            $title = isset( $instance['title'] ) ? apply_filters('widget_title', $instance['title'],$instance, $this->id_base ) : esc_html__('Blog','portfolioo');
+        
 
           if(isset($title) ) {
             
@@ -134,42 +129,7 @@ class portfolioo_blog_widget extends WP_Widget
           }
           wp_reset_postdata();
         
-
-
-            $blockbgcol = isset( $instance['blockbgcol'] ) ? $instance['blockbgcol'] : '#f1f1f1';
-            $blockhovbgcol = isset( $instance['blockhovbgcol'] ) ? $instance['blockhovbgcol'] : '#fff';
-            $titcol = isset( $instance['txtcol'] ) ? $instance['titcol'] : '#333';
-            $tithovcol = isset( $instance['tithovcol'] ) ? $instance['tithovcol'] : '#2196F3';
-            $txtcol = isset( $instance['iconhover'] ) ? $instance['txtcol'] : '#555';
-            $titlecol = isset( $instance['titlecol'] ) ? $instance['titlecol'] : '#222';
-
-
-
-
-  
-          if(is_customize_preview()){
-              $id= $this->id;
-              
-              $blockbgcol =   'background-color:#f1f1f1;';
-              $blockhovbgcol =   'background-color:#fff;';
-              $titcol =   'color:#333;';
-              $tithovcol =   'color:#2196F3;';
-              $txtcol =   'color:#555;';
-              $titlecol =   'color:#222;';
- 
-  
-              if ( ! empty( $instance['blockbgcol'] ) ) { $blockbgcol = 'background-color: ' . $instance['blockbgcol'] . '; ';}
-              if ( ! empty( $instance['blockhovbgcol'] ) ) { $blockhovbgcol = 'background-color: ' . $instance['blockhovbgcol'] . '; ';}
-              if ( ! empty( $instance['titcol'] ) ) { $titcol = 'color: ' . $instance['titcol'] . '; ';}
-              if ( ! empty( $instance['tithovcol'] ) ) { $tithovcol = 'color: ' . $instance['tithovcol'] . '; ';}
-              if ( ! empty( $instance['txtcol'] ) ) { $txtcol = 'color: ' . $instance['txtcol'] . '; ';}
-              if ( ! empty( $instance['titlecol'] ) ) { $txt2color = 'color: ' . $instance['titlecol'] . '; ';}
-
-              
-              echo '<style>'.'#'.$id.' .front__loop .wrap {'.$blockbgcol.'}#'.$id.' .front__loop .wrap:hover {'.$blockhovbgcol.'}#'.$id.' .front__loop h2 {'.$titlecol.'}#'.$id.' .front__loop h3 {'.$titcol.'}#'.$id.' .front__loop h3:hover {'.$tithovcol.'}#'.$id.' .front__loop p {'.$txtcol.'}</style>';
-              
-            }
-             ?> <div class="clearfix"></div><?php
+          ?> <div class="clearfix"></div><?php
 
           /* After widget (defined by themes). */
            echo $args['after_widget'] ;
@@ -189,12 +149,6 @@ class portfolioo_blog_widget extends WP_Widget
         /* Set up some default widget settings. */
         $defaults = array( 
           'title'         => esc_html__('Blog',  'portfolioo'),
-          'blockbgcol'    => '#f1f1f1',
-          'blockhovbgcol' => '#fff',
-          'titcol'        => '#333',
-          'tithovcol'     => '#2196F3',
-          'txtcol'        => '#555',
-          'titlecol'      => '#222'
           );
       		
         $instance = wp_parse_args( (array) $instance, $defaults ); 
@@ -205,36 +159,7 @@ class portfolioo_blog_widget extends WP_Widget
           <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php esc_html__( 'Title', 'portfolioo'  ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
         </p>
-       <!--  <p>
-        <label style="vertical-align: top;" for="<?php //echo $this->get_field_id( 'titlecolor' ); ?>"><?php //_e('Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php //echo $this->get_field_id( 'titlecolor' ); ?>" name="<?php //echo $this->get_field_name( 'titlecolor' ); ?>" value="<?php //echo $instance['titlecolor']; ?>"/>
-        </p>
-        <br>
-        <p>
-        <label style="vertical-align: top;" for="<?php //echo $this->get_field_id( 'titcol' ); ?>"><?php //_e('Blog Title Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php //echo $this->get_field_id( 'titcol' ); ?>" name="<?php //echo $this->get_field_name( 'titcol' ); ?>" value="<?php //echo $instance['titcol']; ?>"/>
-        </p>
-
-        <p>
-        <label style="vertical-align: top;" for="<?php //echo $this->get_field_id( 'tithovcol' ); ?>"><?php //_e('Hover Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php //echo $this->get_field_id( 'tithovcol' ); ?>" name="<?php //echo $this->get_field_name( 'tithovcol' ); ?>" value="<?php //echo $instance['tithovcol']; ?>"/>
-        </p>
-        <br>
-        <p>
-        <label style="vertical-align: top;" for="<?php //echo $this->get_field_id( 'txtcol' ); ?>"><?php //_e('Text Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php //echo $this->get_field_id( 'txtcol' ); ?>" name="<?php //echo $this->get_field_name( 'txtcol' ); ?>" value="<?php //echo $instance['txtcol']; ?>"/>
-        </p>
-
-        <p>
-        <label style="vertical-align: top;" for="<?php //echo $this->get_field_id( 'blockbgcol' ); ?>"><?php //_e('Block BG Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php //echo $this->get_field_id( 'blockbgcol' ); ?>" name="<?php //echo $this->get_field_name( 'blockbgcol' ); ?>" value="<?php //echo $instance['blockbgcol']; ?>"/>
-        </p>
-
-        <p>
-        <label style="vertical-align: top;" for="<?php //echo $this->get_field_id( 'blockhovbgcol' ); ?>"><?php //_e('Block Hover Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php //echo $this->get_field_id( 'blockhovbgcol' ); ?>" name="<?php //echo $this->get_field_name( 'blockhovbgcol' ); ?>" value="<?php //echo $instance['blockhovbgcol']; ?>"/>
-        </p>
-         -->
+    
         
     <?php
     }
@@ -255,71 +180,9 @@ class portfolioo_blog_widget extends WP_Widget
         $instance = $new_instance;
 
         $instance[ 'title' ]       = wp_kses_post( $new_instance[ 'title' ] );
-        $instance['blockbgcol']       = sanitize_hex_color($new_instance['blockbgcol']);
-        $instance['blockhovbgcol']       = sanitize_hex_color($new_instance['blockhovbgcol']);
-        $instance['titcol']       = sanitize_hex_color($new_instance['titcol']);
-        $instance['tithovcol']       = sanitize_hex_color($new_instance['tithovcol']);
-        $instance['txtcol']       = sanitize_hex_color($new_instance['txtcol']);
-        $instance['titlecol']       = sanitize_hex_color($new_instance['titlecol']);
 
         return $instance;
     }
 
-      //ENQUEUE CSS
-        function portfolioo_intro2_css() {
-
-          $settings = $this->get_settings();
-          if(!is_customize_preview()){
-          if ( empty( $settings ) ) {
-            return;
-          }
-
-          foreach ( $settings as $instance_id => $instance ) {
-            $id = $this->id_base . '-' . $instance_id;
-
-            if ( ! is_active_widget( false, $id, $this->id_base ) ) {
-              continue;
-            }
-
-              $blockbgcol =   'background-color:#f1f1f1;';
-              $blockhovbgcol =   'background-color:#fff;';
-              $titcol =   'color:#333;';
-              $tithovcol =   'color:#2196F3;';
-              $txtcol =   'color:#555;';
-              $titlecol =   'color:#222;';
-
-
-            if ( ! empty( $instance['blockbgcol'] ) ) {
-              $blockbgcol = 'background-color: ' . $instance['blockbgcol'] . '; ';
-            }
-
-            if ( ! empty( $instance['blockhovbgcol'] ) ) {
-              $blockhovbgcol = 'background-color: ' . $instance['blockhovbgcol'] . '; ';
-            }
-
-            if ( ! empty( $instance['titcol'] ) ) {
-              $titcol = 'color: ' . $instance['titcol'] . '; ';
-            }
-
-            if ( ! empty( $instance['tithovcol'] ) ) {
-              $tithovcol = 'color: ' . $instance['tithovcol'] . '; ';
-            }
-
-            if ( ! empty( $instance['txtcol'] ) ) {
-              $txtcol = 'color: ' . $instance['txtcol'] . '; ';
-            }
-
-            if ( ! empty( $instance['titlecol'] ) ) {
-              $titlecol = 'color: ' . $instance['titlecol'] . '; ';
-            }
-
-            
-            $widget_style = '#'.$id.' .front__loop .wrap {'.$blockbgcol.'}#'.$id.' .front__loop .wrap:hover {'.$blockhovbgcol.'}#'.$id.' .front__loop h2 {'.$titlecol.'}#'.$id.' .front__loop h3 {'.$titcol.'}#'.$id.' .front__loop h3:hover {'.$tithovcol.'}#'.$id.' .front__loop p {'.$txtcol.'}';
-            wp_add_inline_style( 'portfolioo-style', $widget_style );
-            
-                }
-              }
-
-          }
 
 }

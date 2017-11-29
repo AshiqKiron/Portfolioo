@@ -107,9 +107,9 @@ class portfolioo_service_three_widget extends WP_Widget
             $text11          = isset( $instance['text11'] ) ? apply_filters('', $instance['text11'] ) : esc_attr__('Content Marketing','portfolioo');
             $text12          = isset( $instance['text12'] ) ? apply_filters('', $instance['text12'] ) : esc_attr__('Email Marketing','portfolioo');
             
-            $textcolor  = isset( $instance['textcolor'] ) ? $instance['textcolor'] : '#444';
-            $bgcolor        = isset( $instance['bgcolor'] ) ? $instance['bgcolor'] : '#f1f1f1';
-            $titlecolor     = isset( $instance['titlecolor'] ) ? $instance['titlecolor'] : '#333';
+            $textcolor  = isset( $instance['textcolor'] ) ? esc_html($instance['textcolor']) : '#444';
+            $bgcolor        = isset( $instance['bgcolor'] ) ? esc_html($instance['bgcolor']) : '#f1f1f1';
+            $titlecolor     = isset( $instance['titlecolor'] ) ? esc_html($instance['titlecolor']) : '#333';
  
           /* Before widget (defined by themes). */
           echo $args['before_widget'] ;
@@ -208,9 +208,9 @@ class portfolioo_service_three_widget extends WP_Widget
 
   
               
-              if ( ! empty( $instance['textcolor'] ) ) { $textcolor = 'color: ' . $instance['textcolor'] . '; ';}
-              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . $instance['titlecolor'] . '; ';}
-              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = 'background-color: ' . $instance['bgcolor'] . '; ';}
+              if ( ! empty( $instance['textcolor'] ) ) { $textcolor = 'color: ' . esc_html($instance['textcolor']) . '; ';}
+              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';}
+              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';}
 
   
               
@@ -426,15 +426,15 @@ class portfolioo_service_three_widget extends WP_Widget
 
             
             if ( ! empty( $instance['textcolor'] ) ) {
-              $textcolor = 'color: ' . $instance['textcolor'] . '; ';
+              $textcolor = 'color: ' . esc_html($instance['textcolor']) . '; ';
             }
 
             if ( ! empty( $instance['titlecolor'] ) ) {
-              $titlecolor = 'color: ' . $instance['titlecolor'] . '; ';
+              $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';
             }
 
             if ( ! empty( $instance['bgcolor'] ) ) {
-              $bgcolor = 'background-color: ' . $instance['bgcolor'] . '; ';
+              $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';
             }
 
             

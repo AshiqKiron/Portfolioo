@@ -19,6 +19,13 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.0.6 (30.11.2017)
+- Correctd theme upsell credit
+- Fixed comment.php the_comments_navigation issue
+- Properly escaped all widget options
+- Fixed intro widget one media loading error
+
+
 #### 0.0.5 (25.11.2017)
 - Fixed theme check error
 
@@ -124,7 +131,7 @@ Credits:
 
 
 ### 8. Theme Upsell Code by Justin Tadlock
-    - Author - Nicolas Gallagher and Jonathan Neal 
+    - Author - Justin Tadlock
     - License - GNU GPLv2  
     - URL - https://github.com/justintadlock/trt-customizer-pro/blob/master/license.md
     - Source - https://github.com/justintadlock/trt-customizer-pro

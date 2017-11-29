@@ -103,20 +103,20 @@ class portfolioo_contact_two_widget extends WP_Widget
           $address3 = isset( $instance['address3'] ) ?  $instance['address3']  : esc_attr__('Seasame Street, NYC','portfolioo');
           $address4 = isset( $instance['address4'] ) ?  $instance['address4']  : esc_attr__('Seasame Street, NYC','portfolioo');
 
-          $bgcolor = isset( $instance['bgcolor'] ) ? ($instance['bgcolor'] ): '#f7f9f3';
-          $titlecolor = isset( $instance['titlecolor'] ) ? ($instance['titlecolor'] ): '#333';
-          $subtitcol = isset( $instance['subtitcol'] ) ? ($instance['subtitcol'] ): '#333';
-          $textcol = isset( $instance['textcol'] ) ? ($instance['textcol'] ): '#444';
-          $bor1col = isset( $instance['bor1col'] ) ? ($instance['bor1col'] ): '#000';
-          $bor2col = isset( $instance['bor2col'] ) ? ($instance['bor2col'] ): '#000';
-          $bor3col = isset( $instance['bor3col'] ) ? ($instance['bor3col'] ): '#000';
+          $bgcolor = isset( $instance['bgcolor'] ) ? esc_html($instance['bgcolor'] ): '#f7f9f3';
+          $titlecolor = isset( $instance['titlecolor'] ) ? esc_html($instance['titlecolor'] ): '#333';
+          $subtitcol = isset( $instance['subtitcol'] ) ? esc_html($instance['subtitcol'] ): '#333';
+          $textcol = isset( $instance['textcol'] ) ? esc_html($instance['textcol'] ): '#444';
+          $bor1col = isset( $instance['bor1col'] ) ? esc_html($instance['bor1col'] ): '#000';
+          $bor2col = isset( $instance['bor2col'] ) ? esc_html($instance['bor2col'] ): '#000';
+          $bor3col = isset( $instance['bor3col'] ) ? esc_html($instance['bor3col'] ): '#000';
 
         /* Before widget (defined by themes). */
           echo $args['before_widget'] ;
 
           echo '<section class="contact2">
                 <div id="contact2" class="slide-1 slide-content">
-                <article>';
+                <article class="fadeInDown">';
 
 
           if(isset($title) ){    
@@ -196,13 +196,13 @@ class portfolioo_contact_two_widget extends WP_Widget
 
   
               
-              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . $instance['titlecolor'] . '; ';}
-              if ( ! empty( $instance['subtitcol'] ) ) { $subtitcol = 'color: ' . $instance['subtitcol'] . '; ';}
-              if ( ! empty( $instance['textcol'] ) ) { $textcol = 'color: ' . $instance['textcol'].'; ';}
-              if ( ! empty( $instance['bor1col'] ) ) { $bor1col = ' ' . $instance['bor1col'].'; ';}
-              if ( ! empty( $instance['bor2col'] ) ) { $bor2col = ' ' . $instance['bor2col'].'; ';}
-              if ( ! empty( $instance['bor3col'] ) ) { $bor3col = ' ' . $instance['bor3col'].'; ';}
-              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = 'background-color: ' . $instance['bgcolor'] . '; ';}
+              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';}
+              if ( ! empty( $instance['subtitcol'] ) ) { $subtitcol = 'color: ' . esc_html($instance['subtitcol']) . '; ';}
+              if ( ! empty( $instance['textcol'] ) ) { $textcol = 'color: ' . esc_html($instance['textcol']).'; ';}
+              if ( ! empty( $instance['bor1col'] ) ) { $bor1col = ' ' . esc_html($instance['bor1col']).'; ';}
+              if ( ! empty( $instance['bor2col'] ) ) { $bor2col = ' ' . esc_html($instance['bor2col']).'; ';}
+              if ( ! empty( $instance['bor3col'] ) ) { $bor3col = ' ' . esc_html($instance['bor3col']).'; ';}
+              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';}
 
      
   
@@ -362,7 +362,7 @@ class portfolioo_contact_two_widget extends WP_Widget
         $instance[ 'name' ]      = wp_kses_post( $new_instance[ 'name' ] );
         $instance[ 'text1' ]      = wp_kses_post( $new_instance[ 'text1' ] );
         $instance[ 'text2' ]      = wp_kses_post( $new_instance[ 'text2' ] );
-        $instance[ 'email' ]      = ($new_instance[ 'email' ] );
+        $instance[ 'email' ]      = sanitize_email($new_instance[ 'email' ] );
         $instance[ 'address1' ]      = wp_kses_post( $new_instance[ 'address1' ] );
         $instance[ 'address2' ]      = wp_kses_post( $new_instance[ 'address2' ] );
         $instance[ 'address3' ]      = wp_kses_post( $new_instance[ 'address3' ] );
@@ -407,31 +407,31 @@ class portfolioo_contact_two_widget extends WP_Widget
           
 
             if ( ! empty( $instance['titlecolor'] ) ) {
-              $titlecolor = 'color: ' . $instance['titlecolor'] . '; ';
+              $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';
             }
             
             if ( ! empty( $instance['subtitcol'] ) ) {
-              $subtitcol = 'color: ' . $instance['subtitcol'] . '; ';
+              $subtitcol = 'color: ' . esc_html($instance['subtitcol']) . '; ';
             }
 
             if ( ! empty( $instance['textcol'] ) ) {
-              $textcol = 'color: ' . $instance['textcol'] . '; ';
+              $textcol = 'color: ' . esc_html($instance['textcol']) . '; ';
             }
 
             if ( ! empty( $instance['bor1col'] ) ) {
-              $bor1col = ' ' . $instance['bor1col'] . '; ';
+              $bor1col = ' ' . esc_html($instance['bor1col']) . '; ';
             }
 
             if ( ! empty( $instance['bor2col'] ) ) {
-              $bor2col = ' ' . $instance['bor2col'] . '; ';
+              $bor2col = ' ' . esc_html($instance['bor2col']) . '; ';
             }
 
             if ( ! empty( $instance['bor3col'] ) ) {
-              $bor3col = ' ' . $instance['bor3col'] . '; ';
+              $bor3col = ' ' . esc_html($instance['bor3col']) . '; ';
             }
 
             if ( ! empty( $instance['bgcolor'] ) ) {
-              $bgcolor = 'background-color: ' . $instance['bgcolor'] . '; ';
+              $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';
             }
 
             

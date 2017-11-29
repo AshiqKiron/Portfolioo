@@ -7,7 +7,7 @@ function portfolioo_option_defaults() {
 		'sidr_close_color' => '#2196F3',
 		'body_font_family' => '"Raleway Light", "Source Sans", sans-serif',
 		'body_line_height' => '1.8',
-		'body_font_size' => '14',
+		'body_font_size' => '13',
 		'colophon_txt1' => 'Contact Me',
 		'colophon_txt_color' => '#fff',
 		'footer_bg_color' => '#0c051a',

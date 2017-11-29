@@ -100,10 +100,10 @@ class portfolioo_porfolio_two_widget extends WP_Widget
           $text5          = isset( $instance['text5'] ) ? apply_filters('', $instance['text5'] ) : esc_attr__('Advertising','portfolioo');
           $text6          = isset( $instance['text6'] ) ? apply_filters('', $instance['text6'] ) : esc_attr__('Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolor Lorem Ipsum dolore Lorem Ipsum dolor','portfolioo');
 
-        $titlecolor = isset( $instance['titlecolor'] ) ? $instance['titlecolor'] : '#333';
-        $bgcolor = isset( $instance['bgcolor'] ) ? $instance['bgcolor'] : '#fff';
-        $subtitle1color = isset( $instance['subtitle1color'] ) ? $instance['subtitle1color'] : '#444;';
-        $text1color = isset( $instance['text1color'] ) ? $instance['text1color'] : '#444';
+        $titlecolor = isset( $instance['titlecolor'] ) ? esc_html($instance['titlecolor']) : '#333';
+        $bgcolor = isset( $instance['bgcolor'] ) ? esc_html($instance['bgcolor']) : '#fff';
+        $subtitle1color = isset( $instance['subtitle1color'] ) ? esc_html($instance['subtitle1color']) : '#444;';
+        $text1color = isset( $instance['text1color'] ) ? esc_html($instance['text1color']) : '#444';
 
 
 
@@ -180,10 +180,10 @@ class portfolioo_porfolio_two_widget extends WP_Widget
 
      
               
-              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . $instance['titlecolor'] . '; ';}
-              if ( ! empty( $instance['subtitle1color'] ) ) { $subtitle1color = 'color: ' . $instance['subtitle1color'] . '; ';}
-              if ( ! empty( $instance['text1color'] ) ) { $text1color = 'color: ' . $instance['text1color'] . '; ';}
-              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = 'background-color: ' . $instance['bgcolor'] . '; ';}
+              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';}
+              if ( ! empty( $instance['subtitle1color'] ) ) { $subtitle1color = 'color: ' . esc_html($instance['subtitle1color']) . '; ';}
+              if ( ! empty( $instance['text1color'] ) ) { $text1color = 'color: ' . esc_html($instance['text1color']) . '; ';}
+              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';}
      
   
               
@@ -345,19 +345,19 @@ class portfolioo_porfolio_two_widget extends WP_Widget
 
             
             if ( ! empty( $instance['titlecolor'] ) ) {
-              $titlecolor = 'color: ' . $instance['titlecolor'] . '; ';
+              $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';
             }
 
             if ( ! empty( $instance['subtitle1color'] ) ) {
-              $subtitle1color = 'color: ' . $instance['subtitle1color'] . '; ';
+              $subtitle1color = 'color: ' . esc_html($instance['subtitle1color']) . '; ';
             }
 
             if ( ! empty( $instance['text1color'] ) ) {
-              $text1color = 'color: ' . $instance['text1color'] . '; ';
+              $text1color = 'color: ' . esc_html($instance['text1color']) . '; ';
             }
 
             if ( ! empty( $instance['bgcolor'] ) ) {
-              $bgcolor = 'background-color: ' . $instance['bgcolor'] . '; ';
+              $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';
             }
 
             

@@ -28,9 +28,8 @@ class portfolioo_intro_one_widget extends WP_Widget
 
         parent::__construct( 'portfolioo_intro_one_widget', 'Intro Widget One', $widget_ops );
 
-        add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
+        add_action('admin_enqueue_scripts', array($this, 'upload_scripts'));
         add_action('admin_enqueue_styles', array($this, 'upload_styles'));
-        add_action( 'admin_footer-widgets.php', array( $this, 'print_scripts' ), 9999 );
         add_action('wp_enqueue_scripts', array(&$this, 'portfolioo_intro1_css'));
     }
 
@@ -123,11 +122,11 @@ class portfolioo_intro_one_widget extends WP_Widget
             $text3          = isset( $instance['text3'] ) ? apply_filters('', $instance['text3'] ) : esc_attr__('EMAIL','portfolioo');
             $text4          = isset( $instance['text4'] ) ? apply_filters('', $instance['text4'] ) : esc_attr__('john@doe.com','portfolioo');
             
-            $titlecolor     = isset( $instance['titlecolor'] ) ? $instance['titlecolor'] : '#fff';
-            $subtitlecolor     = isset( $instance['subtitlecolor'] ) ? $instance['subtitlecolor'] : '#212121';
-            $txtcolor     = isset( $instance['txtcolor'] ) ? $instance['txtcolor'] : '#999';
-            $bgcolor     = isset( $instance['bgcolor'] ) ? $instance['bgcolor'] : '#fff';
-            $bordercolor     = isset( $instance['bordercolor'] ) ? $instance['bordercolor'] : '#DDD';
+            $titlecolor     = isset( $instance['titlecolor'] ) ? esc_html($instance['titlecolor']) : '#fff';
+            $subtitlecolor     = isset( $instance['subtitlecolor'] ) ? esc_html($instance['subtitlecolor']) : '#212121';
+            $txtcolor     = isset( $instance['txtcolor'] ) ? esc_html($instance['txtcolor']) : '#999';
+            $bgcolor     = isset( $instance['bgcolor'] ) ? esc_html($instance['bgcolor']) : '#fff';
+            $bordercolor     = isset( $instance['bordercolor'] ) ? esc_html($instance['bordercolor']) : '#DDD';
 
  
           /* Before widget (defined by themes). */
@@ -188,11 +187,11 @@ class portfolioo_intro_one_widget extends WP_Widget
               $bordercolor =   '#DDD;';
       
 
-              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . $instance['titlecolor'] . '; ';}
-              if ( ! empty( $instance['subtitlecolor'] ) ) { $subtitlecolor = 'color: ' . $instance['subtitlecolor'] . '; ';}
-              if ( ! empty( $instance['txtcolor'] ) ) { $txtcolor = 'color: ' . $instance['txtcolor'] . '; ';}
-              if ( ! empty( $instance['bordercolor'] ) ) { $bordercolor = '' . $instance['bordercolor'] . '; ';}
-              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = '' . $instance['bgcolor'] . '; ';}
+              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';}
+              if ( ! empty( $instance['subtitlecolor'] ) ) { $subtitlecolor = 'color: ' . esc_html($instance['subtitlecolor']) . '; ';}
+              if ( ! empty( $instance['txtcolor'] ) ) { $txtcolor = 'color: ' . esc_html($instance['txtcolor']) . '; ';}
+              if ( ! empty( $instance['bordercolor'] ) ) { $bordercolor = '' . esc_html($instance['bordercolor']) . '; ';}
+              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = '' . esc_html($instance['bgcolor']) . '; ';}
 
               
               echo '<style>'.'#'.$id.' .intro1 h1 {'.$titlecolor.'}#'.$id.' .intro1 dd { border-bottom:1px solid '.$bordercolor.'}#'.$id.' .intro1 .slant polygon { fill:'.$bgcolor.'}#'.$id.' .intro1 dd {'.$txtcolor.'}#'.$id.' .intro1 dt {'.$subtitlecolor.'}#'.$id.' .intro1 .slant polygon, .intro1 dl {background-color :'.$bgcolor.'}</style>';
@@ -364,7 +363,7 @@ class portfolioo_intro_one_widget extends WP_Widget
         $instance[ 'text2' ]          = wp_kses_post( $new_instance[ 'text2' ] );
         $instance[ 'text3' ]          = wp_kses_post( $new_instance[ 'text3' ] );
         $instance[ 'text4' ]          = wp_kses_post( $new_instance[ 'text4' ] );
-        $instance[ 'introimgfixed' ]  = ( $new_instance[ 'introimgfixed' ] );
+        $instance[ 'introimgfixed' ]  = esc_url( $new_instance[ 'introimgfixed' ] );
         $instance[ 'titlecolor' ]  = sanitize_hex_color( $new_instance[ 'titlecolor' ] );
         $instance[ 'subtitlecolor' ]  = sanitize_hex_color( $new_instance[ 'subtitlecolor' ] );
         $instance[ 'txtcolor' ]  = sanitize_hex_color( $new_instance[ 'txtcolor' ] );
@@ -401,23 +400,23 @@ class portfolioo_intro_one_widget extends WP_Widget
 
         
             if ( ! empty( $instance['titlecolor'] ) ) {
-              $titlecolor = 'color: ' . $instance['titlecolor'] . '; ';
+              $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';
             }
 
             if ( ! empty( $instance['subtitlecolor'] ) ) {
-              $subtitlecolor = 'color: ' . $instance['subtitlecolor'] . '; ';
+              $subtitlecolor = 'color: ' . esc_html($instance['subtitlecolor']) . '; ';
             }
 
             if ( ! empty( $instance['txtcolor'] ) ) {
-              $txtcolor = 'color: ' . $instance['txtcolor'] . '; ';
+              $txtcolor = 'color: ' . esc_html($instance['txtcolor']) . '; ';
             }
 
             if ( ! empty( $instance['bgcolor'] ) ) {
-              $bgcolor = '' . $instance['bgcolor'] . '; ';
+              $bgcolor = '' . esc_html($instance['bgcolor']) . '; ';
             }
 
             if ( ! empty( $instance['bordercolor'] ) ) {
-              $bordercolor = '' . $instance['bordercolor'] . '; ';
+              $bordercolor = '' . esc_html($instance['bordercolor']) . '; ';
             }
 
          
