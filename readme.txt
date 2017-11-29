@@ -16,6 +16,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.0.7 (30.11.2017)
+- Double text domain error fix
+
+
 #### 0.0.6 (30.11.2017)
 - Correctd theme upsell credit
 - Fixed comment.php the_comments_navigation issue
