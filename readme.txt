@@ -16,6 +16,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.0.8 (01.12.2017)
+- Fixed error for PHP 5.2 version
+
+
 #### 0.0.7 (30.11.2017)
 - Double text domain error fix
 

@@ -8,9 +8,7 @@
 /**
  * Register the Widget
  */
-add_action( 'widgets_init', create_function( '', 'register_widget("portfolioo_porfolio_two_widget");' ) );
-
-
+add_action( 'widgets_init', create_function( '', 'register_widget("portfolioo_porfolio_two_widget");' ) ); 
 
 class portfolioo_porfolio_two_widget extends WP_Widget
 {
