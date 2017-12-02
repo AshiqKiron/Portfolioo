@@ -16,6 +16,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.0.9 (03.12.2017)
+- Removed Color fields from widgets
+
+
 #### 0.0.8 (01.12.2017)
 - Fixed error for PHP 5.2 version
 

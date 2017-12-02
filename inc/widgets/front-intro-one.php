@@ -8,7 +8,10 @@
 /**
  * Register the Widget
  */
-add_action( 'widgets_init', create_function( '', 'register_widget("portfolioo_intro_one_widget");' ) ); 
+function portfolioo_intro_one_widget() {
+    register_widget( 'portfolioo_intro_one_widget' );
+}
+add_action( 'widgets_init', 'portfolioo_intro_one_widget' );
 
 
 class portfolioo_intro_one_widget extends WP_Widget
@@ -27,8 +30,6 @@ class portfolioo_intro_one_widget extends WP_Widget
         parent::__construct( 'portfolioo_intro_one_widget', 'Intro Widget One', $widget_ops );
 
         add_action('admin_enqueue_scripts', array($this, 'upload_scripts'));
-        add_action('admin_enqueue_styles', array($this, 'upload_styles'));
-        add_action('wp_enqueue_scripts', array(&$this, 'portfolioo_intro1_css'));
     }
 
 
@@ -43,60 +44,6 @@ class portfolioo_intro_one_widget extends WP_Widget
     }
         wp_enqueue_script('portfolioo_intro_one_widget', get_template_directory_uri() . '/js/media-upload.js');
     }
-
-
-   /**
-   * Enqueue scripts.
-   *
-   * @since 1.0
-   *
-   * @param string $hook_suffix
-   */
-  public function enqueue_scripts( $hook_suffix ) {
-    if ( 'widgets.php' !== $hook_suffix ) {
-      return;
-    }
-
-    wp_enqueue_style( 'wp-color-picker' );
-    wp_enqueue_script( 'wp-color-picker' );
-    wp_enqueue_script( 'underscore' );
-  }
-
-  /**
-   * Print scripts.
-   *
-   * @since 1.0
-   */
-  public function print_scripts() {
-    ?>
-    <script>
-      ( function( $ ){
-        function initColorPicker( widget ) {
-          widget.find( '.color-picker' ).wpColorPicker( {
-            change: _.throttle( function() { // For Customizer
-              $(this).trigger( 'change' );
-            }, 3000 )
-          });
-        }
-
-        function onFormUpdate( event, widget ) {
-          initColorPicker( widget );
-        }
-
-        $( document ).on( 'widget-added widget-updated', onFormUpdate );
-
-        $( document ).ready( function() {
-          $( '#widgets-right .widget:has(.color-picker)' ).each( function () {
-            initColorPicker( $( this ) );
-          } );
-        } );
-      }( jQuery ) );
-    </script>
-    <?php
-  }
-
-
-
 
 
    /**
@@ -120,12 +67,7 @@ class portfolioo_intro_one_widget extends WP_Widget
             $text3          = isset( $instance['text3'] ) ? apply_filters('', $instance['text3'] ) : esc_attr__('EMAIL','portfolioo');
             $text4          = isset( $instance['text4'] ) ? apply_filters('', $instance['text4'] ) : esc_attr__('john@doe.com','portfolioo');
             
-            $titlecolor     = isset( $instance['titlecolor'] ) ? esc_html($instance['titlecolor']) : '#fff';
-            $subtitlecolor     = isset( $instance['subtitlecolor'] ) ? esc_html($instance['subtitlecolor']) : '#212121';
-            $txtcolor     = isset( $instance['txtcolor'] ) ? esc_html($instance['txtcolor']) : '#999';
-            $bgcolor     = isset( $instance['bgcolor'] ) ? esc_html($instance['bgcolor']) : '#fff';
-            $bordercolor     = isset( $instance['bordercolor'] ) ? esc_html($instance['bordercolor']) : '#DDD';
-
+          
  
           /* Before widget (defined by themes). */
           echo $args['before_widget'] ;
@@ -175,30 +117,7 @@ class portfolioo_intro_one_widget extends WP_Widget
             echo '</dl></div>';
 
 
-          if(is_customize_preview()){
-              $id= $this->id;
-              
-              $titlecolor =   'color:#fff;';
-              $subtitlecolor =   'color:#212121;';
-              $txtcolor =   'color:#999;';
-              $bgcolor =   '#fff;';
-              $bordercolor =   '#DDD;';
-      
-
-              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';}
-              if ( ! empty( $instance['subtitlecolor'] ) ) { $subtitlecolor = 'color: ' . esc_html($instance['subtitlecolor']) . '; ';}
-              if ( ! empty( $instance['txtcolor'] ) ) { $txtcolor = 'color: ' . esc_html($instance['txtcolor']) . '; ';}
-              if ( ! empty( $instance['bordercolor'] ) ) { $bordercolor = '' . esc_html($instance['bordercolor']) . '; ';}
-              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = '' . esc_html($instance['bgcolor']) . '; ';}
-
-              
-              echo '<style>'.'#'.$id.' .intro1 h1 {'.$titlecolor.'}#'.$id.' .intro1 dd { border-bottom:1px solid '.$bordercolor.'}#'.$id.' .intro1 .slant polygon { fill:'.$bgcolor.'}#'.$id.' .intro1 dd {'.$txtcolor.'}#'.$id.' .intro1 dt {'.$subtitlecolor.'}#'.$id.' .intro1 .slant polygon, .intro1 dl {background-color :'.$bgcolor.'}</style>';
-              
-            }
-
-          /* After widget (defined by themes). */
-           echo $args['after_widget'] ;
-
+          
     }
 
 
@@ -224,12 +143,7 @@ class portfolioo_intro_one_widget extends WP_Widget
           'text2'         => esc_attr__('John Doe', 'portfolioo'),
           'text3'         => esc_attr__('EMAIL', 'portfolioo'),
           'text4'         => esc_attr__('john@doe.com', 'portfolioo'),
-          'txt1and3color' => '#AAA',
-          'txt2and4color' => '#333',
-          'bgcolor'       => '#fff',
-          'introimgfixed' => 'static',
-          'bgcolor'       => '#fff',
-          'bordercolor'   => '#DDD'
+        
           );
       		
       		
@@ -265,12 +179,7 @@ class portfolioo_intro_one_widget extends WP_Widget
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
         </p>
 
-        <!-- title Color -->
-        
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'titlecolor' ); ?>"><?php esc_html_e('Color', 'portfolioo') ?></label>
-          <input class="widefat color-picker" id="<?php echo $this->get_field_id( 'titlecolor' ); ?>" name="<?php echo $this->get_field_name( 'titlecolor' ); ?>" value="<?php echo $instance['titlecolor']; ?>" />
-        </p>
+       
 
         <br>
         
@@ -316,25 +225,6 @@ class portfolioo_intro_one_widget extends WP_Widget
 
         <br>
         <br>
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'subtitlecolor' ); ?>"><?php esc_html_e('Sub Title Color', 'portfolioo') ?></label>
-          <input class="widefat color-picker" style="float:right;" id="<?php echo $this->get_field_id( 'subtitlecolor' ); ?>" name="<?php echo $this->get_field_name( 'subtitlecolor' ); ?>" value="<?php echo $instance['subtitlecolor']; ?>" />
-        </p>
-
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'txtcolor' ); ?>"><?php esc_html_e('Text Color', 'portfolioo') ?></label>
-          <input class="widefat color-picker" style="float:right;" id="<?php echo $this->get_field_id( 'txtcolor' ); ?>" name="<?php echo $this->get_field_name( 'txtcolor' ); ?>" value="<?php echo $instance['txtcolor']; ?>" />
-        </p>
-
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bgcolor' ); ?>"><?php esc_html_e('Background Color', 'portfolioo') ?></label>
-          <input class="widefat color-picker" style="float:right;" id="<?php echo $this->get_field_id( 'bgcolor' ); ?>" name="<?php echo $this->get_field_name( 'bgcolor' ); ?>" value="<?php echo $instance['bgcolor']; ?>" />
-        </p>
-
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bordercolor' ); ?>"><?php esc_html_e('Border Color', 'portfolioo') ?></label>
-          <input class="widefat color-picker" style="float:right;" id="<?php echo $this->get_field_id( 'bordercolor' ); ?>" name="<?php echo $this->get_field_name( 'bordercolor' ); ?>" value="<?php echo $instance['bordercolor']; ?>" />
-        </p>
 
 
         
@@ -362,70 +252,10 @@ class portfolioo_intro_one_widget extends WP_Widget
         $instance[ 'text3' ]          = wp_kses_post( $new_instance[ 'text3' ] );
         $instance[ 'text4' ]          = wp_kses_post( $new_instance[ 'text4' ] );
         $instance[ 'introimgfixed' ]  = esc_url( $new_instance[ 'introimgfixed' ] );
-        $instance[ 'titlecolor' ]  = sanitize_hex_color( $new_instance[ 'titlecolor' ] );
-        $instance[ 'subtitlecolor' ]  = sanitize_hex_color( $new_instance[ 'subtitlecolor' ] );
-        $instance[ 'txtcolor' ]  = sanitize_hex_color( $new_instance[ 'txtcolor' ] );
-        $instance[ 'bgcolor' ]  = sanitize_hex_color( $new_instance[ 'bgcolor' ] );
-        $instance[ 'bordercolor' ]  = sanitize_hex_color( $new_instance[ 'bordercolor' ] );
 
 
 
         return $instance;
     }
-
-      //ENQUEUE CSS
-        function portfolioo_intro1_css() {
-
-          $settings = $this->get_settings();
-          if(!is_customize_preview()){
-          if ( empty( $settings ) ) {
-            return;
-          }
-
-          foreach ( $settings as $instance_id => $instance ) {
-            $id = $this->id_base . '-' . $instance_id;
-
-            if ( ! is_active_widget( false, $id, $this->id_base ) ) {
-              continue;
-            }
-
-            $titlecolor =  'color:#fff;';
-            $subtitlecolor = 'color:#212121';
-            $txtcolor = 'color:#999';
-            $bgcolor =  '#fff;';
-            $bordercolor =  '#DDD;';
-
-
-        
-            if ( ! empty( $instance['titlecolor'] ) ) {
-              $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';
-            }
-
-            if ( ! empty( $instance['subtitlecolor'] ) ) {
-              $subtitlecolor = 'color: ' . esc_html($instance['subtitlecolor']) . '; ';
-            }
-
-            if ( ! empty( $instance['txtcolor'] ) ) {
-              $txtcolor = 'color: ' . esc_html($instance['txtcolor']) . '; ';
-            }
-
-            if ( ! empty( $instance['bgcolor'] ) ) {
-              $bgcolor = '' . esc_html($instance['bgcolor']) . '; ';
-            }
-
-            if ( ! empty( $instance['bordercolor'] ) ) {
-              $bordercolor = '' . esc_html($instance['bordercolor']) . '; ';
-            }
-
-         
-            
-            
-            $widget_style = '#'.$id.' .intro1 h1 {'.$titlecolor.'}#'.$id.' .intro1 .slant polygon {fill:'.$bgcolor.'}#'.$id.' .intro1 dd { border-bottom:1px solid '.$bordercolor.'}#'.$id.' .intro1 dt {'.$subtitlecolor.'}#'.$id.' .intro1 dd {'.$txtcolor.'}#'.$id.' .intro1 .slant polygon, .intro1 dl {background-color:'.$bgcolor.'}';
-            wp_add_inline_style( 'portfolioo-style', $widget_style );
-            
-                }
-              }
-
-          }
 
 }

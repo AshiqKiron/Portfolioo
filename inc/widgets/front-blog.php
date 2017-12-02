@@ -8,7 +8,10 @@
 /**
  * Register the Widget
  */
-add_action( 'widgets_init', create_function( '', 'register_widget("portfolioo_blog_widget");' ) ); 
+function portfolioo_blog_widget() {
+    register_widget( 'portfolioo_blog_widget' );
+}
+add_action( 'widgets_init', 'portfolioo_blog_widget' );
 
 
 class portfolioo_blog_widget extends WP_Widget
@@ -26,61 +29,7 @@ class portfolioo_blog_widget extends WP_Widget
 
         parent::__construct( 'portfolioo_blog_widget', 'Blog Widget ', $widget_ops );
 
-        add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
-        add_action('admin_enqueue_styles', array($this, 'upload_styles'));
     }
-
-
-    /**
-   * Enqueue scripts.
-   *
-   * @since 1.0
-   *
-   * @param string $hook_suffix
-   */
-  public function enqueue_scripts( $hook_suffix ) {
-    if ( 'widgets.php' !== $hook_suffix ) {
-      return;
-    }
-
-    wp_enqueue_style( 'wp-color-picker' );
-    wp_enqueue_script( 'wp-color-picker' );
-  }
-
-
-   /**
-   * Print scripts.
-   *
-   * @since 1.0
-   */
-  public function print_scripts() {
-    ?>
-    <script>
-      ( function( $ ){
-        function initColorPicker( widget ) {
-          widget.find( '.color-picker' ).wpColorPicker( {
-            change: _.throttle( function() { // For Customizer
-              $(this).trigger( 'change' );
-            }, 3000 )
-          });
-        }
-
-        function onFormUpdate( event, widget ) {
-          initColorPicker( widget );
-        }
-
-        $( document ).on( 'widget-added widget-updated', onFormUpdate );
-
-        $( document ).ready( function() {
-          $( '#widgets-right .widget:has(.color-picker)' ).each( function () {
-            initColorPicker( $( this ) );
-          } );
-        } );
-      }( jQuery ) );
-    </script>
-    <?php
-  }
-
 
 
 

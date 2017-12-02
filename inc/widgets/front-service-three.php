@@ -8,7 +8,10 @@
 /**
  * Register the Widget
  */
-add_action( 'widgets_init', create_function( '', 'register_widget("portfolioo_service_three_widget");' ) ); 
+function portfolioo_service_three_widget() {
+    register_widget( 'portfolioo_service_three_widget' );
+}
+add_action( 'widgets_init', 'portfolioo_service_three_widget' );
 
 class portfolioo_service_three_widget extends WP_Widget
 {
@@ -25,54 +28,6 @@ class portfolioo_service_three_widget extends WP_Widget
 
         parent::__construct( 'portfolioo_service_three_widget', 'Service Widget Three', $widget_ops );
 
-        add_action('admin_enqueue_styles', array($this, 'upload_styles'));
-        add_action('wp_enqueue_scripts', array(&$this, 'portfolioo_intro1_css'));
-        add_action('wp_enqueue_styles', array(&$this, 'load_my_style'));
-    }
-
-
-    /* Add necessary styles & scripts*/
-      public function enqueue_scripts( $hook_suffix ) {
-        if ( 'widgets.php' !== $hook_suffix ) {
-          return;
-        }
-
-        wp_enqueue_style( 'wp-color-picker' );
-        wp_enqueue_script( 'wp-color-picker' );
-      }
-
-
-    /**
-   * Print scripts.
-   *
-   * @since 1.0
-   */
-    public function print_scripts() {
-      ?>
-      <script>
-        ( function( $ ){
-          function initColorPicker( widget ) {
-            widget.find( '.color-picker' ).wpColorPicker( {
-              change: _.throttle( function() { // For Customizer
-                $(this).trigger( 'change' );
-              }, 3000 )
-            });
-          }
-
-          function onFormUpdate( event, widget ) {
-            initColorPicker( widget );
-          }
-
-          $( document ).on( 'widget-added widget-updated', onFormUpdate );
-
-          $( document ).ready( function() {
-            $( '#widgets-right .widget:has(.color-picker)' ).each( function () {
-              initColorPicker( $( this ) );
-            } );
-          } );
-        }( jQuery ) );
-      </script>
-      <?php
     }
 
 
@@ -104,9 +59,7 @@ class portfolioo_service_three_widget extends WP_Widget
             $text11          = isset( $instance['text11'] ) ? apply_filters('', $instance['text11'] ) : esc_attr__('Content Marketing','portfolioo');
             $text12          = isset( $instance['text12'] ) ? apply_filters('', $instance['text12'] ) : esc_attr__('Email Marketing','portfolioo');
             
-            $textcolor  = isset( $instance['textcolor'] ) ? esc_html($instance['textcolor']) : '#444';
-            $bgcolor        = isset( $instance['bgcolor'] ) ? esc_html($instance['bgcolor']) : '#f1f1f1';
-            $titlecolor     = isset( $instance['titlecolor'] ) ? esc_html($instance['titlecolor']) : '#333';
+          
  
           /* Before widget (defined by themes). */
           echo $args['before_widget'] ;
@@ -195,26 +148,6 @@ class portfolioo_service_three_widget extends WP_Widget
                     </section>';
 			     
 
-          if(is_customize_preview()){
-              $id= $this->id;
-              
-              $textcolor =   'color:#444;';
-              $titlecolor =   'color:#333;';
-              $bgcolor =   'background-color:#f1f1f1;';
-
-
-  
-              
-              if ( ! empty( $instance['textcolor'] ) ) { $textcolor = 'color: ' . esc_html($instance['textcolor']) . '; ';}
-              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';}
-              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';}
-
-  
-              
-              echo '<style>'.'#'.$id. ' .allserv {' . $bgcolor . '}#'.$id.' .allserv h3 {'.$titlecolor.'}#'.$id.' .allserv li {'.$textcolor.'}</style>';
-              
-            }
-
           /* After widget (defined by themes). */
            echo $args['after_widget'] ;
 
@@ -245,9 +178,7 @@ class portfolioo_service_three_widget extends WP_Widget
           'text10'         => esc_attr__('Digital strategy', 'portfolioo'),
           'text11'         => esc_attr__('Content Marketing', 'portfolioo'),
           'text12'         => esc_attr__('Email Marketing', 'portfolioo'),
-          'textcolor' => '#444',
-          'titlecolor' => '#333',
-          'bgcolor'       => '#f1f1f1'
+        
           );
       		
       		
@@ -262,10 +193,7 @@ class portfolioo_service_three_widget extends WP_Widget
             <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php esc_html_e( 'Title', 'portfolioo' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
         </p>
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'titlecolor' ); ?>"><?php esc_html_e('Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'titlecolor' ); ?>" name="<?php echo $this->get_field_name( 'titlecolor' ); ?>" value="<?php echo $instance['titlecolor']; ?>"/>
-        </p>
+       
         <br>
 
         <br>
@@ -348,15 +276,6 @@ class portfolioo_service_three_widget extends WP_Widget
         </p>
 
         <br>
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'textcolor' ); ?>"><?php esc_html_e('Text Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'textcolor' ); ?>" name="<?php echo $this->get_field_name( 'textcolor' ); ?>" value="<?php echo $instance['textcolor']; ?>"/>
-        </p>
-
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bgcolor' ); ?>"><?php esc_html_e('Background Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'bgcolor' ); ?>" name="<?php echo $this->get_field_name( 'bgcolor' ); ?>" value="<?php echo $instance['bgcolor']; ?>"/>
-        </p>
         
     <?php
     }
@@ -390,58 +309,9 @@ class portfolioo_service_three_widget extends WP_Widget
         $instance[ 'text11' ]          = wp_kses_post( $new_instance[ 'text11' ] );
         $instance[ 'text12' ]          = wp_kses_post( $new_instance[ 'text12' ] );
 
-        $instance['bgcolor']       = sanitize_hex_color($new_instance['bgcolor']);
-        $instance['titlecolor']       = sanitize_hex_color($new_instance['titlecolor']);
-        $instance['textcolor']       = sanitize_hex_color($new_instance['textcolor']);
-
-
 
 
         return $instance;
     }
-
-      //ENQUEUE CSS
-        function portfolioo_intro1_css() {
-
-          $settings = $this->get_settings();
-          if(!is_customize_preview()){
-          if ( empty( $settings ) ) {
-            return;
-          }
-
-          foreach ( $settings as $instance_id => $instance ) {
-            $id = $this->id_base . '-' . $instance_id;
-
-            if ( ! is_active_widget( false, $id, $this->id_base ) ) {
-              continue;
-            }
-
-            $textcolor =   'color:#444;';
-            $titlecolor =  'color:#333;';
-            $bgcolor =  'background-color:;';
-
-
-            
-            if ( ! empty( $instance['textcolor'] ) ) {
-              $textcolor = 'color: ' . esc_html($instance['textcolor']) . '; ';
-            }
-
-            if ( ! empty( $instance['titlecolor'] ) ) {
-              $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';
-            }
-
-            if ( ! empty( $instance['bgcolor'] ) ) {
-              $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';
-            }
-
-            
-            
-            $widget_style = '#'.$id. ' .allserv {' . $bgcolor . '}#'.$id.' .allserv h3 {'.$titlecolor.'}#'.$id.' .allserv li {'.$textcolor.'}';
-            wp_add_inline_style( 'portfolioo-style', $widget_style );
-            
-                }
-              }
-
-          }
 
 }

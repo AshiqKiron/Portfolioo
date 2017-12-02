@@ -21,7 +21,7 @@
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'portfolioo' ), 'portfolioo', '<a href="https://asphaltthemes.com/">Asphalt Themes</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s', 'portfolioo' ), 'portfolioo', '<a href="https://asphaltthemes.com/">Asphalt Themes</a>' );
 			?>
 		</div><!-- .site-info -->
 		<a href="#" class="scrolltotop"><i class="fa fa-chevron-up"></i></a>

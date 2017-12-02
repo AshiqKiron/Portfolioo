@@ -8,7 +8,10 @@
 /**
  * Register the Widget
  */
-add_action( 'widgets_init', create_function( '', 'register_widget("portfolioo_contact_two_widget");' ) ); 
+function portfolioo_contact_two_widget() {
+    register_widget( 'portfolioo_contact_two_widget' );
+}
+add_action( 'widgets_init', 'portfolioo_contact_two_widget' );
 
 class portfolioo_contact_two_widget extends WP_Widget
 {
@@ -25,59 +28,12 @@ class portfolioo_contact_two_widget extends WP_Widget
 
         parent::__construct( 'portfolioo_contact_two_widget', 'Contact Widget Two', $widget_ops );
 
-        add_action('admin_enqueue_styles', array($this, 'upload_styles'));
-        add_action('wp_enqueue_scripts', array(&$this, 'portfolioo_portfolio1_css'));
-        add_action('wp_enqueue_styles', array(&$this, 'load_my_style'));
+        
       }
 
 
 
-    /* Add necessary styles & scripts*/
-      public function enqueue_scripts( $hook_suffix ) {
-        if ( 'widgets.php' !== $hook_suffix ) {
-          return;
-        }
-
-        wp_enqueue_style( 'wp-color-picker' );
-        wp_enqueue_script( 'wp-color-picker' );
-      }
-
-
-    /**
-   * Print scripts.
-   *
-   * @since 1.0
-   */
-    public function print_scripts() {
-      ?>
-      <script>
-        ( function( $ ){
-          function initColorPicker( widget ) {
-            widget.find( '.color-picker' ).wpColorPicker( {
-              change: _.throttle( function() { // For Customizer
-                $(this).trigger( 'change' );
-              }, 3000 )
-            });
-          }
-
-          function onFormUpdate( event, widget ) {
-            initColorPicker( widget );
-          }
-
-          $( document ).on( 'widget-added widget-updated', onFormUpdate );
-
-          $( document ).ready( function() {
-            $( '#widgets-right .widget:has(.color-picker)' ).each( function () {
-              initColorPicker( $( this ) );
-            } );
-          } );
-        }( jQuery ) );
-      </script>
-      <?php
-    }
-
-
-
+  
    /**
    * Front-end display of widget.
    *
@@ -101,13 +57,6 @@ class portfolioo_contact_two_widget extends WP_Widget
           $address3 = isset( $instance['address3'] ) ?  $instance['address3']  : esc_attr__('Seasame Street, NYC','portfolioo');
           $address4 = isset( $instance['address4'] ) ?  $instance['address4']  : esc_attr__('Seasame Street, NYC','portfolioo');
 
-          $bgcolor = isset( $instance['bgcolor'] ) ? esc_html($instance['bgcolor'] ): '#f7f9f3';
-          $titlecolor = isset( $instance['titlecolor'] ) ? esc_html($instance['titlecolor'] ): '#333';
-          $subtitcol = isset( $instance['subtitcol'] ) ? esc_html($instance['subtitcol'] ): '#333';
-          $textcol = isset( $instance['textcol'] ) ? esc_html($instance['textcol'] ): '#444';
-          $bor1col = isset( $instance['bor1col'] ) ? esc_html($instance['bor1col'] ): '#000';
-          $bor2col = isset( $instance['bor2col'] ) ? esc_html($instance['bor2col'] ): '#000';
-          $bor3col = isset( $instance['bor3col'] ) ? esc_html($instance['bor3col'] ): '#000';
 
         /* Before widget (defined by themes). */
           echo $args['before_widget'] ;
@@ -180,34 +129,7 @@ class portfolioo_contact_two_widget extends WP_Widget
                 </section>';
 
 
-          if(is_customize_preview()){
-              $id= $this->id;
-              
-              $titlecolor =   'color:#333;';
-              $subtitcol =   'color:#333;';
-              $textcol =   'color:#444;';
-              $bor1col    =   '#000;';
-              $bor2col    =   '#000;';
-              $bor3col    =   '#000;';
-              $bgcolor =   'background-color:#f7f9f3;';
-
-
-  
-              
-              if ( ! empty( $instance['titlecolor'] ) ) { $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';}
-              if ( ! empty( $instance['subtitcol'] ) ) { $subtitcol = 'color: ' . esc_html($instance['subtitcol']) . '; ';}
-              if ( ! empty( $instance['textcol'] ) ) { $textcol = 'color: ' . esc_html($instance['textcol']).'; ';}
-              if ( ! empty( $instance['bor1col'] ) ) { $bor1col = ' ' . esc_html($instance['bor1col']).'; ';}
-              if ( ! empty( $instance['bor2col'] ) ) { $bor2col = ' ' . esc_html($instance['bor2col']).'; ';}
-              if ( ! empty( $instance['bor3col'] ) ) { $bor3col = ' ' . esc_html($instance['bor3col']).'; ';}
-              if ( ! empty( $instance['bgcolor'] ) ) { $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';}
-
-     
-  
-              
-              echo '<style>'.'#'.$id.' .contact2 {'.$bgcolor.'}#'.$id.' .inner {'.$bgcolor.'}#'.$id.' .border-2 {'.$bgcolor.'}#'.$id.' .border-1 {'.$bgcolor.'}#'.$id.' .contact2 h2 {'.$titlecolor.'}#'.$id.' .contact2 ul li {'.$textcol.'}#'.$id.' .contact2 .slide-1 .contact-box h3 {'.$subtitcol.'}#'.$id.' .contact2 .slide-1 .contact-box > .inner {border:2px solid '.$bor1col.'}#'.$id.' .contact2 .border-1 {border:2px solid '.$bor2col.'}#'.$id.' .contact2 .border-2 {border:2px solid '.$bor3col.'}</style>';
-              
-            }
+         
 
           /* After widget (defined by themes). */
            echo $args['after_widget'] ;
@@ -234,14 +156,7 @@ class portfolioo_contact_two_widget extends WP_Widget
           'address1'      => esc_attr__('Office Address', 'portfolioo'),
           'address2'      => esc_attr__('134, Pirate road, Free juntion', 'portfolioo'),
           'address3'      => esc_attr__('Seasame Street, NYC', 'portfolioo'),
-          'address4'           => esc_attr__('Seasame Street, NYC', 'portfolioo'),
-          'titlecolor'      => '#333',
-          'bgcolor'         => '#f7f9f3',
-          'bor1col'         => '#000',
-          'subtitcol'       => '#333',
-          'textcol'         => '#444',
-          'bor2col'         => '#000',
-          'bor3col'         => '#000'
+          'address4'           => esc_attr__('Seasame Street, NYC', 'portfolioo')
           );
           
           
@@ -254,10 +169,7 @@ class portfolioo_contact_two_widget extends WP_Widget
           <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php esc_html_e( 'Title', 'portfolioo'  ); ?></label>
             <input placeholder="<?php esc_attr__('Contact Me', 'portfolioo'); ?>" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $instance['title'] ); ?>" />
         </p>
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'titlecolor' ); ?>"><?php esc_attr__('Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'titlecolor' ); ?>" name="<?php echo $this->get_field_name( 'titlecolor' ); ?>" value="<?php echo $instance['titlecolor']; ?>"/>
-        </p>
+
 
         <br>
 
@@ -308,35 +220,7 @@ class portfolioo_contact_two_widget extends WP_Widget
 
         <br>
         <br>
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'subtitcol' ); ?>"><?php esc_html_e('Sub Title Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'subtitcol' ); ?>" name="<?php echo $this->get_field_name( 'subtitcol' ); ?>" value="<?php echo $instance['subtitcol']; ?>"/>
-        </p>
         
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'textcol' ); ?>"><?php esc_html_e('Text Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'textcol' ); ?>" name="<?php echo $this->get_field_name( 'textcol' ); ?>" value="<?php echo $instance['textcol']; ?>"/>
-        </p>
-
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bor1col' ); ?>"><?php esc_html_e('Border One Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'bor1col' ); ?>" name="<?php echo $this->get_field_name( 'bor1col' ); ?>" value="<?php echo $instance['bor1col']; ?>"/>
-        </p>
-
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bor2col' ); ?>"><?php esc_html_e('Border Two Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'bor2col' ); ?>" name="<?php echo $this->get_field_name( 'bor2col' ); ?>" value="<?php echo $instance['bor2col']; ?>"/>
-        </p>
-
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bor3col' ); ?>"><?php esc_html_e('Border Three Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'bor3col' ); ?>" name="<?php echo $this->get_field_name( 'bor3col' ); ?>" value="<?php echo $instance['bor3col']; ?>"/>
-        </p>
-        
-        <p>
-          <label style="vertical-align: top;" for="<?php echo $this->get_field_id( 'bgcolor' ); ?>"><?php esc_html_e('Background Color', 'portfolioo') ?></label>
-          <input class="color-picker" id="<?php echo $this->get_field_id( 'bgcolor' ); ?>" name="<?php echo $this->get_field_name( 'bgcolor' ); ?>" value="<?php echo $instance['bgcolor']; ?>"/>
-        </p>
         
     <?php
     }
@@ -365,81 +249,12 @@ class portfolioo_contact_two_widget extends WP_Widget
         $instance[ 'address2' ]      = wp_kses_post( $new_instance[ 'address2' ] );
         $instance[ 'address3' ]      = wp_kses_post( $new_instance[ 'address3' ] );
         $instance[ 'address4' ]      = wp_kses_post( $new_instance[ 'address4' ] );
-        $instance['bgcolor']      = sanitize_hex_color($new_instance['bgcolor']);
-        $instance['titlecolor']       = sanitize_hex_color($new_instance['titlecolor']);
-        $instance['subtitcol']       = sanitize_hex_color($new_instance['subtitcol']);
-        $instance['textcol']       = sanitize_hex_color($new_instance['textcol']);
-        $instance['bor1col']       = sanitize_hex_color($new_instance['bor1col']);
-        $instance['bor2col']       = sanitize_hex_color($new_instance['bor2col']);
-        $instance['bor3col']       = sanitize_hex_color($new_instance['bor3col']);
+        
    
 
         return $instance;
     }
 
-      //ENQUEUE CSS
-        function portfolioo_portfolio1_css() {
-
-          $settings = $this->get_settings();
-          if(!is_customize_preview()){
-          if ( empty( $settings ) ) {
-            return;
-          }
-
-          foreach ( $settings as $instance_id => $instance ) {
-            $id = $this->id_base . '-' . $instance_id;
-
-            if ( ! is_active_widget( false, $id, $this->id_base ) ) {
-              continue;
-            }
-
-              $titlecolor =   'color:#333;';
-              $subtitcol =   'color:#333;';
-              $textcol =   'color:#444;';
-              $bor1col    =   '#000;';
-              $bor2col    =   '#000;';
-              $bor3col    =   '#000;';
-              $bgcolor =   'background-color:#f7f9f3;';
-
-
-          
-
-            if ( ! empty( $instance['titlecolor'] ) ) {
-              $titlecolor = 'color: ' . esc_html($instance['titlecolor']) . '; ';
-            }
-            
-            if ( ! empty( $instance['subtitcol'] ) ) {
-              $subtitcol = 'color: ' . esc_html($instance['subtitcol']) . '; ';
-            }
-
-            if ( ! empty( $instance['textcol'] ) ) {
-              $textcol = 'color: ' . esc_html($instance['textcol']) . '; ';
-            }
-
-            if ( ! empty( $instance['bor1col'] ) ) {
-              $bor1col = ' ' . esc_html($instance['bor1col']) . '; ';
-            }
-
-            if ( ! empty( $instance['bor2col'] ) ) {
-              $bor2col = ' ' . esc_html($instance['bor2col']) . '; ';
-            }
-
-            if ( ! empty( $instance['bor3col'] ) ) {
-              $bor3col = ' ' . esc_html($instance['bor3col']) . '; ';
-            }
-
-            if ( ! empty( $instance['bgcolor'] ) ) {
-              $bgcolor = 'background-color: ' . esc_html($instance['bgcolor']) . '; ';
-            }
-
-            
-            
-            $widget_style = '#'.$id.' .contact2 {'.$bgcolor.'}#'.$id.' .inner {'.$bgcolor.'}#'.$id.' .border-2 {'.$bgcolor.'}#'.$id.' .border-1 {'.$bgcolor.'}#'.$id.' .contact2 h2 {'.$titlecolor.'}#'.$id.' .contact2 ul li {'.$textcol.'}#'.$id.' .contact2 .slide-1 .contact-box h3 {'.$subtitcol.'}#'.$id.' .contact2 .slide-1 .contact-box > .inner {border:2px solid '.$bor1col.'}#'.$id.' .contact2 .border-1 {border:2px solid '.$bor2col.'}#'.$id.' .contact2 .border-2 {border:2px solid '.$bor3col.'}';
-            wp_add_inline_style( 'portfolioo-style', $widget_style );
-            
-                }
-              }
-
-          }
-
+     
+             
 }
