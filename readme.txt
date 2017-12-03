@@ -1,3 +1,5 @@
+Portfolioo WordPress Theme, Copyright 2012 Asphaltthemes.com
+Portfolioo is distributed under the terms of the GNU GPL
 *Portfolioo WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.*
 *Underscores WordPress Theme is distributed under the terms of the GNU GPL*
 This program is free software: you can redistribute it and/or modify
@@ -15,6 +17,12 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 
 * Changelog *
+
+#### 0.1.0 (03.12.2017)
+- Escaped widget texts
+- Corrected J.Tadlock attribution
+- Added proper theme copyright declaration
+
 
 #### 0.0.9 (03.12.2017)
 - Removed Color fields from widgets
@@ -142,7 +150,7 @@ Credits:
 
 
 ### 8. Theme Upsell Code by Justin Tadlock
-    - Author - Nicolas Gallagher and Jonathan Neal 
+    - Author - Justin Tadlock
     - License - GNU GPLv2  
     - URL - https://github.com/justintadlock/trt-customizer-pro/blob/master/license.md
     - Source - https://github.com/justintadlock/trt-customizer-pro

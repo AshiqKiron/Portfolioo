@@ -71,7 +71,7 @@ class portfolioo_service_three_widget extends WP_Widget
 
               if(isset($title) ){
               
-                 echo '<h3>' . do_shortcode($title)  .'</h3>';
+                 echo '<h3>' . esc_html(do_shortcode($title))  .'</h3>';
               }
 
               echo '</div>
@@ -79,22 +79,22 @@ class portfolioo_service_three_widget extends WP_Widget
 					    
               if(isset($text1) ){
               
-                 echo '<li>' . do_shortcode($text1)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text1))  .'</li>';
               }
 
               if(isset($text2) ){
               
-                 echo '<li>' . do_shortcode($text2)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text2))  .'</li>';
               }
 
               if(isset($text3) ){
               
-                 echo '<li>' . do_shortcode($text3)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text3))  .'</li>';
               }
 
               if(isset($text4) ){
               
-                 echo '<li>' . do_shortcode($text4)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text4))  .'</li>';
               }
 
               echo '</ul>
@@ -102,22 +102,22 @@ class portfolioo_service_three_widget extends WP_Widget
 
               if(isset($text5) ){
               
-                 echo '<li>' . do_shortcode($text5)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text5))  .'</li>';
               }
 
               if(isset($text6) ){
               
-                 echo '<li>' . do_shortcode($text6)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text6))  .'</li>';
               }
 
               if(isset($text7) ){
               
-                 echo '<li>' . do_shortcode($text7)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text7))  .'</li>';
               }
 
               if(isset($text8) ){
               
-                 echo '<li>' . do_shortcode($text8)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text8))  .'</li>';
               }
 
               echo '</ul>
@@ -125,22 +125,22 @@ class portfolioo_service_three_widget extends WP_Widget
 
               if(isset($text9) ){
               
-                 echo '<li>' . do_shortcode($text9)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text9))  .'</li>';
               }
 
               if(isset($text10) ){
               
-                 echo '<li>' . do_shortcode($text10)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text10))  .'</li>';
               }
 
               if(isset($text11) ){
               
-                 echo '<li>' . do_shortcode($text11)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text11) ) .'</li>';
               }
 
               if(isset($text12) ){
               
-                 echo '<li>' . do_shortcode($text12)  .'</li>';
+                 echo '<li>' . esc_html(do_shortcode($text12))  .'</li>';
               }
 
               echo '</ul><div style="clear:both;></div>"

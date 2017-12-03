@@ -78,7 +78,7 @@ class portfolioo_intro_one_widget extends WP_Widget
 
               if(isset($title) ){
               
-                 echo '<h1 itemprop="text">' . do_shortcode($title)  .'</h1>';
+                 echo '<h1 itemprop="text">' . esc_html(do_shortcode($title))  .'</h1>';
               }
 					
 			     
@@ -96,22 +96,22 @@ class portfolioo_intro_one_widget extends WP_Widget
 
             if(isset($text1)){
 
-               echo '<dt itemprop="text">'. do_shortcode($text1) . '</dt>';
+               echo '<dt itemprop="text">'. esc_html(do_shortcode($text1)) . '</dt>';
             }
 
             if(isset($text2)){
 
-               echo '<dd itemprop="text">'. do_shortcode($text2) . '</dd>';
+               echo '<dd itemprop="text">'. esc_html(do_shortcode($text2)) . '</dd>';
             }
 
             if(isset($text3)){
 
-               echo '<dt itemprop="text">'. do_shortcode($text3) . '</dt>';
+               echo '<dt itemprop="text">'. esc_html(do_shortcode($text3)) . '</dt>';
             }
 
             if(isset($text4)){
 
-               echo '<dd itemprop="text">'. do_shortcode($text4) . '</dd>';
+               echo '<dd itemprop="text">'. esc_html(do_shortcode($text4)) . '</dd>';
             }
 
             echo '</dl></div>';

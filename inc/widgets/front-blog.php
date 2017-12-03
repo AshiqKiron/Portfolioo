@@ -50,7 +50,7 @@ class portfolioo_blog_widget extends WP_Widget
 
           if(isset($title) ) {
             
-            echo '<h2>'.do_shortcode($title).'</h2>'; 
+            echo '<h2>'. esc_html(do_shortcode($title)).'</h2>'; 
           }
 
           $q_args = array(

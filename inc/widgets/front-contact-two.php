@@ -68,7 +68,7 @@ class portfolioo_contact_two_widget extends WP_Widget
 
           if(isset($title) ){    
 
-              echo '<h2>'. do_shortcode($title) .'</h2>';
+              echo '<h2>'. esc_html(do_shortcode($title)) .'</h2>';
                         
           }
 
@@ -80,22 +80,22 @@ class portfolioo_contact_two_widget extends WP_Widget
 
           if(isset($name) ){    
               
-              echo '<h3>'. do_shortcode($name) .'</h3>';
+              echo '<h3>'. esc_html(do_shortcode($name)) .'</h3>';
                         
           }
 
           echo '<ul>';
 
           if(isset($text1) ){    
-              echo '<li>'. do_shortcode($text1) .'</li>';         
+              echo '<li>'. esc_html(do_shortcode($text1)) .'</li>';         
           }
 
           if(isset($text2) ){    
-              echo '<li>'. do_shortcode($text2) .'</li>';         
+              echo '<li>'. esc_html(do_shortcode($text2)) .'</li>';         
           }
 
           if(isset($email) ) {
-              echo '<li>'.do_shortcode($email).'</li>'; 
+              echo '<li>'. esc_html(do_shortcode($email)).'</li>'; 
           }
 
           echo '</ul>
@@ -103,21 +103,21 @@ class portfolioo_contact_two_widget extends WP_Widget
                 <div class="column">';
 
           if(isset($address1) ){    
-              echo '<h3>'. do_shortcode($address1) .'</h3>';         
+              echo '<h3>'. esc_html(do_shortcode($address1)) .'</h3>';         
           }
 
           echo '<ul>';
 
           if(isset($address2) ){    
-              echo '<li>'. do_shortcode($address2) .'</li>';         
+              echo '<li>'. esc_html(do_shortcode($address2)) .'</li>';         
           }
 
           if(isset($address3) ){    
-              echo '<li>'. do_shortcode($address3) .'</li>';         
+              echo '<li>'. esc_html(do_shortcode($address3)) .'</li>';         
           }
 
           if(isset($address4) ){    
-              echo '<li>'. ($address4) .'</li>';         
+              echo '<li>'. esc_html(do_shortcode($address4)) .'</li>';         
           }
 
           echo '</ul>

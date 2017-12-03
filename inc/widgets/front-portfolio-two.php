@@ -64,7 +64,7 @@ class portfolioo_porfolio_two_widget extends WP_Widget
 
           if(isset($title) ) {
             
-            echo '<h2>'.do_shortcode($title).'</h2>'; 
+            echo '<h2>'.esc_html(do_shortcode($title)) .'</h2>'; 
           }
           
           echo '</div>
@@ -73,12 +73,12 @@ class portfolioo_porfolio_two_widget extends WP_Widget
 
           if(isset($text1) ){
               
-            echo '<h3>' . do_shortcode($text1)  .'</h3>';
+            echo '<h3>' . esc_html(do_shortcode($text1))  .'</h3>';
           }
 
           if(isset($text2) ){
               
-            echo '<p>' . do_shortcode($text2)  .'</p>';
+            echo '<p>' . esc_html(do_shortcode($text2))  .'</p>';
           }
 
           echo '</div>
@@ -87,12 +87,12 @@ class portfolioo_porfolio_two_widget extends WP_Widget
 
           if(isset($text3) ){
               
-            echo '<h3>' . do_shortcode($text3)  .'</h3>';
+            echo '<h3>' . esc_html(do_shortcode($text3))  .'</h3>';
           }
 
           if(isset($text4) ){
               
-            echo '<p>' . do_shortcode($text4)  .'</p>';
+            echo '<p>' . esc_html(do_shortcode($text4))  .'</p>';
           }
 
           echo '</div>
@@ -101,12 +101,12 @@ class portfolioo_porfolio_two_widget extends WP_Widget
 
           if(isset($text5) ){
               
-            echo '<h3>' . do_shortcode($text5)  .'</h3>';
+            echo '<h3>' . esc_html(do_shortcode($text5))  .'</h3>';
           }
 
           if(isset($text6) ){
               
-            echo '<p>' . do_shortcode($text6)  .'</p>';
+            echo '<p>' . esc_html(do_shortcode($text6))  .'</p>';
           }
 
           echo '</div>
