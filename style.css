@@ -6,7 +6,7 @@ Author: Asphalt Themes
 Author URI: https://asphaltthemes.com/
 Description: A bloat-free WordPress portfolio theme for building personal website. You can take full advantage of the free widgets to create amazing personal website regardless whether you are graphic designer, painters, artists, web designer, web developer, software engineer or photographer. You can customize elements and widgets inside customizer without you having to tweaking any code. The theme comes with Full width layout, easy Logo upload. Portfolioo is 100% responsive built with HTML5 and CSS3, it is SEO friendly, mobile optimized and retina ready, thoroughly tested by WordPress coding standard has clean and a bloat free code, you can flesh out free portfolio, grid, personal showcase website for free. Perfect Portfolio theme for Graphic Designers, Web Designers, Web Developers, Artists, Painters and Photographers.
 
-Version: 0.1.0
+Version: 0.1.1
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: portfolioo
@@ -962,7 +962,7 @@ a {
   background-color: #fff; }
   /* line 6, sass/frontpage/_portfolio.scss */
   .services h2 {
-    font-size: 70px;
+    font-size: 60px;
     margin-top: 1%;
     padding-left: 10%;
     font-weight: 100;
@@ -1237,6 +1237,10 @@ a {
     padding-left: 30px; }
 
   /* line 171, sass/frontpage/_contact.scss */
+  .contact2 .border-1, .contact2 .border-2 {
+    display: none; }
+
+  /* line 175, sass/frontpage/_contact.scss */
   .contact2 .slide-1 .contact-box .column {
     width: 100%;
     float: none; } }
@@ -1293,6 +1297,10 @@ a {
     padding: 5% 10%;
     color: #555; }
 
+@media only screen and (max-width: 850px) {
+  /* line 55, sass/frontpage/_blog.scss */
+  .front__loop .wrap {
+    width: 100%; } }
 /*--------------------------------------------------------------
 # Templates
 --------------------------------------------------------------*/

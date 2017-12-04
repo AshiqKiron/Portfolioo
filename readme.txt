@@ -18,6 +18,12 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.1.1 (04.12.2017)
+- Intro widget issues fixed
+- CSS fixe for widgets
+- Updated POT file
+
+
 #### 0.1.0 (03.12.2017)
 - Escaped widget texts
 - Corrected J.Tadlock attribution

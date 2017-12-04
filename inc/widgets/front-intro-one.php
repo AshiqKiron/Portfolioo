@@ -73,7 +73,7 @@ class portfolioo_intro_one_widget extends WP_Widget
           echo $args['before_widget'] ;
 
               echo '<div class="container intro1">
-                      <div class="heading" style="background-attachment:'.$introimgfixed.';background-image: linear-gradient(rgba(00, 00, 00, 1.5), rgba(0, 0, 0, 0.1)), url('. esc_url($heroimage) .')">';
+                      <div class="heading" style="background-attachment:'.esc_url($introimgfixed).';background-image: linear-gradient(rgba(00, 00, 00, 1.5), rgba(0, 0, 0, 0.1)), url('. esc_url($heroimage) .')">';
 
 
               if(isset($title) ){
@@ -161,7 +161,7 @@ class portfolioo_intro_one_widget extends WP_Widget
               }  ?>
             
             <input style="display:none;" name="<?php echo $this->get_field_name( 'heroimage' ); ?>" id="<?php echo $this->get_field_id( 'heroimage' ); ?>" class="widefat" type="text" size="36" value="<?php echo esc_url( $instance['heroimage'] ); ?>" />
-            <input style="background-color: #0085ba;color: #fff;border: none;cursor: pointer;padding: 6px 5px;" class="upload_image_button" id="<?php echo $this->get_field_id( 'heroimage' ).'-picker'; ?>" type="button" onClick="mediaPicker(this.id)" value="Upload Image" />
+            <input style="background-color: #0085ba;color: #fff;border: none;cursor: pointer;padding: 6px 5px;" class="upload_image_button" id="<?php echo $this->get_field_id( 'heroimage' ).'-picker'; ?>" type="button" onClick="mediaPicker(this.id)" value="<?php esc_attr_e('Upload Image', 'portfolioo'); ?>" />
         </p>
 
 
@@ -193,7 +193,7 @@ class portfolioo_intro_one_widget extends WP_Widget
               }  ?>
             
             <input style="display:none;" name="<?php echo $this->get_field_name( 'image' ); ?>" id="<?php echo $this->get_field_id( 'image' ); ?>" class="widefat" type="text" size="36" value="<?php echo esc_url( $instance['image'] ); ?>" />
-            <input style="background-color: #0085ba;color: #fff;border: none;cursor: pointer;padding: 6px 5px;" class="upload_image_button" id="<?php echo $this->get_field_id( 'image' ).'-picker'; ?>" type="button" onClick="mediaPicker(this.id)" value="Upload Image" />
+            <input style="background-color: #0085ba;color: #fff;border: none;cursor: pointer;padding: 6px 5px;" class="upload_image_button" id="<?php echo $this->get_field_id( 'image' ).'-picker'; ?>" type="button" onClick="mediaPicker(this.id)" value="<?php esc_attr_e('Upload Image', 'portfolioo'); ?>" />
         </p>
 
 
