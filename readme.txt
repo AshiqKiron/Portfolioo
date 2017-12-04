@@ -18,6 +18,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.1.3 (05.12.2017)
+- Fixed theme check error
+
+
 #### 0.1.2 (05.12.2017)
 - Added theme activation dashboard redirection
 - Updated POT file

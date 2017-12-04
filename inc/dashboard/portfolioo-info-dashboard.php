@@ -57,7 +57,7 @@ function portfolioo_getting_started() {
 		<div class="row">
 			<div class="col-md-5 intro">
 				<h2 class="center"><?php esc_html_e( 'Welcome to Portfolioo', 'portfolioo' ); ?></h2>
-				<p class="center"><?php esc_html_e('Version:', 'portoflioo'); ?> <?php echo $theme['Version'];?></p>
+				<p class="center"><?php esc_html_e('Version:', 'portfolioo'); ?> <?php echo $theme['Version'];?></p>
 				<p class="intro__version center">
 				<?php esc_html_e( 'Thank you for installing Portfolioo! You Can Now Build Your Own Online Portfolio', 'portfolioo' ); ?> 
 				</p>
