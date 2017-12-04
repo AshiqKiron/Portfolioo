@@ -218,6 +218,12 @@ require get_template_directory() . '/inc/customizer/customizer-function.php';
 
 
 /**
+ * Theme activation redirector
+ */
+require_once( trailingslashit( get_template_directory() ) . '/inc/dashboard/portfolioo-info-dashboard.php');
+
+
+/**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';

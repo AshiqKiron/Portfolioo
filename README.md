@@ -20,6 +20,11 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.1.2 (05.12.2017)
+- Added theme activation dashboard redirection
+- Updated POT file
+
+
 #### 0.1.1 (04.12.2017)
 - Intro widget issues fixed
 - CSS fixe for widgets

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: portfolioo 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-12-04 23:25+0600\n"
+"POT-Creation-Date: 2017-12-05 02:49+0600\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -129,7 +129,7 @@ msgstr ""
 msgid "This panel allows you to customize Frontpage"
 msgstr ""
 
-#: inc/customizer.php:60
+#: inc/customizer.php:60 inc/dashboard/portfolioo-info-dashboard.php:234
 msgid "Basic Site Settings"
 msgstr ""
 
@@ -2904,6 +2904,249 @@ msgstr ""
 
 #: inc/customizer.php:1351
 msgid " user-md"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:59
+msgid "Welcome to Portfolioo"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:60
+msgid "Version:"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:62
+msgid "Thank you for installing Portfolioo! You Can Now Build Your Own Online Portfolio"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:78
+msgid "Why Upgrade To portfolioo Pro"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:81
+msgid "Why Upgrade To Portfolioo Pro?"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:85
+msgid "Why Upgrade To Portfolioo Pro"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:88
+msgid "Beautiful Widgets"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:89
+#: inc/dashboard/portfolioo-info-dashboard.php:112
+#: inc/dashboard/portfolioo-info-dashboard.php:134
+#: inc/dashboard/portfolioo-info-dashboard.php:164
+#: inc/dashboard/portfolioo-info-dashboard.php:186
+msgid "Upgrade"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:90
+msgid "Top notch beautiful widgets"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:93
+msgid "25 Frontpage Widget"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:94
+msgid "12 Different Type of Widgets"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:95
+msgid "Check out the"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:95
+msgid "Portfolioo Demos"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:108
+#: inc/dashboard/portfolioo-info-dashboard.php:111
+msgid "Sleek Design"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:113
+msgid "Industry Standard Design"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:116
+msgid "Your Portfolio will stand out"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:117
+msgid "Less Cluttred Design"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:119
+msgid "WOW you site visitor"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:130
+#: inc/dashboard/portfolioo-info-dashboard.php:133
+msgid "Advance Widget Options"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:135
+msgid "With Portfolioo Pro you get"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:138
+msgid "25 Frontpage Widgets"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:139
+msgid "600+ Font Awesome Icons"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:140
+msgid "Google Fonts"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:141
+msgid "Integrated SEO Schema Markup"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:142
+msgid "6 Widget Area"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:143
+msgid "5 Page Template"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:144
+msgid "Plugin Compatibility"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:145
+msgid "Social Share On Posts"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:146
+msgid "Dedicate Support Forum"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:147
+msgid "Extra Widget Options"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:148
+#: inc/dashboard/portfolioo-info-dashboard.php:172
+msgid "Lifetime Updates"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:160
+msgid "More Powerful Options"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:163
+msgid "Portfolioo Pro Comes With"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:165
+msgid "With Portfolioo Pro You Get"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:168
+msgid "Express Support"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:169
+msgid "Extended Customizer Options"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:170
+msgid "Solid Code"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:171
+msgid "Extended Features"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:173
+msgid "Custom Widgets"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:174
+msgid "Super SEO Friendly"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:175
+msgid "One Click Updates"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:185
+msgid "*7 day Money back guarantee."
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:198
+msgid "Upgrade To Get The Most Out Of portfolioo Pro"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:199
+msgid "Build your own clean & professional online Portfolio with portfolioo Pro. Upgrade now, comes with 7 refund policy."
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:203
+msgid "Upgrade Now"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:213
+msgid "Get Support"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:215
+msgid "Portfolioo"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:215
+msgid "Documentation"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:216
+msgid "WordPress.org"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:216
+msgid "Support Forum"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:217
+msgid "Email Support"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:222
+msgid "Getting Started"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:224
+msgid "Start"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:224
+msgid "Customizing"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:224
+msgid "your website"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:225
+msgid "Upgrade to Pro to unlock all features"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:230
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:232
+msgid "How To Set up the Front Page"
+msgstr ""
+
+#: inc/dashboard/portfolioo-info-dashboard.php:233
+msgid "Upgrading To portfolioo Pro"
 msgstr ""
 
 #: inc/template-tags.php:52
