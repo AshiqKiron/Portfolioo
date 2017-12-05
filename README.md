@@ -20,6 +20,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.1.4 (05.12.2017)
+- Fix: Post & home page CSS issue
+
+
 #### 0.1.3 (05.12.2017)
 - Fixed theme check error
 

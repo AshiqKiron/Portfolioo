@@ -18,7 +18,7 @@
 	<div class="entry-content">
 
 		<div class="featured__image">
-			<?php	if ( has_post_thumbnail() ) {
+			<?php if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
 			}
 			else {

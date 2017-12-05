@@ -6,7 +6,7 @@ Author: Asphalt Themes
 Author URI: https://asphaltthemes.com/
 Description: A bloat-free WordPress portfolio theme for building personal website. You can take full advantage of the free widgets to create amazing personal website regardless whether you are graphic designer, painters, artists, web designer, web developer, software engineer or photographer. You can customize elements and widgets inside customizer without you having to tweaking any code. The theme comes with Full width layout, easy Logo upload. Portfolioo is 100% responsive built with HTML5 and CSS3, it is SEO friendly, mobile optimized and retina ready, thoroughly tested by WordPress coding standard has clean and a bloat free code, you can flesh out free portfolio, grid, personal showcase website for free. Perfect Portfolio theme for Graphic Designers, Web Designers, Web Developers, Artists, Painters and Photographers.
 
-Version: 0.1.3
+Version: 0.1.4
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: portfolioo
@@ -1327,6 +1327,10 @@ a {
   padding-bottom: 20%; }
 
 /* line 22, sass/template/_single.scss */
+.hide_featured_image {
+  display: none; }
+
+/* line 26, sass/template/_single.scss */
 .post .featured__image {
   text-align: center;
   margin-top: -15%;
@@ -1334,13 +1338,13 @@ a {
   z-index: 1;
   overflow: hidden;
   padding: 0 5%;
-  height: 700px; }
+  height: auto; }
 
-/* line 32, sass/template/_single.scss */
+/* line 36, sass/template/_single.scss */
 .post-entry-meta::before {
   content: "────"; }
 
-/* line 36, sass/template/_single.scss */
+/* line 40, sass/template/_single.scss */
 .post-entry-meta {
   margin-top: -150px;
   position: absolute;
@@ -1353,50 +1357,51 @@ a {
   color: #fff;
   position: relative;
   z-index: 10; }
-  /* line 49, sass/template/_single.scss */
+  /* line 53, sass/template/_single.scss */
   .post-entry-meta a {
     color: yellow; }
 
-/* line 54, sass/template/_single.scss */
+/* line 58, sass/template/_single.scss */
 .post_wrap {
   padding: 4% 20%; }
-  /* line 57, sass/template/_single.scss */
+  /* line 61, sass/template/_single.scss */
   .post_wrap .entry-title {
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     text-transform: uppercase;
     line-height: 1.5em;
-    font-weight: 100; }
-  /* line 65, sass/template/_single.scss */
+    font-weight: 100;
+    padding-left: 10%; }
+  /* line 70, sass/template/_single.scss */
   .post_wrap .post_others {
     background-color: whitesmoke;
     padding: 5%; }
-  /* line 70, sass/template/_single.scss */
+  /* line 75, sass/template/_single.scss */
   .post_wrap .entry {
     font-size: .99em; }
-    /* line 73, sass/template/_single.scss */
+    /* line 78, sass/template/_single.scss */
     .post_wrap .entry p {
       line-height: 2em;
       color: #000;
       letter-spacing: .5px; }
-    /* line 79, sass/template/_single.scss */
+    /* line 84, sass/template/_single.scss */
     .post_wrap .entry a {
       border-bottom: 1px solid #ddd; }
-  /* line 84, sass/template/_single.scss */
+  /* line 89, sass/template/_single.scss */
   .post_wrap .entry-footer {
     padding: 5% 0; }
-    /* line 86, sass/template/_single.scss */
+    /* line 91, sass/template/_single.scss */
     .post_wrap .entry-footer a {
       color: #666;
       font-size: 13px;
       -webkit-transition: .6s ease all;
       transition: .6s ease all; }
-      /* line 91, sass/template/_single.scss */
+      /* line 96, sass/template/_single.scss */
       .post_wrap .entry-footer a:hover {
         color: #333;
         -webkit-transition: .6s ease all;
         transition: .6s ease all; }
-  /* line 98, sass/template/_single.scss */
+  /* line 103, sass/template/_single.scss */
   .post_wrap .edit-link a {
     float: right;
     color: #333;
@@ -1404,32 +1409,32 @@ a {
     border: 1px solid rgba(153, 153, 153, 0.5);
     padding: 0px 8px; }
 
-/* line 108, sass/template/_single.scss */
+/* line 113, sass/template/_single.scss */
 .hide_featured_image {
   display: none; }
 
-/* line 112, sass/template/_single.scss */
+/* line 117, sass/template/_single.scss */
 .post-navigation {
   padding: 5% 15%; }
-  /* line 115, sass/template/_single.scss */
+  /* line 120, sass/template/_single.scss */
   .post-navigation a {
     color: #333;
     text-shadow: 0.5px 0.5px 0.5px #333;
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
     font-size: 20px; }
-    /* line 121, sass/template/_single.scss */
+    /* line 126, sass/template/_single.scss */
     .post-navigation a :hover {
       text-shadow: none;
       -webkit-transition: .5s ease all;
       transition: .5s ease all; }
-  /* line 127, sass/template/_single.scss */
+  /* line 132, sass/template/_single.scss */
   .post-navigation .nav-previous::after {
     content: "────";
     float: right;
     -webkit-transform: rotate(-60deg);
             transform: rotate(-60deg); }
-  /* line 133, sass/template/_single.scss */
+  /* line 138, sass/template/_single.scss */
   .post-navigation .nav-next::before {
     content: "────";
     float: left;
@@ -1437,16 +1442,16 @@ a {
             transform: rotate(-60deg); }
 
 @media screen and (max-width: 750px) {
-  /* line 146, sass/template/_single.scss */
+  /* line 151, sass/template/_single.scss */
   .post .featured__image {
     margin-top: -10%; }
 
-  /* line 150, sass/template/_single.scss */
+  /* line 155, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -125px;
     left: 0; } }
 @media screen and (min-width: 320px) and (max-width: 550px) {
-  /* line 157, sass/template/_single.scss */
+  /* line 162, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -60px;
     left: 0;
@@ -1456,28 +1461,28 @@ a {
     height: 80px;
     text-align: center; } }
 @media screen and (min-width: 751px) and (max-width: 1450px) {
-  /* line 171, sass/template/_single.scss */
+  /* line 176, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -100px;
     left: 0; } }
 @media screen and (min-width: 1451px) and (max-width: 1900px) {
-  /* line 179, sass/template/_single.scss */
+  /* line 184, sass/template/_single.scss */
   .post-entry-meta {
     left: 0; } }
 @media screen and (min-width: 2001px) and (max-width: 2150px) {
-  /* line 186, sass/template/_single.scss */
+  /* line 191, sass/template/_single.scss */
   .post-entry-meta {
     left: 200px; } }
 @media screen and (min-width: 2151px) and (max-width: 2250px) {
-  /* line 193, sass/template/_single.scss */
+  /* line 198, sass/template/_single.scss */
   .post-entry-meta {
     left: 250px; } }
 @media screen and (min-width: 2251px) and (max-width: 2350px) {
-  /* line 200, sass/template/_single.scss */
+  /* line 205, sass/template/_single.scss */
   .post-entry-meta {
     left: 300px; } }
 @media screen and (min-width: 2351px) and (max-width: 3050px) {
-  /* line 208, sass/template/_single.scss */
+  /* line 213, sass/template/_single.scss */
   .post-entry-meta {
     left: 350px; } }
 /*--------------------------------------------------------------
@@ -1588,7 +1593,7 @@ a {
     float: left;
     width: 44%;
     padding: 1%;
-    min-height: 350px;
+    min-height: auto;
     padding-bottom: 5%; }
   /* line 16, sass/template/_blog.scss */
   .blog_page .blg_page_post_list {
@@ -1623,52 +1628,55 @@ a {
     font-size: 12px;
     color: #1b1b1c;
     text-transform: uppercase; }
-  /* line 55, sass/template/_blog.scss */
+    /* line 54, sass/template/_blog.scss */
+    .blog_page .blog_meta p {
+      line-height: 2; }
+  /* line 59, sass/template/_blog.scss */
   .blog_page .blog_meta p:first-child {
     float: left;
     line-height: 0;
     padding-right: 5px; }
-  /* line 61, sass/template/_blog.scss */
+  /* line 65, sass/template/_blog.scss */
   .blog_page .edit-link {
     border: 1px solid #eee;
     padding: 5px 10px;
     font-size: 14px; }
-    /* line 66, sass/template/_blog.scss */
+    /* line 70, sass/template/_blog.scss */
     .blog_page .edit-link a {
       color: #9E9E9E; }
-  /* line 71, sass/template/_blog.scss */
+  /* line 75, sass/template/_blog.scss */
   .blog_page .blog_meta p:first-child::after {
     content: "|";
     padding-left: 10px; }
-  /* line 76, sass/template/_blog.scss */
+  /* line 80, sass/template/_blog.scss */
   .blog_page .blog_pagination {
     padding: 5% 15%; }
-    /* line 79, sass/template/_blog.scss */
+    /* line 83, sass/template/_blog.scss */
     .blog_page .blog_pagination a {
       color: #000;
       text-shadow: 0.5px 0.5px 0.5px #000;
       -webkit-transition: .5s ease all;
       transition: .5s ease all; }
-      /* line 84, sass/template/_blog.scss */
+      /* line 88, sass/template/_blog.scss */
       .blog_page .blog_pagination a :hover {
         text-shadow: none;
         -webkit-transition: .5s ease all;
         transition: .5s ease all; }
-    /* line 90, sass/template/_blog.scss */
+    /* line 94, sass/template/_blog.scss */
     .blog_page .blog_pagination a:first-child {
       float: left; }
-    /* line 94, sass/template/_blog.scss */
+    /* line 98, sass/template/_blog.scss */
     .blog_page .blog_pagination a:last-child {
       float: right; }
 
-/* line 100, sass/template/_blog.scss */
+/* line 104, sass/template/_blog.scss */
 input[type="submit"] {
   background-color: #222;
   color: #fff;
   -webkit-transition: .6s ease all;
   transition: .6s ease all;
   padding: .9em 1em .8em; }
-  /* line 106, sass/template/_blog.scss */
+  /* line 110, sass/template/_blog.scss */
   input[type="submit"]:hover {
     background-color: #fff;
     color: #000;
@@ -1677,7 +1685,7 @@ input[type="submit"] {
     border: 1px solid #222; }
 
 @media screen and (min-width: 300px) and (max-width: 1100px) {
-  /* line 118, sass/template/_blog.scss */
+  /* line 122, sass/template/_blog.scss */
   .blog_page .blog_post_list_wrap {
     float: none;
     width: 95%;
