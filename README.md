@@ -20,6 +20,12 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.1.6 (08.12.2017)
+- Fix: Dashboard typos
+- Fix: Post layout spacing
+- Removed: Footer section
+
+
 
 #### 0.1.5 (06.12.2017)
 - Fix: navigation category page display issue

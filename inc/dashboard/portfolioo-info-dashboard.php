@@ -116,7 +116,7 @@ function portfolioo_getting_started() {
 						<li><?php esc_html_e( 'Your Portfolio will stand out', 'portfolioo'); ?></li>
 						<li><?php esc_html_e( 'Less Cluttred Design', 'portfolioo'); ?></li>
 
-						<li><?php esc_html_e( 'WOW you site visitor', 'portfolioo'); ?></li>
+						<li><?php esc_html_e( 'WOW your site visitors', 'portfolioo'); ?></li>
 					</ul>
 
 					</div>
@@ -132,7 +132,7 @@ function portfolioo_getting_started() {
 					<div class="col-md-5 dashboard-upgrade-right">
 					<h2 class="dashboard-upgrade-title"><?php esc_html_e( 'Advance Widget Options', 'portfolioo'); ?></h2>
 					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo'); ?></a></span>
-					<p><?php esc_html_e( 'With Portfolioo Pro you get', 'portfolioo'); ?></p>
+					<p><?php esc_html_e( 'Portfolioo Pro have', 'portfolioo'); ?></p>
 					<div class="dashboard-upgrade-benefit">
 					<ul>
 						<li><?php esc_html_e( '25 Frontpage Widgets', 'portfolioo'); ?></li>
@@ -142,7 +142,6 @@ function portfolioo_getting_started() {
 						<li><?php esc_html_e( '6 Widget Area', 'portfolioo'); ?></li>
 						<li><?php esc_html_e( '5 Page Template', 'portfolioo'); ?></li>
 						<li><?php esc_html_e( 'Plugin Compatibility', 'portfolioo'); ?></li>
-						<li><?php esc_html_e( 'Social Share On Posts', 'portfolioo'); ?></li>
 						<li><?php esc_html_e( 'Dedicate Support Forum', 'portfolioo'); ?></li>
 						<li><?php esc_html_e( 'Extra Widget Options', 'portfolioo'); ?></li>
 						<li><?php esc_html_e( 'Lifetime Updates', 'portfolioo'); ?></li>
@@ -160,7 +159,7 @@ function portfolioo_getting_started() {
 					<img src="<?php echo get_template_directory_uri() . '/assets/images/less-clutter.jpg'; ?>" alt="<?php esc_html_e( 'More Powerful Options', 'portfolioo' ); ?>">
 					</div>
 					<div class="col-md-5 dashboard-upgrade-right">
-					<h2 class="dashboard-upgrade-title"><?php esc_html_e( 'Portfolioo Pro Comes With', 'portfolioo' ); ?></h2>
+					<h2 class="dashboard-upgrade-title"><?php esc_html_e( 'More powerful options', 'portfolioo' ); ?></h2>
 					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo' ); ?></a></span>
 					<p><?php esc_html_e( 'With Portfolioo Pro You Get', 'portfolioo' ); ?></p>
 					<div class="dashboard-upgrade-benefit">

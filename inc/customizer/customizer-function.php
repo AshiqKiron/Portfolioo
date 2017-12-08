@@ -30,9 +30,6 @@ function portfolioo_customizer_css() {
       .pad_menutitle i.fa.fa-times {background-color: <?php echo esc_html($portfolioo['sidr_close_color']); ?>;}
       body {font-family: <?php echo esc_html($portfolioo['body_font_family']); ?>;}
       body {font-size: <?php echo esc_html($portfolioo['body_font_size']); ?>px;}
-      #colophon .footdiv h3, #colophon .footdiv .main h4, #colophon .footdiv .main p {color: <?php echo esc_html($portfolioo['colophon_txt_color']); ?>;}
-      #colophon .footdiv {background-color: <?php echo esc_html($portfolioo['footer_bg_color']); ?>;}
-      #colophon .footdiv .main .fa {color: <?php echo esc_html($portfolioo['colophon_icon_color']); ?>;}
 
     </style>
     <?php
