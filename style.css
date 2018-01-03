@@ -6,7 +6,7 @@ Author: Asphalt Themes
 Author URI: https://asphaltthemes.com/
 Description: A bloat-free WordPress portfolio theme for building personal website. You can take full advantage of the free widgets to create amazing personal website regardless whether you are graphic designer, painters, artists, web designer, web developer, software engineer or photographer. You can customize elements and widgets inside customizer without you having to tweaking any code. The theme comes with Full width layout, easy Logo upload. Portfolioo is 100% responsive built with HTML5 and CSS3, it is SEO friendly, mobile optimized and retina ready, thoroughly tested by WordPress coding standard has clean and a bloat free code, you can flesh out free portfolio, grid, personal showcase website for free. Perfect Portfolio theme for Graphic Designers, Web Designers, Web Developers, Artists, Painters and Photographers.
 
-Version: 0.1.5
+Version: 0.1.7
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: portfolioo
@@ -1267,18 +1267,21 @@ a {
               box-shadow: 0px 15px 27px rgba(0, 0, 0, 0.05), 0 15px 30px -10px rgba(0, 0, 0, 0.3);
       -webkit-transition: .5s ease all;
       transition: .5s ease all; }
-  /* line 21, sass/frontpage/_blog.scss */
+  /* line 20, sass/frontpage/_blog.scss */
+  .front__loop .more-link {
+    text-align: center; }
+  /* line 25, sass/frontpage/_blog.scss */
   .front__loop a {
     color: #333;
     font-size: 20px;
     -webkit-transition: .5s ease all;
     transition: .5s ease all; }
-    /* line 26, sass/frontpage/_blog.scss */
+    /* line 30, sass/frontpage/_blog.scss */
     .front__loop a:hover {
       color: #2196F3;
       -webkit-transition: .5s ease all;
       transition: .5s ease all; }
-  /* line 32, sass/frontpage/_blog.scss */
+  /* line 36, sass/frontpage/_blog.scss */
   .front__loop h2 {
     color: #222;
     text-align: center;
@@ -1287,18 +1290,18 @@ a {
     text-transform: uppercase;
     font-weight: 100;
     margin-top: 0px; }
-  /* line 42, sass/frontpage/_blog.scss */
+  /* line 46, sass/frontpage/_blog.scss */
   .front__loop h3 {
     padding: 5%;
     text-align: center;
     color: #333; }
-  /* line 48, sass/frontpage/_blog.scss */
+  /* line 52, sass/frontpage/_blog.scss */
   .front__loop p {
     padding: 5% 10%;
     color: #555; }
 
 @media only screen and (max-width: 850px) {
-  /* line 55, sass/frontpage/_blog.scss */
+  /* line 59, sass/frontpage/_blog.scss */
   .front__loop .wrap {
     width: 100%; } }
 /*--------------------------------------------------------------
@@ -1378,30 +1381,31 @@ a {
     padding: 5%; }
   /* line 75, sass/template/_single.scss */
   .post_wrap .entry {
-    font-size: .99em; }
-    /* line 78, sass/template/_single.scss */
+    font-size: .99em;
+    padding-top: 5%; }
+    /* line 79, sass/template/_single.scss */
     .post_wrap .entry p {
       line-height: 2em;
       color: #000;
       letter-spacing: .5px; }
-    /* line 84, sass/template/_single.scss */
+    /* line 85, sass/template/_single.scss */
     .post_wrap .entry a {
       border-bottom: 1px solid #ddd; }
-  /* line 89, sass/template/_single.scss */
+  /* line 90, sass/template/_single.scss */
   .post_wrap .entry-footer {
     padding: 5% 0; }
-    /* line 91, sass/template/_single.scss */
+    /* line 92, sass/template/_single.scss */
     .post_wrap .entry-footer a {
       color: #666;
       font-size: 13px;
       -webkit-transition: .6s ease all;
       transition: .6s ease all; }
-      /* line 96, sass/template/_single.scss */
+      /* line 97, sass/template/_single.scss */
       .post_wrap .entry-footer a:hover {
         color: #333;
         -webkit-transition: .6s ease all;
         transition: .6s ease all; }
-  /* line 103, sass/template/_single.scss */
+  /* line 104, sass/template/_single.scss */
   .post_wrap .edit-link a {
     float: right;
     color: #333;
@@ -1409,32 +1413,32 @@ a {
     border: 1px solid rgba(153, 153, 153, 0.5);
     padding: 0px 8px; }
 
-/* line 113, sass/template/_single.scss */
+/* line 114, sass/template/_single.scss */
 .hide_featured_image {
   display: none; }
 
-/* line 117, sass/template/_single.scss */
+/* line 118, sass/template/_single.scss */
 .post-navigation {
   padding: 5% 15%; }
-  /* line 120, sass/template/_single.scss */
+  /* line 121, sass/template/_single.scss */
   .post-navigation a {
     color: #333;
     text-shadow: 0.5px 0.5px 0.5px #333;
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
     font-size: 20px; }
-    /* line 126, sass/template/_single.scss */
+    /* line 127, sass/template/_single.scss */
     .post-navigation a :hover {
       text-shadow: none;
       -webkit-transition: .5s ease all;
       transition: .5s ease all; }
-  /* line 132, sass/template/_single.scss */
+  /* line 133, sass/template/_single.scss */
   .post-navigation .nav-previous::after {
     content: "────";
     float: right;
     -webkit-transform: rotate(-60deg);
             transform: rotate(-60deg); }
-  /* line 138, sass/template/_single.scss */
+  /* line 139, sass/template/_single.scss */
   .post-navigation .nav-next::before {
     content: "────";
     float: left;
@@ -1442,16 +1446,16 @@ a {
             transform: rotate(-60deg); }
 
 @media screen and (max-width: 750px) {
-  /* line 151, sass/template/_single.scss */
+  /* line 152, sass/template/_single.scss */
   .post .featured__image {
     margin-top: -10%; }
 
-  /* line 155, sass/template/_single.scss */
+  /* line 156, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -125px;
     left: 0; } }
 @media screen and (min-width: 320px) and (max-width: 550px) {
-  /* line 162, sass/template/_single.scss */
+  /* line 163, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -60px;
     left: 0;
@@ -1461,28 +1465,28 @@ a {
     height: 80px;
     text-align: center; } }
 @media screen and (min-width: 751px) and (max-width: 1450px) {
-  /* line 176, sass/template/_single.scss */
+  /* line 177, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -100px;
     left: 0; } }
 @media screen and (min-width: 1451px) and (max-width: 1900px) {
-  /* line 184, sass/template/_single.scss */
+  /* line 185, sass/template/_single.scss */
   .post-entry-meta {
     left: 0; } }
 @media screen and (min-width: 2001px) and (max-width: 2150px) {
-  /* line 191, sass/template/_single.scss */
+  /* line 192, sass/template/_single.scss */
   .post-entry-meta {
     left: 200px; } }
 @media screen and (min-width: 2151px) and (max-width: 2250px) {
-  /* line 198, sass/template/_single.scss */
+  /* line 199, sass/template/_single.scss */
   .post-entry-meta {
     left: 250px; } }
 @media screen and (min-width: 2251px) and (max-width: 2350px) {
-  /* line 205, sass/template/_single.scss */
+  /* line 206, sass/template/_single.scss */
   .post-entry-meta {
     left: 300px; } }
 @media screen and (min-width: 2351px) and (max-width: 3050px) {
-  /* line 213, sass/template/_single.scss */
+  /* line 214, sass/template/_single.scss */
   .post-entry-meta {
     left: 350px; } }
 /*--------------------------------------------------------------
@@ -1544,7 +1548,7 @@ a {
     float: left;
     width: 32%;
     padding: 1%;
-    min-height: 350px;
+    min-height: auto;
     padding-bottom: 5%; }
     /* line 71, sass/template/_index.scss */
     .index-page article img {
@@ -1704,7 +1708,7 @@ input[type="submit"] {
     float: left;
     width: 32%;
     padding: 1%;
-    min-height: 350px;
+    min-height: auto;
     padding-bottom: 5%; }
     /* line 15, sass/template/_archive.scss */
     .archive_page article img {
@@ -2079,18 +2083,20 @@ input[type="submit"] {
 
 /* line 10, sass/site/secondary/_widgets.scss */
 .footer-widget {
-  padding: 1% 5%; }
+  padding: 0% 10%; }
   /* line 13, sass/site/secondary/_widgets.scss */
   .footer-widget .widget {
     float: left;
-    width: 25%; }
-  /* line 18, sass/site/secondary/_widgets.scss */
+    width: 25%;
+    padding-top: 10%;
+    padding-bottom: 10%; }
+  /* line 20, sass/site/secondary/_widgets.scss */
   .footer-widget ul {
     list-style: none;
     padding: 0; }
 
 @media screen and (min-width: 300px) and (max-width: 800px) {
-  /* line 26, sass/site/secondary/_widgets.scss */
+  /* line 28, sass/site/secondary/_widgets.scss */
   .footer-widget .widget {
     float: none;
     width: 95%; } }
