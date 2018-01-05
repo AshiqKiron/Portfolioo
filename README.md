@@ -20,6 +20,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.1.8 (05.01.2018)
+- Update: template options
+
+
 #### 0.1.7 (04.01.2018)
 - Add: Template import upsell dashboard
 
@@ -29,6 +33,13 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 - Fix: Post layout spacing
 - Removed: Footer section from customizer
 - Fix: Footer empty widget spacing
+=======
+#### 0.1.6 (08.12.2017)
+- Fix: Dashboard typos
+- Fix: Post layout spacing
+- Removed: Footer section
+
+>>>>>>> 0184d14c0b21e6496c12c7b4f4331b23fe9a3143
 
 
 #### 0.1.5 (06.12.2017)
