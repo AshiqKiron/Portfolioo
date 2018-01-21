@@ -114,6 +114,7 @@ function portfolioo_getting_started() {
 					<p><?php esc_html_e('Easy One click demo import', 'portfolioo'); ?></p>
 					<div class="dashboard-upgrade-benefit">
 					<ul>
+						<li><?php esc_html_e('16 Prebuilt templates to kickstart', 'portfolioo'); ?></li>
 						<li><?php esc_html_e('Say goodbye to complicated site setup', 'portfolioo'); ?></li>
 						<li><?php esc_html_e('Lots of Portfolio templates at your fingertip', 'portfolioo'); ?></li>
 					</ul>
