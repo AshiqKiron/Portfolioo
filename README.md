@@ -145,7 +145,7 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 
 Images are from pixabay.com and WordPress dummy contents released under GPL v2
-Tested up to WordPress: 4.9
+Tested up to WordPress: 4.9.4
 Requires WordPress    : 4.5
 Requires PHP version  : 5.6
 Requires MySQL version: 5.7

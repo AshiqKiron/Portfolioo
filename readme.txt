@@ -18,6 +18,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.1.9 (21.01.2018)
+- Update: Dashboard templates
+
+
 
 #### 0.1.8 (05.01.2018)
 - Update: template options
@@ -134,7 +138,7 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 
 Images are from pixabay.com and WordPress dummy contents released under GPL v2
-Tested up to WordPress: 4.9
+Tested up to WordPress: 4.9.4
 Requires WordPress    : 4.5
 Requires PHP version  : 5.6
 Requires MySQL version: 5.7
