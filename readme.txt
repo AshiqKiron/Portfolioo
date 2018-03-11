@@ -18,9 +18,12 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.2.1 (12.03.2018)
+- Update: Dashboard upgrade link
+
+
 #### 0.1.9 (21.01.2018)
 - Update: Dashboard templates
-
 
 
 #### 0.1.8 (05.01.2018)
