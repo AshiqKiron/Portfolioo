@@ -86,13 +86,13 @@ function portfolioo_getting_started() {
 					</div>
 					<div class="col-md-5 dashboard-upgrade-right">
 					<h2 class="dashboard-upgrade-title"><?php esc_html_e('Beautiful Widgets', 'portfolioo'); ?></h2>
-					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=theme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e('Upgrade', 'portfolioo'); ?></a></span>
+					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e('Upgrade', 'portfolioo'); ?></a></span>
 					<p><?php esc_html_e('Top notch beautiful widgets', 'portfolioo'); ?></p>
 					<div class="dashboard-upgrade-benefit">
 					<ul>
 						<li><?php esc_html_e('25 Frontpage Widget', 'portfolioo'); ?></li>
 						<li><?php esc_html_e('12 Different Type of Widgets', 'portfolioo'); ?></li>
-						<li><?php esc_html_e('Check out the', 'portfolioo'); ?> <a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/portfolioo#demos&utm_source=org&utm_medium=theme&utm_campaign=upsell_link'); ?>"><?php esc_html_e('Portfolioo Demos', 'portfolioo'); ?></a></li>
+						<li><?php esc_html_e('Check out the', 'portfolioo'); ?> <a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/portfolioo#demos&utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link'); ?>"><?php esc_html_e('Portfolioo Demos', 'portfolioo'); ?></a></li>
 					</ul>
 
 					</div>
@@ -110,7 +110,7 @@ function portfolioo_getting_started() {
 					</div>
 					<div class="col-md-5 dashboard-upgrade-right">
 					<h2 class="dashboard-upgrade-title"><?php esc_attr_e('One Click Import', 'portfolioo'); ?></h2>
-					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=theme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e('Upgrade', 'portfolioo'); ?></a></span>
+					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e('Upgrade', 'portfolioo'); ?></a></span>
 					<p><?php esc_html_e('Easy One click demo import', 'portfolioo'); ?></p>
 					<div class="dashboard-upgrade-benefit">
 					<ul>
@@ -133,7 +133,7 @@ function portfolioo_getting_started() {
 					</div>
 					<div class="col-md-5 dashboard-upgrade-right">
 					<h2 class="dashboard-upgrade-title"><?php esc_html_e( 'Sleek Design', 'portfolioo'); ?></h2>
-					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=theme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo'); ?></a></span>
+					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo'); ?></a></span>
 					<p><?php esc_html_e( 'Industry Standard Design', 'portfolioo'); ?></p>
 					<div class="dashboard-upgrade-benefit">
 					<ul>
@@ -155,7 +155,7 @@ function portfolioo_getting_started() {
 					</div>
 					<div class="col-md-5 dashboard-upgrade-right">
 					<h2 class="dashboard-upgrade-title"><?php esc_html_e( 'Advance Widget Options', 'portfolioo'); ?></h2>
-					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=theme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo'); ?></a></span>
+					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo'); ?></a></span>
 					<p><?php esc_html_e( 'Portfolioo Pro have', 'portfolioo'); ?></p>
 					<div class="dashboard-upgrade-benefit">
 					<ul>
@@ -184,7 +184,7 @@ function portfolioo_getting_started() {
 					</div>
 					<div class="col-md-5 dashboard-upgrade-right">
 					<h2 class="dashboard-upgrade-title"><?php esc_html_e( 'More powerful options', 'portfolioo' ); ?></h2>
-					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=theme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo' ); ?></a></span>
+					<span class="dashboard-upgrade-button"><a href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo' ); ?></a></span>
 					<p><?php esc_html_e( 'With Portfolioo Pro You Get', 'portfolioo' ); ?></p>
 					<div class="dashboard-upgrade-benefit">
 					<ul>
@@ -206,7 +206,7 @@ function portfolioo_getting_started() {
 				<div class="row">
 					<div style="text-align: center;float: none;padding-top: 5%;" class="col-md-5 dashboard-upgrade-right">
 					<h4 style="font-size: 20px;" class="dashboard-upgrade-title"><?php esc_html_e( '*7 day Money back guarantee.', 'portfolioo' ); ?></h4>
-					<span  class="dashboard-upgrade-button"><a target="_blank" href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=theme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo' ); ?></a></span>
+					<span  class="dashboard-upgrade-button"><a target="_blank" href="https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link" target="_blank"><?php esc_html_e( 'Upgrade', 'portfolioo' ); ?></a></span>
 					
 					</div>
 				</div>
@@ -223,7 +223,7 @@ function portfolioo_getting_started() {
 				</div>
 
 				<div class="col-md-5 dashboard-cta-right">
-					<a target="_blank" class="theme__cta--download--pro" href="<?php echo esc_url('https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=theme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Upgrade Now', 'portfolioo' ); ?></a>
+					<a target="_blank" class="theme__cta--download--pro" href="<?php echo esc_url('https://asphaltthemes.com/portfolioo#buy_pro&utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Upgrade Now', 'portfolioo' ); ?></a>
 					
 				</div>
 			</div>
@@ -235,9 +235,9 @@ function portfolioo_getting_started() {
 			<div class="col-md-4">
 				<h3><?php esc_html_e( 'Get Support', 'portfolioo' ); ?></h3>
 				<ol>
-					<li><?php esc_html_e( 'Portfolioo', 'portfolioo' ); ?> <a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/docs/portfolioo-pro/how-to-setup-front-page/#utm_source=org&utm_medium=theme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Documentation', 'portfolioo' ); ?></a></li>
+					<li><?php esc_html_e( 'Portfolioo', 'portfolioo' ); ?> <a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/docs/portfolioo-pro/how-to-setup-front-page/#utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Documentation', 'portfolioo' ); ?></a></li>
 					<li><?php esc_html_e( 'WordPress.org', 'portfolioo' ); ?> <a target="_blank" href="<?php echo esc_url('https://wordpress.org/support/theme/portfolioo'); ?>"><?php esc_html_e( 'Support Forum', 'portfolioo' ); ?></a></li>
-					<li><a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/contact/#utm_source=org&utm_medium=theme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Email Support', 'portfolioo' ); ?></a></li>
+					<li><a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/contact/#utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Email Support', 'portfolioo' ); ?></a></li>
 				</ol>
 			</div>
 
@@ -252,9 +252,9 @@ function portfolioo_getting_started() {
 			<div class="col-md-4">
 				<h3><?php esc_html_e( 'Theme Documentation', 'portfolioo' ); ?></h3>
 				<ol>
-					<li><a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/docs/portfolioo-pro/how-to-setup-front-page/#utm_source=org&utm_medium=theme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'How To Set up the Front Page', 'portfolioo' ); ?></a></li>
-					<li><a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/docs/portfolioo-pro/upgrading-to-portfolioo-pro/#utm_source=org&utm_medium=theme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Upgrading To portfolioo Pro', 'portfolioo' ); ?></a></li>
-					<li><a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/docs/portfolioo-pro/basic-site-settings/#utm_source=org&utm_medium=theme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Basic Site Settings', 'portfolioo' ); ?></a></li>
+					<li><a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/docs/portfolioo-pro/how-to-setup-front-page/#utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'How To Set up the Front Page', 'portfolioo' ); ?></a></li>
+					<li><a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/docs/portfolioo-pro/upgrading-to-portfolioo-pro/#utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Upgrading To portfolioo Pro', 'portfolioo' ); ?></a></li>
+					<li><a target="_blank" href="<?php echo esc_url('https://asphaltthemes.com/docs/portfolioo-pro/basic-site-settings/#utm_source=org&utm_medium=portfoliotheme&utm_campaign=upsell_link'); ?>"><?php esc_html_e( 'Basic Site Settings', 'portfolioo' ); ?></a></li>
 				</ol>
 			</div>
 		</div>
