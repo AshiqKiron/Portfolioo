@@ -18,6 +18,9 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.2.3 (07.05.2018)
+- Add: Added back blog.php file
+
 
 #### 0.2.2 (13.04.2018)
 - Change: Dashboard upgrade link
