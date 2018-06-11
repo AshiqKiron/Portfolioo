@@ -51,7 +51,7 @@ $portfolioo = portfolioo_option_defaults();
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button href="#sidr" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'menu' ) ); ?>
 			</nav>
 	</header><!-- #masthead -->
 

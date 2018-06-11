@@ -106,7 +106,13 @@
 	    color: #333;
 	    font-size: 11px;
 	    border: 1px solid rgba(153, 153, 153, 0.5);
-	    padding: 0px 8px;
+	    padding: 5px 10px;
+	    transition: .5s ease all;
+
+	    &:hover {
+	    	transition: .5s ease all;
+	    	color: #999;
+	    }
 	}
 
 }

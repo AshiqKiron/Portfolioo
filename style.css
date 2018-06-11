@@ -6,11 +6,11 @@ Author: Asphalt Themes
 Author URI: https://asphaltthemes.com/
 Description: A bloat-free WordPress portfolio theme for building personal website. You can take full advantage of the free widgets to create amazing personal website regardless whether you are graphic designer, painters, artists, web designer, web developer, software engineer or photographer. You can customize elements and widgets inside customizer without you having to tweaking any code. The theme comes with Full width layout, easy Logo upload. Portfolioo is 100% responsive built with HTML5 and CSS3, it is SEO friendly, mobile optimized and retina ready, thoroughly tested by WordPress coding standard has clean and a bloat free code, you can flesh out free portfolio, grid, personal showcase website for free. Perfect Portfolio theme for Graphic Designers, Web Designers, Web Developers, Artists, Painters and Photographers.
 
-Version: 0.2.3
+Version: 0.2.4
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: portfolioo
-Tags: one-column, custom-menu, two-columns, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, portfolio, blog, education
+Tags: one-column, custom-menu, two-columns, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-logo, editor-style, featured-image-header, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments, translation-ready, portfolio, blog, education
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -576,7 +576,7 @@ a {
   }*/
   /* line 90, sass/navigation/_menus.scss */
   .main-navigation ul {
-    display: block; } }
+    display: none; } }
 /* line 99, sass/navigation/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -1411,34 +1411,41 @@ a {
     color: #333;
     font-size: 11px;
     border: 1px solid rgba(153, 153, 153, 0.5);
-    padding: 0px 8px; }
+    padding: 5px 10px;
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all; }
+    /* line 112, sass/template/_single.scss */
+    .post_wrap .edit-link a:hover {
+      -webkit-transition: .5s ease all;
+      transition: .5s ease all;
+      color: #999; }
 
-/* line 114, sass/template/_single.scss */
+/* line 120, sass/template/_single.scss */
 .hide_featured_image {
   display: none; }
 
-/* line 118, sass/template/_single.scss */
+/* line 124, sass/template/_single.scss */
 .post-navigation {
   padding: 5% 15%; }
-  /* line 121, sass/template/_single.scss */
+  /* line 127, sass/template/_single.scss */
   .post-navigation a {
     color: #333;
     text-shadow: 0.5px 0.5px 0.5px #333;
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
     font-size: 20px; }
-    /* line 127, sass/template/_single.scss */
+    /* line 133, sass/template/_single.scss */
     .post-navigation a :hover {
       text-shadow: none;
       -webkit-transition: .5s ease all;
       transition: .5s ease all; }
-  /* line 133, sass/template/_single.scss */
+  /* line 139, sass/template/_single.scss */
   .post-navigation .nav-previous::after {
     content: "────";
     float: right;
     -webkit-transform: rotate(-60deg);
             transform: rotate(-60deg); }
-  /* line 139, sass/template/_single.scss */
+  /* line 145, sass/template/_single.scss */
   .post-navigation .nav-next::before {
     content: "────";
     float: left;
@@ -1446,16 +1453,16 @@ a {
             transform: rotate(-60deg); }
 
 @media screen and (max-width: 750px) {
-  /* line 152, sass/template/_single.scss */
+  /* line 158, sass/template/_single.scss */
   .post .featured__image {
     margin-top: -10%; }
 
-  /* line 156, sass/template/_single.scss */
+  /* line 162, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -125px;
     left: 0; } }
 @media screen and (min-width: 320px) and (max-width: 550px) {
-  /* line 163, sass/template/_single.scss */
+  /* line 169, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -60px;
     left: 0;
@@ -1465,28 +1472,28 @@ a {
     height: 80px;
     text-align: center; } }
 @media screen and (min-width: 751px) and (max-width: 1450px) {
-  /* line 177, sass/template/_single.scss */
+  /* line 183, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -100px;
     left: 0; } }
 @media screen and (min-width: 1451px) and (max-width: 1900px) {
-  /* line 185, sass/template/_single.scss */
+  /* line 191, sass/template/_single.scss */
   .post-entry-meta {
     left: 0; } }
 @media screen and (min-width: 2001px) and (max-width: 2150px) {
-  /* line 192, sass/template/_single.scss */
+  /* line 198, sass/template/_single.scss */
   .post-entry-meta {
     left: 200px; } }
 @media screen and (min-width: 2151px) and (max-width: 2250px) {
-  /* line 199, sass/template/_single.scss */
+  /* line 205, sass/template/_single.scss */
   .post-entry-meta {
     left: 250px; } }
 @media screen and (min-width: 2251px) and (max-width: 2350px) {
-  /* line 206, sass/template/_single.scss */
+  /* line 212, sass/template/_single.scss */
   .post-entry-meta {
     left: 300px; } }
 @media screen and (min-width: 2351px) and (max-width: 3050px) {
-  /* line 214, sass/template/_single.scss */
+  /* line 220, sass/template/_single.scss */
   .post-entry-meta {
     left: 350px; } }
 /*--------------------------------------------------------------
@@ -1660,27 +1667,29 @@ a {
       color: #000;
       text-shadow: 0.5px 0.5px 0.5px #000;
       -webkit-transition: .5s ease all;
-      transition: .5s ease all; }
-      /* line 88, sass/template/_blog.scss */
+      transition: .5s ease all;
+      font-size: 20px; }
+      /* line 89, sass/template/_blog.scss */
       .blog_page .blog_pagination a :hover {
-        text-shadow: none;
+        text-shadow: 0px 0px 0px;
         -webkit-transition: .5s ease all;
-        transition: .5s ease all; }
-    /* line 94, sass/template/_blog.scss */
+        transition: .5s ease all;
+        color: #2196F3; }
+    /* line 96, sass/template/_blog.scss */
     .blog_page .blog_pagination a:first-child {
       float: left; }
-    /* line 98, sass/template/_blog.scss */
+    /* line 100, sass/template/_blog.scss */
     .blog_page .blog_pagination a:last-child {
       float: right; }
 
-/* line 104, sass/template/_blog.scss */
+/* line 106, sass/template/_blog.scss */
 input[type="submit"] {
   background-color: #222;
   color: #fff;
   -webkit-transition: .6s ease all;
   transition: .6s ease all;
   padding: .9em 1em .8em; }
-  /* line 110, sass/template/_blog.scss */
+  /* line 112, sass/template/_blog.scss */
   input[type="submit"]:hover {
     background-color: #fff;
     color: #000;
@@ -1689,7 +1698,7 @@ input[type="submit"] {
     border: 1px solid #222; }
 
 @media screen and (min-width: 300px) and (max-width: 1100px) {
-  /* line 122, sass/template/_blog.scss */
+  /* line 124, sass/template/_blog.scss */
   .blog_page .blog_post_list_wrap {
     float: none;
     width: 95%;
@@ -2202,7 +2211,7 @@ input[type="submit"] {
   /* line 4, sass/site/primary/_footer.scss */
   #colophon a {
     text-decoration: none;
-    color: rgba(255, 235, 59, 0.65); }
+    color: #ddd; }
   /* line 9, sass/site/primary/_footer.scss */
   #colophon .site-info {
     background-color: #111;

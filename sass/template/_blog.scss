@@ -84,10 +84,12 @@
 			color: #000;
     		text-shadow: 0.5px 0.5px 0.5px #000;
     		transition: .5s ease all;
+    		font-size: 20px;
 
     		:hover {
-    			text-shadow:none;
+    			text-shadow: 0px 0px 0px ;
     			transition: .5s ease all;
+    			color: #2196F3;
     		}
 		}
 

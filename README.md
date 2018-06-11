@@ -20,6 +20,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.2.4 (12.06.2018)
+- Fix: Menu issue
+- Tweak: Blog pagination font size
+
 
 #### 0.2.3 (07.05.2018)
 - Add: Added back blog.php file
