@@ -20,6 +20,11 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+
+#### 0.2.5 (24th August 2018)
+- Version Bump
+
+
 #### 0.2.4 (12.06.2018)
 - Fix: Menu issue
 - Tweak: Blog pagination font size
