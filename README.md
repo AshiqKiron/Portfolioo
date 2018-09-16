@@ -21,6 +21,11 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 * Changelog *
 
 
+#### 0.2.6 (14th September 2018)
+- Update: Tested upto 4.9.8
+- Add: Minimum required version
+
+
 #### 0.2.5 (24th August 2018)
 - Version Bump
 
