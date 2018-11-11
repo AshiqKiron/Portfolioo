@@ -19,6 +19,11 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 * Changelog *
 
 
+#### 0.2.7 (12 November, 2018)
+- Update: Upsell info
+- Add: Gutenberg theme opt in
+
+
 #### 0.2.6 (17th September 2018)
 - Update: Tested upto 4.9.8
 - Add: Minimum required version

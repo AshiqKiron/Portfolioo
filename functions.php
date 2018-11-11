@@ -50,6 +50,19 @@ function portfolioo_setup() {
 		'primary' => esc_html__( 'Primary Menu', 'portfolioo' ),
 	) );
 
+
+	//Add responsive embed for Gutenberg
+	add_theme_support( 'responsive-embeds' );
+
+
+	//Add default Gutenberg editor styles
+	add_theme_support( 'wp-block-styles' );
+
+
+	//Add Gutenberg image align wide feature
+	add_theme_support( 'align-wide' );
+
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

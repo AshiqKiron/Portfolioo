@@ -168,7 +168,7 @@ function portfolioo_getting_started() {
 						<li><?php esc_html_e( 'Plugin Compatibility', 'portfolioo'); ?></li>
 						<li><?php esc_html_e( 'Dedicate Support Forum', 'portfolioo'); ?></li>
 						<li><?php esc_html_e( 'Extra Widget Options', 'portfolioo'); ?></li>
-						<li><?php esc_html_e( 'Lifetime Updates', 'portfolioo'); ?></li>
+						
 					</ul>
 
 					</div>
@@ -192,7 +192,7 @@ function portfolioo_getting_started() {
 						<li><?php esc_html_e( 'Extended Customizer Options', 'portfolioo' ); ?></li>
 						<li><?php esc_html_e( 'Solid Code', 'portfolioo' ); ?></li>
 						<li><?php esc_html_e( 'Extended Features', 'portfolioo' ); ?></li>
-						<li><?php esc_html_e( 'Lifetime Updates', 'portfolioo' ); ?></li>
+						
 						<li><?php esc_html_e( 'Custom Widgets', 'portfolioo' ); ?></li>
 						<li><?php esc_html_e( 'Super SEO Friendly', 'portfolioo' ); ?></li>
 						<li><?php esc_html_e( 'One Click Updates', 'portfolioo' ); ?></li>
