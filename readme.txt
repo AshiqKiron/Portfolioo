@@ -18,6 +18,11 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 * Changelog *
 
+#### 0.2.8 (17 December, 2018)
+- Fix: Blog post title issue
+
+
+
 
 #### 0.2.7 (12 November, 2018)
 - Update: Upsell info

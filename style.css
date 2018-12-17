@@ -6,7 +6,7 @@ Author: Asphalt Themes
 Author URI: https://asphaltthemes.com/
 Description: A bloat-free WordPress portfolio theme for building personal website. You can take full advantage of the free widgets to create amazing personal website regardless whether you are graphic designer, painters, artists, web designer, web developer, software engineer or photographer. You can customize elements and widgets inside customizer without you having to tweaking any code. The theme comes with Full width layout, easy Logo upload. Portfolioo is 100% responsive built with HTML5 and CSS3, it is SEO friendly, mobile optimized and retina ready, thoroughly tested by WordPress coding standard. Gutenberg ready, clean and bloat free code, you can flesh out free portfolio, grid, personal showcase website for free. Perfect Portfolio theme for Graphic Designers, Web Designers, Web Developers, Artists, Painters and Photographers.
 
-Version: 0.2.7
+Version: 0.2.8
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: portfolioo
@@ -365,7 +365,7 @@ hr {
 
 /* line 1, sass/elements/_lists.scss */
 ul, ol {
-  margin: 0 0 1.5em 3em; }
+  margin: 0 0 5px 3em; }
 
 /* line 5, sass/elements/_lists.scss */
 ul {
@@ -379,7 +379,7 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em; }
+  margin-left: 5px; }
 
 /* line 19, sass/elements/_lists.scss */
 dt {
@@ -1452,7 +1452,7 @@ a {
     -webkit-transform: rotate(-60deg);
             transform: rotate(-60deg); }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1500px) {
   /* line 158, sass/template/_single.scss */
   .post .featured__image {
     margin-top: -10%; }
@@ -1460,9 +1460,11 @@ a {
   /* line 162, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -125px;
-    left: 0; } }
+    left: 0;
+    text-align: center;
+    margin: 0 auto; } }
 @media screen and (min-width: 320px) and (max-width: 550px) {
-  /* line 169, sass/template/_single.scss */
+  /* line 172, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -60px;
     left: 0;
@@ -1472,30 +1474,18 @@ a {
     height: 80px;
     text-align: center; } }
 @media screen and (min-width: 751px) and (max-width: 1450px) {
-  /* line 183, sass/template/_single.scss */
+  /* line 186, sass/template/_single.scss */
   .post-entry-meta {
     margin-top: -100px;
     left: 0; } }
-@media screen and (min-width: 1451px) and (max-width: 1900px) {
-  /* line 191, sass/template/_single.scss */
+@media screen and (min-width: 1451px) and (max-width: 2000px) {
+  /* line 194, sass/template/_single.scss */
   .post-entry-meta {
     left: 0; } }
-@media screen and (min-width: 2001px) and (max-width: 2150px) {
-  /* line 198, sass/template/_single.scss */
+@media screen and (min-width: 2001px) and (max-width: 3000px) {
+  /* line 201, sass/template/_single.scss */
   .post-entry-meta {
     left: 200px; } }
-@media screen and (min-width: 2151px) and (max-width: 2250px) {
-  /* line 205, sass/template/_single.scss */
-  .post-entry-meta {
-    left: 250px; } }
-@media screen and (min-width: 2251px) and (max-width: 2350px) {
-  /* line 212, sass/template/_single.scss */
-  .post-entry-meta {
-    left: 300px; } }
-@media screen and (min-width: 2351px) and (max-width: 3050px) {
-  /* line 220, sass/template/_single.scss */
-  .post-entry-meta {
-    left: 350px; } }
 /*--------------------------------------------------------------
 ## Index Page
 --------------------------------------------------------------*/
