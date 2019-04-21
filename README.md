@@ -21,8 +21,13 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 * Changelog *
 
 
+#### 0.2.9 (22 April, 2019)
+- Add     : Add WordPress 5.2 Compatibility
+
+
+
 #### 0.2.8 (17 December, 2018)
-- Fix: Blog post title issue
+- Fix     : Blog post title issue
 
 
 

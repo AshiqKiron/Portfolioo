@@ -245,7 +245,3 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load theme upsell
  */
 require_once( trailingslashit( get_template_directory() ) . '/inc/trt-customize-pro/example-1/class-customize.php' );
-
-
-
-
