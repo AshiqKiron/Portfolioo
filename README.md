@@ -21,6 +21,17 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 * Changelog *
 
 
+
+##### = 0.3.1 -  July 9 , 2019  =
+- Compatibility: Tested up to 5.2.2
+
+
+
+##### = 0.3.0 - June 8 , 2019  =
+- Add: WP Compatibility 5.2.1
+
+
+
 #### 0.2.9 (22 April, 2019)
 - Add     : Add WordPress 5.2 Compatibility
 
