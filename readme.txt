@@ -19,6 +19,10 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 * Changelog *
 
 
+##### = 0.3.2 -  October 17 , 2019  =
+- Compatibility: Tested up to 5.3
+
+
 
 ##### = 0.3.1 -  July 9 , 2019  =
 - Compatibility: Tested up to 5.2.2
@@ -201,7 +205,7 @@ along with this program.  If not, see http://www.gnu.org/licenses/
 
 
 Images are from pixabay.com and WordPress dummy contents released under GPL v2
-Tested up to WordPress: 4.9.4
+Tested up to WordPress: 5.3
 Requires WordPress    : 4.5
 Requires PHP version  : 5.6
 Requires MySQL version: 5.7
